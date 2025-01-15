@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="2d716375-058a-4a9d-a508-764eab5c596d"/>
+  <meta>
+    <lastUpdated value="2025-01-15T14:05:09.650+00:00"/>
+  </meta>
+  <type value="collection"/>
+  <entry>
+    <fullUrl value="http://hl7.org/fhir/us/covid19library/ValueSet/pregnancy-status-value-set"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p class="res-header-id">
+              <b>Generated Narrative: ValueSet </b>
+            </p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on SNOMED CT 900000000000207008 edition 01-Aug 2024</p>
+            <p>This value set contains 2 concepts</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-77386006"> </a>  
+                  <a href="http://snomed.info/id/77386006">77386006</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Pregnancy</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-60001007"> </a>  
+                  <a href="http://snomed.info/id/60001007">60001007</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Not pregnant (finding)</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hl7.org/fhir/us/covid19library/ValueSet/pregnancy-status-value-set"/>
+        <version value="0.1.0"/>
+        <name value="PregnancyStatusVS"/>
+        <title value="Pregnancy Status Value Set"/>
+        <status value="active"/>
+        <date value="2021-12-08T02:47:19+00:00"/>
+        <expansion>
+          <identifier value="urn:uuid:bfb473d3-0a1d-42ce-8b61-cee4a6b0a272"/>
+          <timestamp value="2025-01-15T14:07:04+00:00"/>
+          <total value="2"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-valueset"/>
+            <valueUri value="null"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20240801"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20240801"/>
+          </parameter>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="77386006"/>
+            <display value="Pregnancy"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="60001007"/>
+            <display value="Not pregnant (finding)"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://hl7.org/fhir/ValueSet/adverse-event-type"/>
+    <resource>
+      <ValueSet>
+        <meta>
+          <lastUpdated value="2024-08-12T01:54:17.111+00:00"/>
+          <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+        </meta>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p class="res-header-id">
+              <b>Generated Narrative: ValueSet </b>
+            </p>
+            <div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%">
+              <p style="margin-bottom: 0px">Last updated: 2024-08-12 01:54:17+0000</p>
+              <p style="margin-bottom: 0px">Profile: 
+                <a href="http://hl7.org/fhir/R4/shareablevalueset.html">Shareable ValueSet</a>
+              </p>
+            </div>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on SNOMED CT 900000000000207008 edition 01-Aug 2024</p>
+            <p>This value set expansion contains 47 concepts.</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370894009"> </a>  
+                  <a href="http://snomed.info/id/370894009">370894009</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Serious reportable event (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-5331006"> </a>  
+                  <a href="http://snomed.info/id/5331006">5331006</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Postoperative death</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-13234002"> </a>  
+                  <a href="http://snomed.info/id/13234002">13234002</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Death during anesthetic induction</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-49380000"> </a>  
+                  <a href="http://snomed.info/id/49380000">49380000</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Anesthetic death</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-52136000"> </a>  
+                  <a href="http://snomed.info/id/52136000">52136000</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Intraoperative death</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370895005"> </a>  
+                  <a href="http://snomed.info/id/370895005">370895005</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Serious reportable event associated with surgery (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370896006"> </a>  
+                  <a href="http://snomed.info/id/370896006">370896006</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Surgery performed on the wrong body part (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370897002"> </a>  
+                  <a href="http://snomed.info/id/370897002">370897002</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Surgery performed on the wrong patient (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370898007"> </a>  
+                  <a href="http://snomed.info/id/370898007">370898007</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Wrong surgical procedure performed on a patient (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370899004"> </a>  
+                  <a href="http://snomed.info/id/370899004">370899004</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Retention of foreign object in a patient after surgery or other procedure (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370900009"> </a>  
+                  <a href="http://snomed.info/id/370900009">370900009</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Intraoperative or immediately postoperative death in an American Society of Anesthesiologists Class I patient (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370901008"> </a>  
+                  <a href="http://snomed.info/id/370901008">370901008</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Serious reportable event associated with product or device (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370902001"> </a>  
+                  <a href="http://snomed.info/id/370902001">370902001</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Patient death or serious disability associated with the use of contaminated drugs, devices, or biologics provided by the healthcare facility (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370903006"> </a>  
+                  <a href="http://snomed.info/id/370903006">370903006</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Patient death or serious disability associated with the use or function of a device in patient care, in which the device is used or functions other than as intended (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370904000"> </a>  
+                  <a href="http://snomed.info/id/370904000">370904000</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Patient death or serious disability associated with intravascular air embolism that occurs while being cared for in a healthcare facility (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370905004"> </a>  
+                  <a href="http://snomed.info/id/370905004">370905004</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Serious reportable event associated with patient protection (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370906003"> </a>  
+                  <a href="http://snomed.info/id/370906003">370906003</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Infant discharged to the wrong person (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370907007"> </a>  
+                  <a href="http://snomed.info/id/370907007">370907007</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Patient death or serious disability associated with patient elopement (disappearance) for more than four hours (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370908002"> </a>  
+                  <a href="http://snomed.info/id/370908002">370908002</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Patient suicide, or attempted suicide resulting in serious disability, while being cared for in a healthcare facility (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370909005"> </a>  
+                  <a href="http://snomed.info/id/370909005">370909005</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Serious reportable event associated with care management (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370910000"> </a>  
+                  <a href="http://snomed.info/id/370910000">370910000</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Patient death or serious disability associated with a medication error (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370911001"> </a>  
+                  <a href="http://snomed.info/id/370911001">370911001</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Patient death or serious disability associated with a hemolytic reaction due to the administration of ABO-incompatible blood or blood products (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370912008"> </a>  
+                  <a href="http://snomed.info/id/370912008">370912008</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Maternal death or serious disability associated with labor or delivery in a low-risk pregnancy while being cared for in a healthcare facility (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370913003"> </a>  
+                  <a href="http://snomed.info/id/370913003">370913003</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Patient death or serious disability associated with hypoglycemia, the onset of which occurs while the patient is being cared for in a healthcare facility (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370914009"> </a>  
+                  <a href="http://snomed.info/id/370914009">370914009</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Death or serious disability (kernicterus) associated with failure to identify and treat hyperbilirubinemia in neonates (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370915005"> </a>  
+                  <a href="http://snomed.info/id/370915005">370915005</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Stage 3 or 4 pressure injury acquired after admission to a healthcare facility</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370916006"> </a>  
+                  <a href="http://snomed.info/id/370916006">370916006</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Patient death or serious disability due to spinal manipulative therapy (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370917002"> </a>  
+                  <a href="http://snomed.info/id/370917002">370917002</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Serious reportable event associated with environment (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370918007"> </a>  
+                  <a href="http://snomed.info/id/370918007">370918007</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Patient death or serious disability associated with an electric shock while being cared for in a healthcare facility (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370919004"> </a>  
+                  <a href="http://snomed.info/id/370919004">370919004</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Any incident in which a line designated for oxygen or other gas to be delivered to a patient contains the wrong gas or is contaminated by toxic substances (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370920005"> </a>  
+                  <a href="http://snomed.info/id/370920005">370920005</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Patient death or serious disability associated with a burn incurred from any source while being cared for in a healthcare facility (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370921009"> </a>  
+                  <a href="http://snomed.info/id/370921009">370921009</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Patient death associated with a fall while being cared for in a healthcare facility (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370922002"> </a>  
+                  <a href="http://snomed.info/id/370922002">370922002</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Patient death or serious disability associated with the use of restraints or bedrails while being cared for in a healthcare facility (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370923007"> </a>  
+                  <a href="http://snomed.info/id/370923007">370923007</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Serious reportable event associated with criminal activity (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370924001"> </a>  
+                  <a href="http://snomed.info/id/370924001">370924001</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Any instance of care ordered by or provided by someone impersonating a physician, nurse, pharmacist, or other licensed healthcare provider (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370925000"> </a>  
+                  <a href="http://snomed.info/id/370925000">370925000</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Abduction of a patient of any age (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370926004"> </a>  
+                  <a href="http://snomed.info/id/370926004">370926004</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Sexual assault on a patient within or on the grounds of the healthcare facility (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-370927008"> </a>  
+                  <a href="http://snomed.info/id/370927008">370927008</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Death or significant injury of a patient or staff member resulting from a physical assault (i.e., battery) that occurs within or on the grounds of the healthcare facility (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-397866006"> </a>  
+                  <a href="http://snomed.info/id/397866006">397866006</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Staff injury or damage (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-398226000"> </a>  
+                  <a href="http://snomed.info/id/398226000">398226000</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Perioperative death</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-405644001"> </a>  
+                  <a href="http://snomed.info/id/405644001">405644001</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Critical incident (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-415169009"> </a>  
+                  <a href="http://snomed.info/id/415169009">415169009</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Preoperative anesthetic death</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-424522003"> </a>  
+                  <a href="http://snomed.info/id/424522003">424522003</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Artificial insemination with wrong donor spermatozoa or donor egg (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-426106009"> </a>  
+                  <a href="http://snomed.info/id/426106009">426106009</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Anesthetic procedure performed on the wrong body part (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-427513009"> </a>  
+                  <a href="http://snomed.info/id/427513009">427513009</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Anesthetic procedure performed on the wrong patient (event)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-844579007"> </a>  
+                  <a href="http://snomed.info/id/844579007">844579007</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Transmission of infectious agent via medicinal product</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-1912002"> </a>  
+                  <a href="http://snomed.info/id/1912002">1912002</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Fall</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hl7.org/fhir/ValueSet/adverse-event-type"/>
+        <identifier>
+          <system value="urn:ietf:rfc:3986"/>
+          <value value="urn:oid:2.16.840.1.113883.4.642.3.835"/>
+        </identifier>
+        <identifier>
+          <use value="old"/>
+          <system value="urn:ietf:rfc:3986"/>
+          <value value="urn:oid:2.16.840.1.113883.4.642.3.808"/>
+        </identifier>
+        <version value="0.1.0"/>
+        <name value="AdverseEventType"/>
+        <title value="AdverseEvent Type"/>
+        <status value="draft"/>
+        <experimental value="true"/>
+        <date value="2025-01-15T14:05:09+00:00"/>
+        <expansion>
+          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-unclosed">
+            <valueBoolean value="true"/>
+          </extension>
+          <identifier value="urn:uuid:c1e65230-fa26-4ed0-8b4c-bd54f9380478"/>
+          <timestamp value="2025-01-15T14:07:04+00:00"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-valueset"/>
+            <valueUri value="null"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20240801"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20240801"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="true"/>
+          </parameter>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370894009"/>
+            <display value="Serious reportable event (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="5331006"/>
+            <display value="Postoperative death"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="13234002"/>
+            <display value="Death during anesthetic induction"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="49380000"/>
+            <display value="Anesthetic death"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="52136000"/>
+            <display value="Intraoperative death"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370895005"/>
+            <display value="Serious reportable event associated with surgery (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370896006"/>
+            <display value="Surgery performed on the wrong body part (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370897002"/>
+            <display value="Surgery performed on the wrong patient (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370898007"/>
+            <display value="Wrong surgical procedure performed on a patient (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370899004"/>
+            <display value="Retention of foreign object in a patient after surgery or other procedure (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370900009"/>
+            <display value="Intraoperative or immediately postoperative death in an American Society of Anesthesiologists Class I patient (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370901008"/>
+            <display value="Serious reportable event associated with product or device (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370902001"/>
+            <display value="Patient death or serious disability associated with the use of contaminated drugs, devices, or biologics provided by the healthcare facility (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370903006"/>
+            <display value="Patient death or serious disability associated with the use or function of a device in patient care, in which the device is used or functions other than as intended (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370904000"/>
+            <display value="Patient death or serious disability associated with intravascular air embolism that occurs while being cared for in a healthcare facility (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370905004"/>
+            <display value="Serious reportable event associated with patient protection (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370906003"/>
+            <display value="Infant discharged to the wrong person (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370907007"/>
+            <display value="Patient death or serious disability associated with patient elopement (disappearance) for more than four hours (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370908002"/>
+            <display value="Patient suicide, or attempted suicide resulting in serious disability, while being cared for in a healthcare facility (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370909005"/>
+            <display value="Serious reportable event associated with care management (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370910000"/>
+            <display value="Patient death or serious disability associated with a medication error (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370911001"/>
+            <display value="Patient death or serious disability associated with a hemolytic reaction due to the administration of ABO-incompatible blood or blood products (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370912008"/>
+            <display value="Maternal death or serious disability associated with labor or delivery in a low-risk pregnancy while being cared for in a healthcare facility (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370913003"/>
+            <display value="Patient death or serious disability associated with hypoglycemia, the onset of which occurs while the patient is being cared for in a healthcare facility (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370914009"/>
+            <display value="Death or serious disability (kernicterus) associated with failure to identify and treat hyperbilirubinemia in neonates (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370915005"/>
+            <display value="Stage 3 or 4 pressure injury acquired after admission to a healthcare facility"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370916006"/>
+            <display value="Patient death or serious disability due to spinal manipulative therapy (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370917002"/>
+            <display value="Serious reportable event associated with environment (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370918007"/>
+            <display value="Patient death or serious disability associated with an electric shock while being cared for in a healthcare facility (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370919004"/>
+            <display value="Any incident in which a line designated for oxygen or other gas to be delivered to a patient contains the wrong gas or is contaminated by toxic substances (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370920005"/>
+            <display value="Patient death or serious disability associated with a burn incurred from any source while being cared for in a healthcare facility (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370921009"/>
+            <display value="Patient death associated with a fall while being cared for in a healthcare facility (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370922002"/>
+            <display value="Patient death or serious disability associated with the use of restraints or bedrails while being cared for in a healthcare facility (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370923007"/>
+            <display value="Serious reportable event associated with criminal activity (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370924001"/>
+            <display value="Any instance of care ordered by or provided by someone impersonating a physician, nurse, pharmacist, or other licensed healthcare provider (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370925000"/>
+            <display value="Abduction of a patient of any age (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370926004"/>
+            <display value="Sexual assault on a patient within or on the grounds of the healthcare facility (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="370927008"/>
+            <display value="Death or significant injury of a patient or staff member resulting from a physical assault (i.e., battery) that occurs within or on the grounds of the healthcare facility (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="397866006"/>
+            <display value="Staff injury or damage (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="398226000"/>
+            <display value="Perioperative death"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="405644001"/>
+            <display value="Critical incident (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="415169009"/>
+            <display value="Preoperative anesthetic death"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="424522003"/>
+            <display value="Artificial insemination with wrong donor spermatozoa or donor egg (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="426106009"/>
+            <display value="Anesthetic procedure performed on the wrong body part (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="427513009"/>
+            <display value="Anesthetic procedure performed on the wrong patient (event)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="844579007"/>
+            <display value="Transmission of infectious agent via medicinal product"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="1912002"/>
+            <display value="Fall"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+</Bundle>

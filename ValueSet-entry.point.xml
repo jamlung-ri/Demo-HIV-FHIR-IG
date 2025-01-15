@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="entry.point"/>
+  <meta>
+    <lastUpdated value="2024-05-28T19:27:57.377923Z"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet entry.point</b></p><a name="entry.point"> </a><a name="hcentry.point"> </a><a name="entry.point-en-US"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Last updated: 2024-05-28 19:27:57+0000</p></div><ul><li>Include codes from<code>https://app.staging.openconceptlab.org/entry.point</code> where excludeWildcard  = true, excludeFuzzy  = true and includeSearchMeta  = true</li></ul></div>
+  </text>
+  <url value="https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/entry.point"/>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://hl7.org/fhir/v2/0203"/>
+        <code value="ACSN"/>
+        <display value="Accession ID"/>
+      </coding>
+      <text value="Accession ID"/>
+    </type>
+    <system value="https://api.staging.openconceptlab.org"/>
+    <value value="/orgs/Kenya_SMART_Guidelines/ValueSet/entry_point/"/>
+  </identifier>
+  <version value="0.1.0"/>
+  <name value="Entry Point"/>
+  <title value="Entry Point"/>
+  <status value="active"/>
+  <date value="2025-01-15T14:05:09+00:00"/>
+  <publisher value="intellisoftkenya"/>
+  <contact>
+    <name value="intellisoftkenya"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.intellisoftkenya.com/"/>
+    </telecom>
+  </contact>
+  <description value="0.1.0"/>
+  <compose>
+    <include>
+      <system value="https://app.staging.openconceptlab.org/entry.point"/>
+      <version value="0.1.0"/>
+      <filter>
+        <property value="excludeWildcard"/>
+        <op value="="/>
+        <value value="true"/>
+      </filter>
+      <filter>
+        <property value="excludeFuzzy"/>
+        <op value="="/>
+        <value value="true"/>
+      </filter>
+      <filter>
+        <property value="includeSearchMeta"/>
+        <op value="="/>
+        <value value="true"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,193 @@
+{
+   "library" : {
+      "localId" : "0",
+      "annotation" : [ {
+         "translatorVersion" : "3.11.0",
+         "translatorOptions" : "EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion",
+         "signatureLevel" : "All",
+         "type" : "CqlToElmInfo"
+      }, {
+         "type" : "Annotation",
+         "s" : {
+            "r" : "220",
+            "s" : [ {
+               "value" : [ "","library HIVConfig" ]
+            } ]
+         }
+      } ],
+      "identifier" : {
+         "id" : "HIVConfig",
+         "system" : "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localId" : "1",
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1"
+         }, {
+            "localId" : "206",
+            "locator" : "3:1-3:26",
+            "localIdentifier" : "FHIR",
+            "uri" : "http://hl7.org/fhir",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "206",
+                  "s" : [ {
+                     "value" : [ "","using " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIR" ]
+                     } ]
+                  }, {
+                     "value" : [ " version '4.0.1'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "statements" : {
+         "def" : [ {
+            "localId" : "208",
+            "locator" : "8:1-9:29",
+            "name" : "HIV burden of setting",
+            "context" : "Unfiltered",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "208",
+                  "s" : [ {
+                     "value" : [ "/* \n * HIV burden of setting\n */\n","define ","\"HIV burden of setting\"",":\n    " ]
+                  }, {
+                     "r" : "209",
+                     "s" : [ {
+                        "value" : [ "'High HIV burden setting'" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "209",
+               "locator" : "9:5-9:29",
+               "valueType" : "{urn:hl7-org:elm-types:r1}String",
+               "value" : "High HIV burden setting",
+               "type" : "Literal"
+            }
+         }, {
+            "localId" : "211",
+            "locator" : "11:1-12:12",
+            "name" : "Testing Interval",
+            "context" : "Unfiltered",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "211",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Testing Interval\"",":\n    " ]
+                  }, {
+                     "r" : "212",
+                     "s" : [ {
+                        "value" : [ "3 ","months" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "212",
+               "locator" : "12:5-12:12",
+               "value" : 3,
+               "unit" : "months",
+               "type" : "Quantity"
+            }
+         }, {
+            "localId" : "214",
+            "locator" : "14:1-15:10",
+            "name" : "Intervention Interval",
+            "context" : "Unfiltered",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "214",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Intervention Interval\"",":\n    " ]
+                  }, {
+                     "r" : "215",
+                     "s" : [ {
+                        "value" : [ "7 ","days" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "215",
+               "locator" : "15:5-15:10",
+               "value" : 7,
+               "unit" : "days",
+               "type" : "Quantity"
+            }
+         }, {
+            "localId" : "217",
+            "locator" : "17:1-18:11",
+            "name" : "LTFU Days",
+            "context" : "Unfiltered",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "217",
+                  "s" : [ {
+                     "value" : [ "","define ","\"LTFU Days\"",":\n    " ]
+                  }, {
+                     "r" : "218",
+                     "s" : [ {
+                        "value" : [ "28 ","days" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "218",
+               "locator" : "18:5-18:11",
+               "value" : 28,
+               "unit" : "days",
+               "type" : "Quantity"
+            }
+         }, {
+            "localId" : "220",
+            "locator" : "20:1-21:13",
+            "name" : "DSD Retention Interval",
+            "context" : "Unfiltered",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "220",
+                  "s" : [ {
+                     "value" : [ "","define ","\"DSD Retention Interval\"",":\n    " ]
+                  }, {
+                     "r" : "221",
+                     "s" : [ {
+                        "value" : [ "12 ","months" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "221",
+               "locator" : "21:5-21:13",
+               "value" : 12,
+               "unit" : "months",
+               "type" : "Quantity"
+            }
+         } ]
+      }
+   }
+}

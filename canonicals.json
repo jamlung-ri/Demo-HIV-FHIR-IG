@@ -1,0 +1,314 @@
+[
+  {
+    "id" : "FHIRCommon",
+    "type" : "Library",
+    "url" : "http://example.org/Library/FHIRCommon",
+    "version" : "0.1.0",
+    "name" : "FHIRCommon"
+  },
+  {
+    "id" : "HIVCommon",
+    "type" : "Library",
+    "url" : "http://example.org/Library/HIVCommon",
+    "version" : "0.1.0",
+    "name" : "HIVCommon"
+  },
+  {
+    "id" : "FHIRHelpers",
+    "type" : "Library",
+    "url" : "http://hl7.org/fhir/Library/FHIRHelpers",
+    "version" : "0.1.0",
+    "name" : "FHIRHelpers"
+  },
+  {
+    "id" : "adverse-event-type",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/ValueSet/adverse-event-type",
+    "version" : "0.1.0",
+    "name" : "AdverseEventType",
+    "oids" : [
+      "2.16.840.1.113883.4.642.3.835",
+      "2.16.840.1.113883.4.642.3.808"
+    ]
+  },
+  {
+    "id" : "pregnancy-status-value-set",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/us/covid19library/ValueSet/pregnancy-status-value-set",
+    "version" : "0.1.0",
+    "name" : "PregnancyStatusVS"
+  },
+  {
+    "id" : "HIVConcepts",
+    "type" : "Library",
+    "url" : "http://smart.who.int/hiv/Library/HIVConcepts",
+    "version" : "0.1.0",
+    "name" : "HIVConcepts"
+  },
+  {
+    "id" : "HIVConceptsCustom",
+    "type" : "Library",
+    "url" : "http://smart.who.int/hiv/Library/HIVConceptsCustom",
+    "version" : "0.1.0",
+    "name" : "HIVConceptsCustom"
+  },
+  {
+    "id" : "HIVConfig",
+    "type" : "Library",
+    "url" : "http://smart.who.int/hiv/Library/HIVConfig",
+    "version" : "0.1.0",
+    "name" : "HIVConfig"
+  },
+  {
+    "id" : "HIVElements",
+    "type" : "Library",
+    "url" : "http://smart.who.int/hiv/Library/HIVElements",
+    "version" : "0.1.0",
+    "name" : "HIVElements"
+  },
+  {
+    "id" : "HIVIND18Logic",
+    "type" : "Library",
+    "url" : "http://smart.who.int/hiv/Library/HIVIND18Logic",
+    "version" : "0.1.0",
+    "name" : "HIVIND18Logic"
+  },
+  {
+    "id" : "HIVIND27Logic",
+    "type" : "Library",
+    "url" : "http://smart.who.int/hiv/Library/HIVIND27Logic",
+    "version" : "0.1.0",
+    "name" : "HIVIND27Logic"
+  },
+  {
+    "id" : "HIVIND28Logic",
+    "type" : "Library",
+    "url" : "http://smart.who.int/hiv/Library/HIVIND28Logic",
+    "version" : "0.1.0",
+    "name" : "HIVIND28Logic"
+  },
+  {
+    "id" : "HIVIND29Logic",
+    "type" : "Library",
+    "url" : "http://smart.who.int/hiv/Library/HIVIND29Logic",
+    "version" : "0.1.0",
+    "name" : "HIVIND29Logic"
+  },
+  {
+    "id" : "HIVIND30Logic",
+    "type" : "Library",
+    "url" : "http://smart.who.int/hiv/Library/HIVIND30Logic",
+    "version" : "0.1.0",
+    "name" : "HIVIND30Logic"
+  },
+  {
+    "id" : "HIVIndicatorElements",
+    "type" : "Library",
+    "url" : "http://smart.who.int/hiv/Library/HIVIndicatorElements",
+    "version" : "0.1.0",
+    "name" : "HIVIndicatorElements"
+  },
+  {
+    "id" : "WHOCommon",
+    "type" : "Library",
+    "url" : "http://smart.who.int/hiv/Library/WHOCommon",
+    "version" : "0.1.0",
+    "name" : "WHOCommon"
+  },
+  {
+    "id" : "WHOConcepts",
+    "type" : "Library",
+    "url" : "http://smart.who.int/hiv/Library/WHOConcepts",
+    "version" : "0.1.0",
+    "name" : "WHOConcepts"
+  },
+  {
+    "id" : "WHOElements",
+    "type" : "Library",
+    "url" : "http://smart.who.int/hiv/Library/WHOElements",
+    "version" : "0.1.0",
+    "name" : "WHOElements"
+  },
+  {
+    "id" : "WHOEncounterElements",
+    "type" : "Library",
+    "url" : "http://smart.who.int/hiv/Library/WHOEncounterElements",
+    "version" : "0.1.0",
+    "name" : "WHOEncounterElements"
+  },
+  {
+    "id" : "HIVIND18",
+    "type" : "Measure",
+    "url" : "http://smart.who.int/hiv/Measure/HIVIND18",
+    "version" : "0.1.0",
+    "name" : "HIVIND18"
+  },
+  {
+    "id" : "HIVIND27",
+    "type" : "Measure",
+    "url" : "http://smart.who.int/hiv/Measure/HIVIND27",
+    "version" : "0.1.0",
+    "name" : "HIVIND27"
+  },
+  {
+    "id" : "HIVIND28",
+    "type" : "Measure",
+    "url" : "http://smart.who.int/hiv/Measure/HIVIND28",
+    "version" : "0.1.0",
+    "name" : "HIVIND28"
+  },
+  {
+    "id" : "HIVIND29",
+    "type" : "Measure",
+    "url" : "http://smart.who.int/hiv/Measure/HIVIND29",
+    "version" : "0.1.0",
+    "name" : "HIVIND29"
+  },
+  {
+    "id" : "HIVIND30",
+    "type" : "Measure",
+    "url" : "http://smart.who.int/hiv/Measure/HIVIND30",
+    "version" : "0.1.0",
+    "name" : "HIVIND30"
+  },
+  {
+    "id" : "CIEL",
+    "type" : "CodeSystem",
+    "url" : "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/CodeSystem/CIEL",
+    "version" : "0.1.0",
+    "name" : "CIEL"
+  },
+  {
+    "id" : "fhir.hivfhirIg",
+    "type" : "ImplementationGuide",
+    "url" : "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ImplementationGuide/fhir.hivfhirIg",
+    "version" : "0.1.0",
+    "name" : "HIVFHIRIG"
+  },
+  {
+    "id" : "ConditionProfile",
+    "type" : "StructureDefinition",
+    "url" : "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/StructureDefinition/ConditionProfile",
+    "version" : "0.1.0",
+    "name" : "ConditionProfile"
+  },
+  {
+    "id" : "DiagnosticReportProfile",
+    "type" : "StructureDefinition",
+    "url" : "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/StructureDefinition/DiagnosticReportProfile",
+    "version" : "0.1.0",
+    "name" : "DiagnosticReportProfile"
+  },
+  {
+    "id" : "EncounterProfile",
+    "type" : "StructureDefinition",
+    "url" : "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/StructureDefinition/EncounterProfile",
+    "version" : "0.1.0",
+    "name" : "EncounterProfile"
+  },
+  {
+    "id" : "MedicationProfile",
+    "type" : "StructureDefinition",
+    "url" : "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/StructureDefinition/MedicationProfile",
+    "version" : "0.1.0",
+    "name" : "MedicationProfile"
+  },
+  {
+    "id" : "ObservationProfile",
+    "type" : "StructureDefinition",
+    "url" : "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/StructureDefinition/ObservationProfile",
+    "version" : "0.1.0",
+    "name" : "ObservationProfile"
+  },
+  {
+    "id" : "PatientProfile",
+    "type" : "StructureDefinition",
+    "url" : "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/StructureDefinition/PatientProfile",
+    "version" : "0.1.0",
+    "name" : "PatientProfile"
+  },
+  {
+    "id" : "HIVObservationHIVCondition",
+    "type" : "StructureMap",
+    "url" : "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/StructureMap/HIVObservationHIVCondition",
+    "version" : "0.1.0",
+    "name" : "HIVObservationHIVCondition"
+  },
+  {
+    "id" : "HIV.B.DE3",
+    "type" : "ValueSet",
+    "url" : "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/HIV.B.DE3",
+    "version" : "0.1.0",
+    "name" : "New Enrollment"
+  },
+  {
+    "id" : "HIV.D.DE5",
+    "type" : "ValueSet",
+    "url" : "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/HIV.D.DE5",
+    "version" : "0.1.0",
+    "name" : "Entry point for community-level testing"
+  },
+  {
+    "id" : "HIV.D.DE6",
+    "type" : "ValueSet",
+    "url" : "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/HIV.D.DE6",
+    "version" : "0.1.0",
+    "name" : "Entry point for facility-level testing"
+  },
+  {
+    "id" : "HIV.D.DE7",
+    "type" : "ValueSet",
+    "url" : "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/HIV.D.DE7",
+    "version" : "0.1.0",
+    "name" : "Test result"
+  },
+  {
+    "id" : "HIV.D.DE8",
+    "type" : "ValueSet",
+    "url" : "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/HIV.D.DE8",
+    "version" : "0.1.0",
+    "name" : "Test results received"
+  },
+  {
+    "id" : "HTS.setting",
+    "type" : "ValueSet",
+    "url" : "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/HTS.setting",
+    "version" : "0.1.0",
+    "name" : "HTS Setting"
+  },
+  {
+    "id" : "OnARV",
+    "type" : "ValueSet",
+    "url" : "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/OnARV",
+    "version" : "0.1.0",
+    "name" : "OnARV"
+  },
+  {
+    "id" : "entry.point",
+    "type" : "ValueSet",
+    "url" : "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/entry.point",
+    "version" : "0.1.0",
+    "name" : "Entry Point"
+  },
+  {
+    "id" : "transfer.in",
+    "type" : "ValueSet",
+    "url" : "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/transfer.in",
+    "version" : "0.1.0",
+    "name" : "Transfer in"
+  },
+  {
+    "id" : "tx-curr",
+    "type" : "CodeSystem",
+    "url" : "https://app.staging.openconceptlab.org/#/orgs/Kenya_SMART_Guidelines/sources/tx_curr",
+    "version" : "0.1.0",
+    "name" : "HIV-Indicators"
+  },
+  {
+    "id" : "EnrollmentMethodsforHIVProgram",
+    "type" : "ValueSet",
+    "url" : "https://path-global-health.github.io/MERindicators/ValueSet/EnrollmentMethodsforHIVProgram",
+    "version" : "0.1.0",
+    "name" : "EnrollmentMethodsforHIVProgram"
+  }
+]

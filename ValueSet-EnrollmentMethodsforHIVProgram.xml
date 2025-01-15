@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="EnrollmentMethodsforHIVProgram"/>
+  <meta>
+    <lastUpdated value="2023-09-01T14:06:03.742108Z"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet EnrollmentMethodsforHIVProgram</b></p><a name="EnrollmentMethodsforHIVProgram"> </a><a name="hcEnrollmentMethodsforHIVProgram"> </a><a name="EnrollmentMethodsforHIVProgram-en-US"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Last updated: 2023-09-01 14:06:03+0000</p></div><ul><li>Include all codes defined in <code>https://path-global-health.github.io/MERindicators/CodeSystem/EnrollmentMethods</code></li></ul></div>
+  </text>
+  <url value="https://path-global-health.github.io/MERindicators/ValueSet/EnrollmentMethodsforHIVProgram"/>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://hl7.org/fhir/v2/0203"/>
+        <code value="ACSN"/>
+        <display value="Accession ID"/>
+      </coding>
+      <text value="Accession ID"/>
+    </type>
+    <system value="https://api.staging.openconceptlab.org"/>
+    <value value="/orgs/Kenya_SMART_Guidelines/ValueSet/EnrollmentMethodsforHIVProgram/"/>
+  </identifier>
+  <version value="0.1.0"/>
+  <name value="EnrollmentMethodsforHIVProgram"/>
+  <title value="EnrollmentMethodsforHIVProgram"/>
+  <status value="draft"/>
+  <date value="2023-09-01T00:14:22Z"/>
+  <publisher value="intellisoftkenya"/>
+  <contact>
+    <name value="intellisoftkenya"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.intellisoftkenya.com/"/>
+    </telecom>
+  </contact>
+  <description value="1"/>
+  <compose>
+    <include>
+      <system value="https://path-global-health.github.io/MERindicators/CodeSystem/EnrollmentMethods"/>
+    </include>
+  </compose>
+</ValueSet>

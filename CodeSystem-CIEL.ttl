@@ -1,0 +1,2500 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/CodeSystem/CIEL> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "CIEL"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2024-06-10T13:12:40.540000Z"^^xsd:dateTime ]
+  ] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem CIEL</b></p><a name=\"CIEL\"> </a><a name=\"hcCIEL\"> </a><a name=\"CIEL-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2024-06-10 13:12:40+0000; Language: en</p></div><p><b>Properties</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class=\"grid\"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>URI</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>conceptclass</td><td>conceptclass</td><td>https://api.staging.openconceptlab.org/orgs/OCL/sources/Classes/concepts</td><td>string</td><td>Standard list of concept classes.</td></tr><tr><td>datatype</td><td>datatype</td><td>https://api.staging.openconceptlab.org/orgs/OCL/sources/Datatypes/concepts</td><td>string</td><td>Standard list of concept datatypes.</td></tr><tr><td>inactive</td><td>inactive</td><td>http://hl7.org/fhir/concept-properties</td><td>Coding</td><td>True if the concept is not considered active.</td></tr></table><p><b>Concepts</b></p><p>This case-insensitive code system <code>https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/CodeSystem/CIEL</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">1065<a name=\"CIEL-1065\"> </a></td><td>YES</td><td/></tr><tr><td style=\"white-space:nowrap\">1066<a name=\"CIEL-1066\"> </a></td><td>NO</td><td/></tr><tr><td style=\"white-space:nowrap\">1067<a name=\"CIEL-1067\"> </a></td><td>Unknown</td><td/></tr><tr><td style=\"white-space:nowrap\">1434<a name=\"CIEL-1434\"> </a></td><td>Currently pregnant</td><td/></tr><tr><td style=\"white-space:nowrap\">138405<a name=\"CIEL-138405\"> </a></td><td>Human immunodeficiency virus (HIV) disease</td><td/></tr><tr><td style=\"white-space:nowrap\">160119<a name=\"CIEL-160119\"> </a></td><td>CURRENTLY TAKING ARV</td><td/></tr><tr><td style=\"white-space:nowrap\">116128<a name=\"CIEL-116128\"> </a></td><td>Malaria</td><td/></tr><tr><td style=\"white-space:nowrap\">160540<a name=\"CIEL-160540\"> </a></td><td>Method of enrollment</td><td/></tr><tr><td style=\"white-space:nowrap\">160542<a name=\"CIEL-160542\"> </a></td><td>Outpatient department</td><td/></tr><tr><td style=\"white-space:nowrap\">1193<a name=\"CIEL-1193\"> </a></td><td>CURRENT DRUGS USED</td><td/></tr><tr><td style=\"white-space:nowrap\">5096<a name=\"CIEL-5096\"> </a></td><td>RETURN VISIT DATE</td><td/></tr><tr><td style=\"white-space:nowrap\">160104<a name=\"CIEL-160104\"> </a></td><td>Efavirenz / Lamivudine / Stavudine</td><td/></tr><tr><td style=\"white-space:nowrap\">160105<a name=\"CIEL-160105\"> </a></td><td>Efavirenz / Stavudine / Zidovudine</td><td/></tr><tr><td style=\"white-space:nowrap\">160124<a name=\"CIEL-160124\"> </a></td><td>Efavirenz / Lamivudine / Zidovudine</td><td/></tr><tr><td style=\"white-space:nowrap\">161361<a name=\"CIEL-161361\"> </a></td><td>efavirenz / lamivudine / tenofovir disoproxil</td><td/></tr><tr><td style=\"white-space:nowrap\">161363<a name=\"CIEL-161363\"> </a></td><td>lamivudine / stavudine</td><td/></tr><tr><td style=\"white-space:nowrap\">161364<a name=\"CIEL-161364\"> </a></td><td>Lamivudine / tenofovir disoproxil</td><td/></tr><tr><td style=\"white-space:nowrap\">1652<a name=\"CIEL-1652\"> </a></td><td>Lamivudine / nevirapine / zidovudine</td><td/></tr><tr><td style=\"white-space:nowrap\">5424<a name=\"CIEL-5424\"> </a></td><td>Other antiretroviral drug</td><td/></tr><tr><td style=\"white-space:nowrap\">5811<a name=\"CIEL-5811\"> </a></td><td>Unknown antiretroviral drug</td><td/></tr><tr><td style=\"white-space:nowrap\">630<a name=\"CIEL-630\"> </a></td><td>Lamivudine / zidovudine</td><td/></tr><tr><td style=\"white-space:nowrap\">103166<a name=\"CIEL-103166\"> </a></td><td>Abacavir / lamivudine</td><td/></tr><tr><td style=\"white-space:nowrap\">70056<a name=\"CIEL-70056\"> </a></td><td>Abacavir</td><td/></tr><tr><td style=\"white-space:nowrap\">71647<a name=\"CIEL-71647\"> </a></td><td>Atazanavir</td><td/></tr><tr><td style=\"white-space:nowrap\">74807<a name=\"CIEL-74807\"> </a></td><td>Didanosine</td><td/></tr><tr><td style=\"white-space:nowrap\">75523<a name=\"CIEL-75523\"> </a></td><td>Efavirenz</td><td/></tr><tr><td style=\"white-space:nowrap\">75628<a name=\"CIEL-75628\"> </a></td><td>Efavirenz</td><td/></tr><tr><td style=\"white-space:nowrap\">77995<a name=\"CIEL-77995\"> </a></td><td>Indinavir</td><td/></tr><tr><td style=\"white-space:nowrap\">78643<a name=\"CIEL-78643\"> </a></td><td>Lamivudine</td><td/></tr><tr><td style=\"white-space:nowrap\">79040<a name=\"CIEL-79040\"> </a></td><td>Lopinavir</td><td/></tr><tr><td style=\"white-space:nowrap\">792<a name=\"CIEL-792\"> </a></td><td>Lamivudine / nevirapine / stavudine</td><td/></tr><tr><td style=\"white-space:nowrap\">794<a name=\"CIEL-794\"> </a></td><td>Lopinavir / ritonavir</td><td/></tr><tr><td style=\"white-space:nowrap\">80487<a name=\"CIEL-80487\"> </a></td><td>Nelfinavir</td><td/></tr><tr><td style=\"white-space:nowrap\">80586<a name=\"CIEL-80586\"> </a></td><td>Nevirapine</td><td/></tr><tr><td style=\"white-space:nowrap\">83412<a name=\"CIEL-83412\"> </a></td><td>Ritonavir</td><td/></tr><tr><td style=\"white-space:nowrap\">84309<a name=\"CIEL-84309\"> </a></td><td>Stavudine</td><td/></tr><tr><td style=\"white-space:nowrap\">84795<a name=\"CIEL-84795\"> </a></td><td>Tenofovir</td><td/></tr><tr><td style=\"white-space:nowrap\">86663<a name=\"CIEL-86663\"> </a></td><td>Zidovudine</td><td/></tr><tr><td style=\"white-space:nowrap\">01234<a name=\"CIEL-01234\"> </a></td><td>Tenofovir / Lamivudine / Dolutegravir</td><td/></tr><tr><td style=\"white-space:nowrap\">9860127<a name=\"CIEL-9860127\"> </a></td><td>No</td><td>Generic answer to a question.</td></tr><tr><td style=\"white-space:nowrap\">9860131<a name=\"CIEL-9860131\"> </a></td><td>New client</td><td/></tr><tr><td style=\"white-space:nowrap\">9860133<a name=\"CIEL-9860133\"> </a></td><td>Transfer in date</td><td/></tr><tr><td style=\"white-space:nowrap\">9860135<a name=\"CIEL-9860135\"> </a></td><td>Transit patient</td><td>A patient who is being seen outside of their regular care setting temporarily to receive medication refills, etc.</td></tr><tr><td style=\"white-space:nowrap\">9860137<a name=\"CIEL-9860137\"> </a></td><td>re-enroll</td><td/></tr><tr><td style=\"white-space:nowrap\">9860143<a name=\"CIEL-9860143\"> </a></td><td>Treatment end date</td><td/></tr><tr><td style=\"white-space:nowrap\">9860145<a name=\"CIEL-9860145\"> </a></td><td>Transferred out</td><td>Patient transferred out to other services</td></tr><tr><td style=\"white-space:nowrap\">9860147<a name=\"CIEL-9860147\"> </a></td><td>Died</td><td/></tr><tr><td style=\"white-space:nowrap\">9860151<a name=\"CIEL-9860151\"> </a></td><td>Treatment interrupted/stopped</td><td/></tr><tr><td style=\"white-space:nowrap\">9860153<a name=\"CIEL-9860153\"> </a></td><td>ARV regimen/code for drugs collected</td><td/></tr><tr><td style=\"white-space:nowrap\">9860155<a name=\"CIEL-9860155\"> </a></td><td>Antiretroviral treatment start date</td><td>When were the antiretroviral drugs started for the patient?</td></tr><tr><td style=\"white-space:nowrap\">9860157<a name=\"CIEL-9860157\"> </a></td><td>Toxicity, drug</td><td>Adverse reaction to a drug (oral, parenteral, topical).</td></tr><tr><td style=\"white-space:nowrap\">9860159<a name=\"CIEL-9860159\"> </a></td><td>Regimen failure</td><td>Failure of a therapy or treatment to achieve its end points.</td></tr><tr><td style=\"white-space:nowrap\">9860161<a name=\"CIEL-9860161\"> </a></td><td>Cannot afford treatment</td><td>Patient unable to pay for treatment.</td></tr><tr><td style=\"white-space:nowrap\">9860163<a name=\"CIEL-9860163\"> </a></td><td>Isoniazid / pyrazinamide / rifampin</td><td>Combination drug also known as Rifater.  Used in the early treatment of tuberculosis.</td></tr><tr><td style=\"white-space:nowrap\">9860165<a name=\"CIEL-9860165\"> </a></td><td>Weight change</td><td>Alteration in a patient's weight.  Could represent either a weight gain or loss.</td></tr><tr><td style=\"white-space:nowrap\">9860167<a name=\"CIEL-9860167\"> </a></td><td>Unknown</td><td>Generic answer to a question.</td></tr><tr><td style=\"white-space:nowrap\">9860169<a name=\"CIEL-9860169\"> </a></td><td>Ethambutol and isoniazid</td><td>Combination drug used to treat tuberculosis, often used with other drugs.  It's also known as Ethizide.</td></tr><tr><td style=\"white-space:nowrap\">9860171<a name=\"CIEL-9860171\"> </a></td><td>Rifampicin isoniazid pyrazinamide and ethambutol</td><td>Fixed-dose combination drug used to treat tuberculosis.  Also known as Rifafour.</td></tr><tr><td style=\"white-space:nowrap\">9860173<a name=\"CIEL-9860173\"> </a></td><td>Reason antiretrovirals stopped</td><td>Question on encounter form.  Part of the plan gathers a reason for stopping ARVs.  This concept captures that information.</td></tr><tr><td style=\"white-space:nowrap\">9860175<a name=\"CIEL-9860175\"> </a></td><td>Tuberculosis treatment started</td><td>Part of the encounter form plan. Answers are drugs started at the end of the particular encounter.</td></tr><tr><td style=\"white-space:nowrap\">9860177<a name=\"CIEL-9860177\"> </a></td><td>Change formulation</td><td>Answer on encounter form.  Implies that a patient's current drugs will be changed to meet a new formulation.</td></tr><tr><td style=\"white-space:nowrap\">9860179<a name=\"CIEL-9860179\"> </a></td><td>Completed total PMTCT</td><td>Answer to question.  Implies that a person completed a course of total prevention of mother to child transmission therapy.</td></tr><tr><td style=\"white-space:nowrap\">9860181<a name=\"CIEL-9860181\"> </a></td><td>Rifampicin and isoniazid</td><td>Combination drug also known as Rifinah. Used in the early treatment of tuberculosis.</td></tr><tr><td style=\"white-space:nowrap\">9860183<a name=\"CIEL-9860183\"> </a></td><td>Currently pregnant</td><td/></tr><tr><td style=\"white-space:nowrap\">9860185<a name=\"CIEL-9860185\"> </a></td><td>Medications unavailable</td><td>Drugs/medications unavailable for use to treat patient. A reason for not receiving/taking medications.</td></tr><tr><td style=\"white-space:nowrap\">9860187<a name=\"CIEL-9860187\"> </a></td><td>Inpatient care or hospitalization</td><td>none</td></tr><tr><td style=\"white-space:nowrap\">9860189<a name=\"CIEL-9860189\"> </a></td><td>Other</td><td>A generic, descriptive answer which is a handwritten, non-coded response to a question.</td></tr><tr><td style=\"white-space:nowrap\">9860191<a name=\"CIEL-9860191\"> </a></td><td>Isoniazid</td><td>A crystalline antibacterial compound (C6H7N3O) used in the treatment of tuberculosis. </td></tr><tr><td style=\"white-space:nowrap\">9860193<a name=\"CIEL-9860193\"> </a></td><td>Ethambutol</td><td>Anti-mycobaterial drug used to treat active tuberculosis. Always used with other antimycobacterial agents.</td></tr><tr><td style=\"white-space:nowrap\">9860195<a name=\"CIEL-9860195\"> </a></td><td>Streptomycin</td><td/></tr><tr><td style=\"white-space:nowrap\">9860197<a name=\"CIEL-9860197\"> </a></td><td>Pyrazinamide</td><td>Antituberculosis agent used to treat patients with active tuberculosis, usually in combination with other agents.</td></tr><tr><td style=\"white-space:nowrap\">9860199<a name=\"CIEL-9860199\"> </a></td><td>Refusal of treatment by patient</td><td>Patient or client refusal of or resistance to medical, psychological, or psychiatric treatment. (APA, Thesaurus of Psychological Index Terms, 8th ed.)</td></tr><tr><td style=\"white-space:nowrap\">9860201<a name=\"CIEL-9860201\"> </a></td><td>Planned treatment interruption</td><td/></tr><tr><td style=\"white-space:nowrap\">9860203<a name=\"CIEL-9860203\"> </a></td><td>Non-compliance with treatment or therapy</td><td>Not following the prescribed course of therapy or not taking prescribed medicines.</td></tr><tr><td style=\"white-space:nowrap\">9860205<a name=\"CIEL-9860205\"> </a></td><td>Treatment never started - patient refused</td><td/></tr><tr><td style=\"white-space:nowrap\">9860207<a name=\"CIEL-9860207\"> </a></td><td>Other patient decision</td><td/></tr><tr><td style=\"white-space:nowrap\">9860209<a name=\"CIEL-9860209\"> </a></td><td>Patient age</td><td>Generic answer to a question.  For example, a patient stops a medication because of his or her age.</td></tr><tr><td style=\"white-space:nowrap\">9860211<a name=\"CIEL-9860211\"> </a></td><td>Gender identity</td><td/></tr><tr><td style=\"white-space:nowrap\">9860213<a name=\"CIEL-9860213\"> </a></td><td>Identifies as male gender</td><td/></tr><tr><td style=\"white-space:nowrap\">9860215<a name=\"CIEL-9860215\"> </a></td><td>Identifies as female gender</td><td/></tr><tr><td style=\"white-space:nowrap\">9860217<a name=\"CIEL-9860217\"> </a></td><td>Male to female transsexual</td><td/></tr><tr><td style=\"white-space:nowrap\">9860219<a name=\"CIEL-9860219\"> </a></td><td>Female to male transsexual</td><td/></tr><tr><td style=\"white-space:nowrap\">9860221<a name=\"CIEL-9860221\"> </a></td><td>Identifies as non-binary gender</td><td/></tr><tr><td style=\"white-space:nowrap\">9860223<a name=\"CIEL-9860223\"> </a></td><td>Female gender</td><td/></tr><tr><td style=\"white-space:nowrap\">9860225<a name=\"CIEL-9860225\"> </a></td><td>Restart medication</td><td/></tr><tr><td style=\"white-space:nowrap\">9860227<a name=\"CIEL-9860227\"> </a></td><td>Currently breastfeeding child</td><td>Question on encounter form: &quot;Is the child currently being breastfed?&quot;</td></tr><tr><td style=\"white-space:nowrap\">9860229<a name=\"CIEL-9860229\"> </a></td><td>New patient identifier</td><td>Link to new patient identifier if patient has transferred out of facility</td></tr><tr><td style=\"white-space:nowrap\">9860231<a name=\"CIEL-9860231\"> </a></td><td>Reason for lost to follow up</td><td>Why the patient did not follow up with the health care?</td></tr><tr><td style=\"white-space:nowrap\">9860233<a name=\"CIEL-9860233\"> </a></td><td>Health facility</td><td/></tr><tr><td style=\"white-space:nowrap\">9860235<a name=\"CIEL-9860235\"> </a></td><td>Community</td><td>People with whom the client lives in the same geographical area or neighborhood</td></tr><tr><td style=\"white-space:nowrap\">9860237<a name=\"CIEL-9860237\"> </a></td><td>mobile voluntary counseling and testing program</td><td/></tr><tr><td style=\"white-space:nowrap\">9860239<a name=\"CIEL-9860239\"> </a></td><td>Home based HIV testing program</td><td/></tr><tr><td style=\"white-space:nowrap\">9860241<a name=\"CIEL-9860241\"> </a></td><td>HIV positive</td><td>Includes the spectrum of human immunodeficiency virus infections that range from asymptomatic seropositivity, thru AIDS-related complex (ARC), to acquired immunodeficiency syndrome (AIDS).</td></tr><tr><td style=\"white-space:nowrap\">9860243<a name=\"CIEL-9860243\"> </a></td><td>Negative</td><td>Response to a finding or test result.</td></tr><tr><td style=\"white-space:nowrap\">9921831<a name=\"CIEL-9921831\"> </a></td><td>HIV program end date</td><td>Question on encounter form. The date the patient was removed from the HIV program.</td></tr><tr><td style=\"white-space:nowrap\">5240<a name=\"CIEL-5240\"> </a></td><td>Lost to followup</td><td>Patients that are lost to followup.. boolean question.</td></tr></table><p><b>Additional Language Displays</b></p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Bengali (bn)</b></td><td><b>Spanish (es)</b></td><td><b>French (fr)</b></td><td><b>ht</b></td><td><b>id</b></td><td><b>Italian (it)</b></td><td><b>km</b></td><td><b>ne</b></td><td><b>Portuguese (pt)</b></td><td><b>Русский (Russian, ru)</b></td><td><b>rw</b></td><td><b>sw</b></td><td><b>ti</b></td><td><b>ur</b></td><td><b>vi</b></td></tr><tr><td>1065</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>1066</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>1067</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>1434</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>138405</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>160119</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>116128</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>160540</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>160542</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>1193</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>5096</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>160104</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>160105</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>160124</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>161361</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>161363</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>161364</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>1652</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>5424</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>5811</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>630</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>103166</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>70056</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>71647</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>74807</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>75523</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>75628</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>77995</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>78643</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>79040</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>792</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>794</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>80487</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>80586</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>83412</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>84309</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>84795</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>86663</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>01234</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860127</td><td>না</td><td>No</td><td>Non</td><td>Fo</td><td></td><td>Falso</td><td>ទេ</td><td>हुँदैन</td><td>Falso</td><td>Нет</td><td>Muzima</td><td></td><td>ኣይትጥቀምን</td><td>نہیں</td><td></td></tr><tr><td>9860131</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860133</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860135</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860137</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860143</td><td></td><td>Fecha en la que se suspendió el tratamiento</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860145</td><td></td><td></td><td>Reféré vers</td><td>Transfere deyò</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860147</td><td></td><td>Muerte</td><td>Dècédé	</td><td>mouri</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860151</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860153</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860155</td><td></td><td></td><td>Date de début des antirétroviraux</td><td>Antiretwoviral tretman dat kòmansman</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860157</td><td></td><td>toxicidad por droga</td><td>Toxicité au médicaments</td><td>Medikaman toksik</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860159</td><td></td><td>Falla de tratamiento</td><td>Échec du traitement</td><td>Echek rejim</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860161</td><td></td><td>No puede costear el tratamiento</td><td>Pouvez pas offrir un traitement</td><td>Pa kapab peye tretman</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860163</td><td></td><td>Rifampicina, isoniazida y pirazinamida</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860165</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860167</td><td>জানিনা</td><td>Desconocida</td><td>Inconnu</td><td>Enkoni</td><td></td><td></td><td>មិនដឹង</td><td></td><td></td><td>Не известно</td><td>Ntabizi</td><td>Haijulikani</td><td></td><td>معلوم نہیں</td><td></td></tr><tr><td>9860169</td><td></td><td>Clorhidrato de etambutol+isoniazida</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860171</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860173</td><td></td><td></td><td>Antirétroviraux raison d'arrêt</td><td>Rezon dwog antiretwoviral te sispann</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860175</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860177</td><td></td><td></td><td>Changement de formulation</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860179</td><td></td><td></td><td>Traitement PTME complete</td><td>Fini ak PTME</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860181</td><td></td><td>Rifampicina e isoniazida</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860183</td><td></td><td>Actualmente embarazada</td><td>Femme enceinte</td><td>Fanm ensent</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>Ujauzito wa sasa</td><td></td><td></td><td></td></tr><tr><td>9860185</td><td></td><td>Fármaco no disponible - no hay reserva</td><td>Médicaments non disponibles</td><td>Medikaman pa disponib</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860187</td><td></td><td>Cuidado de paciente hospitalizado</td><td>Patient hospitalisé</td><td>Entène lopital</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860189</td><td></td><td>Otro no codificado</td><td>Autre et non codé</td><td>Lòt ki pa-kode</td><td></td><td></td><td>ផ្សេងៗ</td><td>अन्य</td><td></td><td></td><td></td><td>Nyinginezo</td><td></td><td></td><td></td></tr><tr><td>9860191</td><td></td><td>Ácido isonicotínco hidrazina</td><td>Isoniazid</td><td>Isoniazid</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860193</td><td></td><td>Etambutol</td><td>Ethambutol</td><td>Ethambutol</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>Ethambutol</td></tr><tr><td>9860195</td><td></td><td>Estreptomicina</td><td>Streptomycine	</td><td>Streptomysin</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860197</td><td></td><td>Amida de ácido pirazinoico</td><td>Pyrazinamide</td><td>Pyrazinamide</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860199</td><td></td><td>rechazo del tratamiento por el paciente</td><td>Refus de traitement par le patient</td><td>Pasyan pa vle pran medikaman</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860201</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860203</td><td></td><td>Adherencia del paciente nula - general</td><td>Le non-respect d'un traitement ou d'une thérapie</td><td>Ki pa konfòm avèk tretman oswa terapi</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860205</td><td></td><td></td><td>Traitement jamais commencer - patient refus</td><td>Tretman pa janm kòmanse - pasyan refize</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860207</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860209</td><td></td><td>Edad del paciente</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860211</td><td></td><td>Identidad de género</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860213</td><td></td><td>Identidad masculina</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860215</td><td></td><td>Identidad femenina</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860217</td><td></td><td>Transexual, mujer a hombre</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860219</td><td></td><td>Cirugía intersexual, conversión de sexo femenino a sexo masculino</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860221</td><td></td><td>Identidad de género no binario</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860223</td><td></td><td>Mujer</td><td>Sexe féminin</td><td>Sèks fi</td><td></td><td></td><td>ស្រី</td><td></td><td></td><td>Женщины</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860225</td><td></td><td>Reinicio de la medicación</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860227</td><td></td><td>Amamantamiento (madre)</td><td>Allaite actuellement</td><td>Ap bay tete nan moman a</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860229</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860231</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860233</td><td></td><td>Institución sanitaria</td><td>Centre médical</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860235</td><td></td><td>Comunidad (contexto social)</td><td></td><td></td><td>Masyarakat</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860237</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860239</td><td></td><td></td><td>Programme de dépistage du VIH à domicile</td><td>Pwogram tès VIH sante kominote</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860241</td><td></td><td>virus de la inmunodeficiencia humana positivo</td><td>Virus de l'immunodéficience humaine positif</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>Tích cực HIV</td></tr><tr><td>9860243</td><td></td><td>(-)</td><td>Négatif</td><td>Négatif</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>Hasi</td><td></td><td></td><td></td></tr><tr><td>9921831</td><td></td><td></td><td>Date de fin du programme VIH</td><td>Dat fini ak pwogram VIH</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>5240</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/CodeSystem/CIEL"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/v2/0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "ACSN" ] ;
+         fhir:display [ fhir:v "Accession ID" ]
+       ] ) ;
+       fhir:text [ fhir:v "Accession ID" ]
+     ] ;
+     fhir:system [ fhir:v "https://api.staging.openconceptlab.org"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "/orgs/Kenya_SMART_Guidelines/CodeSystem/CIEL/" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "CIEL"] ; # 
+  fhir:title [ fhir:v "CIEL"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2025-01-15T14:05:09+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "intellisoftkenya"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "intellisoftkenya" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.intellisoftkenya.com/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "0.1.1"] ; # 
+  fhir:caseSensitive [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "97"^^xsd:nonNegativeInteger] ; # 
+  fhir:property ( [
+     fhir:code [ fhir:v "conceptclass" ] ;
+     fhir:uri [ fhir:v "https://api.staging.openconceptlab.org/orgs/OCL/sources/Classes/concepts"^^xsd:anyURI ] ;
+     fhir:description [ fhir:v "Standard list of concept classes." ] ;
+     fhir:type [ fhir:v "string" ]
+  ] [
+     fhir:code [ fhir:v "datatype" ] ;
+     fhir:uri [ fhir:v "https://api.staging.openconceptlab.org/orgs/OCL/sources/Datatypes/concepts"^^xsd:anyURI ] ;
+     fhir:description [ fhir:v "Standard list of concept datatypes." ] ;
+     fhir:type [ fhir:v "string" ]
+  ] [
+     fhir:code [ fhir:v "inactive" ] ;
+     fhir:uri [ fhir:v "http://hl7.org/fhir/concept-properties"^^xsd:anyURI ] ;
+     fhir:description [ fhir:v "True if the concept is not considered active." ] ;
+     fhir:type [ fhir:v "Coding" ]
+  ] ) ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "1065" ] ;
+     fhir:display [ fhir:v "YES" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "YES" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "1066" ] ;
+     fhir:display [ fhir:v "NO" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "NO" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "1067" ] ;
+     fhir:display [ fhir:v "Unknown" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Unknown" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "1434" ] ;
+     fhir:display [ fhir:v "Currently pregnant" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Currently pregnant" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "138405" ] ;
+     fhir:display [ fhir:v "Human immunodeficiency virus (HIV) disease" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Human immunodeficiency virus (HIV) disease" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "160119" ] ;
+     fhir:display [ fhir:v "CURRENTLY TAKING ARV" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "CURRENTLY TAKING ARV" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "116128" ] ;
+     fhir:display [ fhir:v "Malaria" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Malaria" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "160540" ] ;
+     fhir:display [ fhir:v "Method of enrollment" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Method of enrollment" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "160542" ] ;
+     fhir:display [ fhir:v "Outpatient department" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Outpatient department" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "1193" ] ;
+     fhir:display [ fhir:v "CURRENT DRUGS USED" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "CURRENT DRUGS USED" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "5096" ] ;
+     fhir:display [ fhir:v "RETURN VISIT DATE" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "RETURN VISIT DATE" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "160104" ] ;
+     fhir:display [ fhir:v "Efavirenz / Lamivudine / Stavudine" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Efavirenz / Lamivudine / Stavudine" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "160105" ] ;
+     fhir:display [ fhir:v "Efavirenz / Stavudine / Zidovudine" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Efavirenz / Stavudine / Zidovudine" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "160124" ] ;
+     fhir:display [ fhir:v "Efavirenz / Lamivudine / Zidovudine" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Efavirenz / Lamivudine / Zidovudine" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "161361" ] ;
+     fhir:display [ fhir:v "efavirenz / lamivudine / tenofovir disoproxil" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "efavirenz / lamivudine / tenofovir disoproxil" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "161363" ] ;
+     fhir:display [ fhir:v "lamivudine / stavudine" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "lamivudine / stavudine" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "161364" ] ;
+     fhir:display [ fhir:v "Lamivudine / tenofovir disoproxil" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Lamivudine / tenofovir disoproxil" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "1652" ] ;
+     fhir:display [ fhir:v "Lamivudine / nevirapine / zidovudine" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Lamivudine / nevirapine / zidovudine" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "5424" ] ;
+     fhir:display [ fhir:v "Other antiretroviral drug" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Other antiretroviral drug" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "5811" ] ;
+     fhir:display [ fhir:v "Unknown antiretroviral drug" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Unknown antiretroviral drug" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "630" ] ;
+     fhir:display [ fhir:v "Lamivudine / zidovudine" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Lamivudine / zidovudine" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "103166" ] ;
+     fhir:display [ fhir:v "Abacavir / lamivudine" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Abacavir / lamivudine" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "70056" ] ;
+     fhir:display [ fhir:v "Abacavir" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Abacavir" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "71647" ] ;
+     fhir:display [ fhir:v "Atazanavir" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Atazanavir" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "74807" ] ;
+     fhir:display [ fhir:v "Didanosine" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Didanosine" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "75523" ] ;
+     fhir:display [ fhir:v "Efavirenz" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Efavirenz" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "75628" ] ;
+     fhir:display [ fhir:v "Efavirenz" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Efavirenz" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "77995" ] ;
+     fhir:display [ fhir:v "Indinavir" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Indinavir" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "78643" ] ;
+     fhir:display [ fhir:v "Lamivudine" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Lamivudine" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "79040" ] ;
+     fhir:display [ fhir:v "Lopinavir" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Lopinavir" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "792" ] ;
+     fhir:display [ fhir:v "Lamivudine / nevirapine / stavudine" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Lamivudine / nevirapine / stavudine" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "794" ] ;
+     fhir:display [ fhir:v "Lopinavir / ritonavir" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Lopinavir / ritonavir" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "80487" ] ;
+     fhir:display [ fhir:v "Nelfinavir" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Nelfinavir" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "80586" ] ;
+     fhir:display [ fhir:v "Nevirapine" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Nevirapine" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "83412" ] ;
+     fhir:display [ fhir:v "Ritonavir" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Ritonavir" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "84309" ] ;
+     fhir:display [ fhir:v "Stavudine" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Stavudine" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "84795" ] ;
+     fhir:display [ fhir:v "Tenofovir" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Tenofovir" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "86663" ] ;
+     fhir:display [ fhir:v "Zidovudine" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Zidovudine" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "01234" ] ;
+     fhir:display [ fhir:v "Tenofovir / Lamivudine / Dolutegravir" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Tenofovir / Lamivudine / Dolutegravir" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860127" ] ;
+     fhir:display [ fhir:v "No" ] ;
+     fhir:definition [ fhir:v "Generic answer to a question." ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "ru" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Нет" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "False" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:value [ fhir:v "Faux" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Falso" ]
+     ] [
+       fhir:language [ fhir:v "it" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "No" ]
+     ] [
+       fhir:language [ fhir:v "it" ] ;
+       fhir:value [ fhir:v "Falso" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Não" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Falso" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "No" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Non" ]
+     ] [
+       fhir:language [ fhir:v "rw" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Muzima" ]
+     ] [
+       fhir:language [ fhir:v "ti" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "ኣይትጥቀምን" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "No" ]
+     ] [
+       fhir:language [ fhir:v "bn" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "না" ]
+     ] [
+       fhir:language [ fhir:v "ht" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Non" ]
+     ] [
+       fhir:language [ fhir:v "ht" ] ;
+       fhir:value [ fhir:v "Fo" ]
+     ] [
+       fhir:language [ fhir:v "ur" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "نہیں" ]
+     ] [
+       fhir:language [ fhir:v "km" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "ទេ" ]
+     ] [
+       fhir:language [ fhir:v "ne" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "हुँदैन" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860131" ] ;
+     fhir:display [ fhir:v "New client" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "New client" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "New patient" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Question" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "Coded" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860133" ] ;
+     fhir:display [ fhir:v "Transfer in date" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Transfer in date" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Question" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "Date" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860135" ] ;
+     fhir:display [ fhir:v "Transit patient" ] ;
+     fhir:definition [ fhir:v "A patient who is being seen outside of their regular care setting temporarily to receive medication refills, etc." ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Transient patient" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Transit patient" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860137" ] ;
+     fhir:display [ fhir:v "re-enroll" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "re-enroll" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860143" ] ;
+     fhir:display [ fhir:v "Treatment end date" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Date treatment stopped" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Treatment end date" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Fecha en la que se suspendió el tratamiento" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Question" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "Date" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860145" ] ;
+     fhir:display [ fhir:v "Transferred out" ] ;
+     fhir:definition [ fhir:v "Patient transferred out to other services" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Transferred out" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Transférer au" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:value [ fhir:v "Reféré vers" ]
+     ] [
+       fhir:language [ fhir:v "ht" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Transfere deyò" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860147" ] ;
+     fhir:display [ fhir:v "Died" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Died" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Muerte" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Dècédé	" ]
+     ] [
+       fhir:language [ fhir:v "ht" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "mouri" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "State" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860151" ] ;
+     fhir:display [ fhir:v "Treatment interrupted/stopped" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Treatment interrupted/stopped" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Finding" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860153" ] ;
+     fhir:display [ fhir:v "ARV regimen/code for drugs collected" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "ARV regimen/code for drugs collected" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "ARV regimen/code for drugs dispensed" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Finding" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "Coded" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860155" ] ;
+     fhir:display [ fhir:v "Antiretroviral treatment start date" ] ;
+     fhir:definition [ fhir:v "When were the antiretroviral drugs started for the patient?" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Antiretroviral treatment start date" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "SHORT" ]
+       ] ;
+       fhir:value [ fhir:v "ARV start date" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "ART start date" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Date de début des antirétroviraux" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Date antiretrovirals started" ]
+     ] [
+       fhir:language [ fhir:v "ht" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Antiretwoviral tretman dat kòmansman" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Finding" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "Date" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860157" ] ;
+     fhir:display [ fhir:v "Toxicity, drug" ] ;
+     fhir:definition [ fhir:v "Adverse reaction to a drug (oral, parenteral, topical)." ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Toxicity, drug" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "efecto adverso" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Drug poisoning" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Drug toxicity" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "toxicidad por droga" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Toxicité au médicaments" ]
+     ] [
+       fhir:language [ fhir:v "ht" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Medikaman toksik" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Diagnosis" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860159" ] ;
+     fhir:display [ fhir:v "Regimen failure" ] ;
+     fhir:definition [ fhir:v "Failure of a therapy or treatment to achieve its end points." ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Regimen failure" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Échec du traitement" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Falla de tratamiento" ]
+     ] [
+       fhir:language [ fhir:v "ht" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Echek rejim" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Finding" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860161" ] ;
+     fhir:display [ fhir:v "Cannot afford treatment" ] ;
+     fhir:definition [ fhir:v "Patient unable to pay for treatment." ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Cannot afford treatment" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "No puede costear el tratamiento" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Pouvez pas offrir un traitement" ]
+     ] [
+       fhir:language [ fhir:v "ht" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Pa kapab peye tretman" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Finding" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860163" ] ;
+     fhir:display [ fhir:v "Isoniazid / pyrazinamide / rifampin" ] ;
+     fhir:definition [ fhir:v "Combination drug also known as Rifater.  Used in the early treatment of tuberculosis." ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Isoniazid / pyrazinamide / rifampin" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Rifater" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Rifampicin isoniazid and pyrazinamide" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Rifampicina+isoniazida+pirazinamida" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Rifampicina, isoniazida y pirazinamida" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Drug" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860165" ] ;
+     fhir:display [ fhir:v "Weight change" ] ;
+     fhir:definition [ fhir:v "Alteration in a patient's weight.  Could represent either a weight gain or loss." ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Weight change" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Finding" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860167" ] ;
+     fhir:display [ fhir:v "Unknown" ] ;
+     fhir:definition [ fhir:v "Generic answer to a question." ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Unknown" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Ne sait pas" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:value [ fhir:v "Inconnu" ]
+     ] [
+       fhir:language [ fhir:v "rw" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Ntabizi" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Desconocido" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Desconocida" ]
+     ] [
+       fhir:language [ fhir:v "sw" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Haijulikani" ]
+     ] [
+       fhir:language [ fhir:v "ru" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Не известно" ]
+     ] [
+       fhir:language [ fhir:v "bn" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "জানিনা" ]
+     ] [
+       fhir:language [ fhir:v "ht" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Enkoni" ]
+     ] [
+       fhir:language [ fhir:v "ur" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "معلوم نہیں" ]
+     ] [
+       fhir:language [ fhir:v "km" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "មិនដឹង" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860169" ] ;
+     fhir:display [ fhir:v "Ethambutol and isoniazid" ] ;
+     fhir:definition [ fhir:v "Combination drug used to treat tuberculosis, often used with other drugs.  It's also known as Ethizide." ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Ethambutol and isoniazid" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Ethizide" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "SHORT" ]
+       ] ;
+       fhir:value [ fhir:v "Ethambutol / isoniazid" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Clorhidrato de etambutol+isoniazida" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Drug" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860171" ] ;
+     fhir:display [ fhir:v "Rifampicin isoniazid pyrazinamide and ethambutol" ] ;
+     fhir:definition [ fhir:v "Fixed-dose combination drug used to treat tuberculosis.  Also known as Rifafour." ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Rifampicin isoniazid pyrazinamide and ethambutol" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Rifafour" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Drug" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860173" ] ;
+     fhir:display [ fhir:v "Reason antiretrovirals stopped" ] ;
+     fhir:definition [ fhir:v "Question on encounter form.  Part of the plan gathers a reason for stopping ARVs.  This concept captures that information." ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Reason antiretrovirals stopped" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Antirétroviraux raison d'arrêt" ]
+     ] [
+       fhir:language [ fhir:v "ht" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Rezon dwog antiretwoviral te sispann" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Reason ARVs stopped" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Question" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "Coded" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860175" ] ;
+     fhir:display [ fhir:v "Tuberculosis treatment started" ] ;
+     fhir:definition [ fhir:v "Part of the encounter form plan. Answers are drugs started at the end of the particular encounter." ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Tuberculosis treatment started" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Question" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "Coded" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860177" ] ;
+     fhir:display [ fhir:v "Change formulation" ] ;
+     fhir:definition [ fhir:v "Answer on encounter form.  Implies that a patient's current drugs will be changed to meet a new formulation." ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Change formulation" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Changement de formulation" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc Order" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860179" ] ;
+     fhir:display [ fhir:v "Completed total PMTCT" ] ;
+     fhir:definition [ fhir:v "Answer to question.  Implies that a person completed a course of total prevention of mother to child transmission therapy." ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Completed total PMTCT" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Traitement PTME complete" ]
+     ] [
+       fhir:language [ fhir:v "ht" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Fini ak PTME" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Finding" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860181" ] ;
+     fhir:display [ fhir:v "Rifampicin and isoniazid" ] ;
+     fhir:definition [ fhir:v "Combination drug also known as Rifinah. Used in the early treatment of tuberculosis." ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Rifampicin and isoniazid" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Rifinah" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Rifampicina+isoniazida" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Rifampicina e isoniazida" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Drug" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860183" ] ;
+     fhir:display [ fhir:v "Currently pregnant" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Currently pregnant" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Femme enceinte" ]
+     ] [
+       fhir:language [ fhir:v "sw" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Ujauzito wa sasa" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "SHORT" ]
+       ] ;
+       fhir:value [ fhir:v "Currently pregnant" ]
+     ] [
+       fhir:language [ fhir:v "ht" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Fanm ensent" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Embarazo confirmado" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Paciente actualmente embarazada" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Embarazada" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Actualmente embarazada" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Finding" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "Boolean" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860185" ] ;
+     fhir:display [ fhir:v "Medications unavailable" ] ;
+     fhir:definition [ fhir:v "Drugs/medications unavailable for use to treat patient. A reason for not receiving/taking medications." ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Medications unavailable" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "SHORT" ]
+       ] ;
+       fhir:value [ fhir:v "Meds Unavailable" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Drugs unavailable" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Médicaments non disponibles" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Drugs out of stock" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Medications out of stock" ]
+     ] [
+       fhir:language [ fhir:v "ht" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Medikaman pa disponib" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Fármaco no disponible - no hay reserva" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Question" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "Coded" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860187" ] ;
+     fhir:display [ fhir:v "Inpatient care or hospitalization" ] ;
+     fhir:definition [ fhir:v "none" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Inpatient care or hospitalization" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Patient hospitalisé" ]
+     ] [
+       fhir:language [ fhir:v "ht" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Entène lopital" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Cuidado de paciente hospitalizado" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc Order" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860189" ] ;
+     fhir:display [ fhir:v "Other" ] ;
+     fhir:definition [ fhir:v "A generic, descriptive answer which is a handwritten, non-coded response to a question." ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Other non-coded" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:value [ fhir:v "Autre" ]
+     ] [
+       fhir:language [ fhir:v "sw" ] ;
+       fhir:value [ fhir:v "Nyinginezo" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Otro no codificado" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Other" ]
+     ] [
+       fhir:language [ fhir:v "ht" ] ;
+       fhir:value [ fhir:v "Lòt" ]
+     ] [
+       fhir:language [ fhir:v "ht" ] ;
+       fhir:value [ fhir:v "LÒT SAN-KÒD" ]
+     ] [
+       fhir:language [ fhir:v "ht" ] ;
+       fhir:value [ fhir:v "Lòt ki pa-kode" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:value [ fhir:v "Autre et non codé" ]
+     ] [
+       fhir:language [ fhir:v "km" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "ផ្សេងៗ" ]
+     ] [
+       fhir:language [ fhir:v "ne" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "अन्य" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860191" ] ;
+     fhir:display [ fhir:v "Isoniazid" ] ;
+     fhir:definition [ fhir:v "A crystalline antibacterial compound (C6H7N3O) used in the treatment of tuberculosis. " ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Isoniazid" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Nydrazid" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Soniazio" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Tubizid" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "SHORT" ]
+       ] ;
+       fhir:value [ fhir:v "INH" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Isoniazid" ]
+     ] [
+       fhir:language [ fhir:v "ht" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "izoniazid" ]
+     ] [
+       fhir:language [ fhir:v "ht" ] ;
+       fhir:value [ fhir:v "Isoniazid" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Isoniacida" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Isoniazida" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Isonicotinilhidrazina" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Ácido isonicotínco hidrazina" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Drug" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860193" ] ;
+     fhir:display [ fhir:v "Ethambutol" ] ;
+     fhir:definition [ fhir:v "Anti-mycobaterial drug used to treat active tuberculosis. Always used with other antimycobacterial agents." ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Ethambutol" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Myambutol" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "SHORT" ]
+       ] ;
+       fhir:value [ fhir:v "E" ]
+     ] [
+       fhir:language [ fhir:v "vi" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Ethambutol" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Ethambutol" ]
+     ] [
+       fhir:language [ fhir:v "ht" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Ethambutol" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Etambutol" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Drug" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860195" ] ;
+     fhir:display [ fhir:v "Streptomycin" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Streptomycin" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "SHORT" ]
+       ] ;
+       fhir:value [ fhir:v "S" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Streptomycine	" ]
+     ] [
+       fhir:language [ fhir:v "ht" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Streptomysin" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Estreptomicina" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Drug" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860197" ] ;
+     fhir:display [ fhir:v "Pyrazinamide" ] ;
+     fhir:definition [ fhir:v "Antituberculosis agent used to treat patients with active tuberculosis, usually in combination with other agents." ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Pyrazinamide" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "SHORT" ]
+       ] ;
+       fhir:value [ fhir:v "Z" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Pyrazinamide" ]
+     ] [
+       fhir:language [ fhir:v "ht" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Pyrazinamide" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Pirazinamida" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Amida de ácido pirazinoico" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Drug" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860199" ] ;
+     fhir:display [ fhir:v "Refusal of treatment by patient" ] ;
+     fhir:definition [ fhir:v "Patient or client refusal of or resistance to medical, psychological, or psychiatric treatment. (APA, Thesaurus of Psychological Index Terms, 8th ed.)" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Refusal of treatment by patient" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "rechazo del tratamiento por el paciente" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Refus de traitement par le patient" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Patient refused treatment" ]
+     ] [
+       fhir:language [ fhir:v "ht" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Pasyan pa vle pran medikaman" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Diagnosis" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "Boolean" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860201" ] ;
+     fhir:display [ fhir:v "Planned treatment interruption" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Planned treatment interruption" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "SHORT" ]
+       ] ;
+       fhir:value [ fhir:v "Planned rx interruption" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860203" ] ;
+     fhir:display [ fhir:v "Non-compliance with treatment or therapy" ] ;
+     fhir:definition [ fhir:v "Not following the prescribed course of therapy or not taking prescribed medicines." ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Non-compliance with treatment or therapy" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Non-adherence with treatment or therapy" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Poor adherence with treatment or therapy" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Le non-respect d'un traitement ou d'une thérapie" ]
+     ] [
+       fhir:language [ fhir:v "ht" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Ki pa konfòm avèk tretman oswa terapi" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Incumplimiento del paciente - general" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Adherencia del paciente nula - general" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Finding" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860205" ] ;
+     fhir:display [ fhir:v "Treatment never started - patient refused" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Treatment never started - patient refused" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Traitement jamais commencer - patient refus" ]
+     ] [
+       fhir:language [ fhir:v "ht" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Tretman pa janm kòmanse - pasyan refize" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "State" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860207" ] ;
+     fhir:display [ fhir:v "Other patient decision" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Other patient decision" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860209" ] ;
+     fhir:display [ fhir:v "Patient age" ] ;
+     fhir:definition [ fhir:v "Generic answer to a question.  For example, a patient stops a medication because of his or her age." ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Patient age" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Factor etario" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Edad del paciente" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860211" ] ;
+     fhir:display [ fhir:v "Gender identity" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Gender identity" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Identidad de género" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Question" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "Coded" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860213" ] ;
+     fhir:display [ fhir:v "Identifies as male gender" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "SHORT" ]
+       ] ;
+       fhir:value [ fhir:v "Male" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Identifies as male gender" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Se identifica como género masculino" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Identidad de género masculino" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Identidad masculina" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Finding" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860215" ] ;
+     fhir:display [ fhir:v "Identifies as female gender" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "SHORT" ]
+       ] ;
+       fhir:value [ fhir:v "Female" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Identifies as female gender" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Se identifica como género femenino" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Identidad de género femenino" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Identidad femenina" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Finding" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860217" ] ;
+     fhir:display [ fhir:v "Male to female transsexual" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Male to female transsexual" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Transexual, mujer a hombre" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Finding" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860219" ] ;
+     fhir:display [ fhir:v "Female to male transsexual" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Female to male transsexual" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Cirugía intersexual, conversión de sexo femenino a sexo masculino" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Finding" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860221" ] ;
+     fhir:display [ fhir:v "Identifies as non-binary gender" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Identifies as non-binary gender" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Se identifica como género no binario" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Identidad de género no binario" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Finding" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860223" ] ;
+     fhir:display [ fhir:v "Female gender" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Female gender" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Sexe féminin" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Female" ]
+     ] [
+       fhir:language [ fhir:v "ru" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Женщины" ]
+     ] [
+       fhir:language [ fhir:v "ht" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Sèks fi" ]
+     ] [
+       fhir:language [ fhir:v "km" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "ស្រី" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Mujer" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860225" ] ;
+     fhir:display [ fhir:v "Restart medication" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Reinicio de la medicación" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Restart medication" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Procedure" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860227" ] ;
+     fhir:display [ fhir:v "Currently breastfeeding child" ] ;
+     fhir:definition [ fhir:v "Question on encounter form: \"Is the child currently being breastfed?\"" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Currently breastfeeding child" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Allaitement de l'enfant en cours" ]
+     ] [
+       fhir:language [ fhir:v "ht" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Ap bay tete nan moman a" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:value [ fhir:v "Allaite actuellement" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Amamantamiento (madre)" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Question" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "Coded" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860229" ] ;
+     fhir:display [ fhir:v "New patient identifier" ] ;
+     fhir:definition [ fhir:v "Link to new patient identifier if patient has transferred out of facility" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "New patient ID" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "New patient identifier" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "Text" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860231" ] ;
+     fhir:display [ fhir:v "Reason for lost to follow up" ] ;
+     fhir:definition [ fhir:v "Why the patient did not follow up with the health care?" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Reason for lost to follow up" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "Text" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860233" ] ;
+     fhir:display [ fhir:v "Health facility" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Health facility" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Centre médical" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Institución sanitaria" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860235" ] ;
+     fhir:display [ fhir:v "Community" ] ;
+     fhir:definition [ fhir:v "People with whom the client lives in the same geographical area or neighborhood" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Community" ]
+     ] [
+       fhir:language [ fhir:v "id" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Masyarakat" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Comunidad" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Comunidad (contexto social)" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860237" ] ;
+     fhir:display [ fhir:v "mobile voluntary counseling and testing program" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "SHORT" ]
+       ] ;
+       fhir:value [ fhir:v "mobile VCT program" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "mobile voluntary counseling and testing program" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "Coded" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860239" ] ;
+     fhir:display [ fhir:v "Home based HIV testing program" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Home based HIV testing program" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "SHORT" ]
+       ] ;
+       fhir:value [ fhir:v "HCT program" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Programme de dépistage du VIH à domicile" ]
+     ] [
+       fhir:language [ fhir:v "ht" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Pwogram tès VIH sante kominote" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860241" ] ;
+     fhir:display [ fhir:v "HIV positive" ] ;
+     fhir:definition [ fhir:v "Includes the spectrum of human immunodeficiency virus infections that range from asymptomatic seropositivity, thru AIDS-related complex (ARC), to acquired immunodeficiency syndrome (AIDS)." ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "HIV positive" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "virus de la inmunodeficiencia humana positivo" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:value [ fhir:v "Séropositif" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Virus de l'immunodéficience humaine positif" ]
+     ] [
+       fhir:language [ fhir:v "vi" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Tích cực HIV" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Diagnosis" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9860243" ] ;
+     fhir:display [ fhir:v "Negative" ] ;
+     fhir:definition [ fhir:v "Response to a finding or test result." ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Negative" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Négatif" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "(-)" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "-" ]
+     ] [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "Neg" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Negativo" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Negativa" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Neg" ]
+     ] [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "(-)" ]
+     ] [
+       fhir:language [ fhir:v "sw" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Hasi" ]
+     ] [
+       fhir:language [ fhir:v "ht" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Négatif" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Misc" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "N/A" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9921831" ] ;
+     fhir:display [ fhir:v "HIV program end date" ] ;
+     fhir:definition [ fhir:v "Question on encounter form. The date the patient was removed from the HIV program." ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "HIV program end date" ]
+     ] [
+       fhir:language [ fhir:v "fr" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Date de fin du programme VIH" ]
+     ] [
+       fhir:language [ fhir:v "ht" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Dat fini ak pwogram VIH" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Question" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "Datetime" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "5240" ] ;
+     fhir:display [ fhir:v "Lost to followup" ] ;
+     fhir:definition [ fhir:v "Patients that are lost to followup.. boolean question." ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:use [
+         fhir:code [ fhir:v "FULLY_SPECIFIED" ]
+       ] ;
+       fhir:value [ fhir:v "Lost to followup" ]
+     ] ) ;
+     fhir:property ( [
+       fhir:code [ fhir:v "conceptclass" ] ;
+       fhir:value [ fhir:v "Question" ]
+     ] [
+       fhir:code [ fhir:v "datatype" ] ;
+       fhir:value [ fhir:v "Boolean" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

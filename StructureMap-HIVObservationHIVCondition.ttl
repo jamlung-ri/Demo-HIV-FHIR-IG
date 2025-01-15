@@ -1,0 +1,1556 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/StructureMap/HIVObservationHIVCondition> a fhir:StructureMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "HIVObservationHIVCondition"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureMap HIVObservationHIVCondition</b></p><a name=\"HIVObservationHIVCondition\"> </a><a name=\"hcHIVObservationHIVCondition\"> </a><a name=\"HIVObservationHIVCondition-en-US\"> </a><pre class=\"fml\">\r\n<b>map</b><span style=\"color: navy\"> &quot;</span>https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/StructureMap/HIVObservationHIVCondition<span style=\"color: navy\">&quot; = &quot;</span>HIVObservationHIVCondition<span style=\"color: navy\">&quot;\r\n\r\n</span><span style=\"color: navy\">// </span><span style=\"color: green\">declare the structure defs used</span>\r\n\r\n<b>uses</b><span style=\"color: navy\"> &quot;</span><a href=\"http://hl7.org/fhir/R4/bundle.html\" title=\"Bundle\">http://hl7.org/fhir/StructureDefinition/Bundle</a><span style=\"color: navy\">&quot; </span><b>alias </b>input <b>as </b><b>source</b>\r\n<b>uses</b><span style=\"color: navy\"> &quot;</span><a href=\"http://hl7.org/fhir/R4/bundle.html\" title=\"Bundle\">http://hl7.org/fhir/StructureDefinition/Bundle</a><span style=\"color: navy\">&quot; </span><b>alias </b>output <b>as </b><b>target</b>\r\n\r\n<span style=\"color: navy\">// </span><span style=\"color: green\">declare group with local vars (src, tgt) and their aliases</span>\r\n<span style=\"color: navy\">// </span><span style=\"color: green\">anything ending with semicolon is a rule</span>\r\n<b>group </b>HIVObservationHIVCondition<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">src</span><span style=\"color: navy\"> : </span>input, <b>target</b> <span style=\"color: maroon\">tgt</span><span style=\"color: navy\"> : </span>output<span style=\"color: navy\">)</span><span style=\"color: navy\"> {\r\n</span>  <span style=\"color: navy\">// </span><span style=\"color: green\">set bundle type for the output bundle</span>\r\n  src<span style=\"color: navy\"><b> -&gt; </b></span>tgt.type = <span style=\"color: blue\">'transaction'</span> <i>&quot;setBundleType&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">// </span><span style=\"color: green\">loop through patients in input bundle</span>\r\n  src.entry<b> as </b><span style=\"color: maroon\">entry</span><span style=\"color: navy\"><b> -&gt; </b></span>tgt.entry<b> as </b><span style=\"color: maroon\">tentry</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    entry.resource<span style=\"color: navy\"> : </span>Patient<b> as </b><span style=\"color: maroon\">patient</span><span style=\"color: navy\"><b> -&gt; </b></span> tentry.resource = <span style=\"color: maroon\">patient</span><span style=\"color: navy\">, </span> tentry.request<b> as </b><span style=\"color: maroon\">newrequest</span><b> then</b><span style=\"color: navy\"> {\r\n</span>      entry<span style=\"color: navy\"><b> -&gt; </b></span>tentry.fullUrl = <span style=\"color: navy\">(</span>'urn:uuid:' &amp; patient.id<span style=\"color: navy\">)</span> <i>&quot;setFullUrl&quot;</i><span style=\"color: navy\">;</span>\r\n      entry<span style=\"color: navy\"><b> -&gt; </b></span> newrequest.method = <span style=\"color: blue\">'PUT'</span><span style=\"color: navy\">, </span> newrequest.url = <span style=\"color: navy\">(</span>'Patient/' &amp; patient.id<span style=\"color: navy\">)</span> <i>&quot;setPatientRequest&quot;</i><span style=\"color: navy\">;</span>\r\n      entry<span style=\"color: navy\"><b> -&gt; </b></span> tgt.entry<b> as </b><span style=\"color: maroon\">pentry</span><span style=\"color: navy\">, </span> pentry.resource = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Provenance'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">prov</span><span style=\"color: navy\">, </span> <b>uuid</b><span style=\"color: navy\">(</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">pid</span><span style=\"color: navy\">, </span> pentry.request<b> as </b><span style=\"color: maroon\">prequest</span><b> then</b><span style=\"color: navy\"> {\r\n</span>        patient<span style=\"color: navy\"><b> -&gt; </b></span>prov.id = <span style=\"color: maroon\">pid</span> <i>&quot;setPId&quot;</i><span style=\"color: navy\">;</span>\r\n        patient<span style=\"color: navy\"><b> -&gt; </b></span>pentry.fullUrl = <span style=\"color: navy\">(</span>'urn:uuid:' &amp; pid<span style=\"color: navy\">)</span> <i>&quot;setFullUrl&quot;</i><span style=\"color: navy\">;</span>\r\n        patient<span style=\"color: navy\"><b> -&gt; </b></span> prequest.method = <span style=\"color: blue\">'PUT'</span><span style=\"color: navy\">, </span> prequest.url = <span style=\"color: navy\">(</span>'Provenance/' &amp; pid<span style=\"color: navy\">)</span> <i>&quot;setrequest&quot;</i><span style=\"color: navy\">;</span>\r\n        patient<span style=\"color: navy\"><b> -&gt; </b></span>prov.target<b> as </b><span style=\"color: maroon\">ptarg</span><b> then</b><span style=\"color: navy\"> {\r\n</span>          patient<span style=\"color: navy\"><b> -&gt; </b></span>ptarg.reference = <span style=\"color: navy\">(</span>'urn:uuid:' &amp; patient.id<span style=\"color: navy\">)</span> <i>&quot;setTargetRef&quot;</i><span style=\"color: navy\">;</span>\r\n        <span style=\"color: navy\">}</span> <i>&quot;setTarget&quot;</i><span style=\"color: navy\">;</span>\r\n        patient<span style=\"color: navy\"><b> -&gt; </b></span>prov.entity<b> as </b><span style=\"color: maroon\">entity</span><b> then</b><span style=\"color: navy\"> {\r\n</span>          patient<span style=\"color: navy\"><b> -&gt; </b></span>entity.role = <span style=\"color: blue\">'source'</span> <i>&quot;setRole&quot;</i><span style=\"color: navy\">;</span>\r\n          patient<span style=\"color: navy\"><b> -&gt; </b></span>entity.what<b> as </b><span style=\"color: maroon\">pwhat</span><b> then </b>setProvenanceFromBundleId<span style=\"color: navy\">(</span><span style=\"color: maroon\">src</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">pwhat</span><span style=\"color: navy\">)</span> <i>&quot;setWhatId&quot;</i><span style=\"color: navy\">;</span>\r\n        <span style=\"color: navy\">}</span> <i>&quot;setEntity&quot;</i><span style=\"color: navy\">;</span>\r\n      <span style=\"color: navy\">}</span> <i>&quot;setProvenance&quot;</i><span style=\"color: navy\">;</span>\r\n      <span style=\"color: navy\">// </span><span style=\"color: green\">for observations of that patient look for art program enrollment</span>\r\n      <span style=\"color: navy\">// </span><span style=\"color: green\">create a condition resource in output with uuid</span>\r\n      src.entry<b> as </b><span style=\"color: maroon\">obsentry</span><b> where </b>resource.is(Observation) and resource.subject.exists(reference = ('Patient/' &amp; patient.id)) and resource.code.exists(coding.exists((system = 'https://cielterminology.org') and (code = '160540')))<span style=\"color: navy\"><b> -&gt; </b></span> tgt.entry<b> as </b><span style=\"color: maroon\">newentry</span><span style=\"color: navy\">, </span> newentry.resource = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Condition'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">cond</span><span style=\"color: navy\">, </span> <b>uuid</b><span style=\"color: navy\">(</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">cid</span><b> then</b><span style=\"color: navy\"> {\r\n</span>        obsentry.resource<b> as </b><span style=\"color: maroon\">obs</span><span style=\"color: navy\"><b> -&gt; </b></span> newentry.fullUrl = <span style=\"color: navy\">(</span>'urn:uuid:' &amp; cid<span style=\"color: navy\">)</span><span style=\"color: navy\">, </span> newentry.request<b> as </b><span style=\"color: maroon\">newrequest</span><b> then</b><span style=\"color: navy\"> {\r\n</span>          obsentry<span style=\"color: navy\"><b> -&gt; </b></span>cond.id = <span style=\"color: maroon\">cid</span> <i>&quot;setCId&quot;</i><span style=\"color: navy\">;</span>\r\n          <span style=\"color: navy\">// </span><span style=\"color: green\">setrequest rule for resource in transaction bundle</span>\r\n          <span style=\"color: navy\">// </span><span style=\"color: green\">needs to be processed properly before putting on existing data on fhir server</span>\r\n          obsentry<span style=\"color: navy\"><b> -&gt; </b></span> newrequest.method = <span style=\"color: blue\">'PUT'</span><span style=\"color: navy\">, </span> newrequest.url = <span style=\"color: navy\">(</span>'Condition/' &amp; cid<span style=\"color: navy\">)</span> <i>&quot;setrequest&quot;</i><span style=\"color: navy\">;</span>\r\n          patient<span style=\"color: navy\"><b> -&gt; </b></span>cond.subject<b> as </b><span style=\"color: maroon\">subject</span><b> then</b><span style=\"color: navy\"> {\r\n</span>            patient<span style=\"color: navy\"><b> -&gt; </b></span>subject.reference = <b>reference</b><span style=\"color: navy\">(</span><span style=\"color: maroon\">patient</span><span style=\"color: navy\">)</span> <i>&quot;setSubjectRef&quot;</i><span style=\"color: navy\">;</span>\r\n          <span style=\"color: navy\">}</span> <i>&quot;setSubject&quot;</i><span style=\"color: navy\">;</span>\r\n          obs.effective<b> as </b><span style=\"color: maroon\">effective</span><span style=\"color: navy\"><b> -&gt; </b></span>cond.onset = <span style=\"color: maroon\">effective</span> <i>&quot;setOnset&quot;</i><span style=\"color: navy\">;</span>\r\n          obsentry<span style=\"color: navy\"><b> -&gt; </b></span>cond.clinicalStatus = <b>cc</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'http://terminology.hl7.org/CodeSystem/condition-clinical'</span><span style=\"color: navy\">, </span><span style=\"color: blue\">'active'</span><span style=\"color: navy\">, </span><span style=\"color: blue\">'Active'</span><span style=\"color: navy\">)</span> <i>&quot;setClinicalStatus&quot;</i><span style=\"color: navy\">;</span>\r\n          obsentry<span style=\"color: navy\"><b> -&gt; </b></span>cond.code = <b>cc</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'http://smart.who.int/hiv/CodeSystem/HIVConcepts'</span><span style=\"color: navy\">, </span><span style=\"color: blue\">'HIV.B.DE116'</span><span style=\"color: navy\">, </span><span style=\"color: blue\">'HIV-positive'</span><span style=\"color: navy\">)</span> <i>&quot;setCode&quot;</i><span style=\"color: navy\">;</span>\r\n          obsentry<span style=\"color: navy\"><b> -&gt; </b></span>cond.category = <b>cc</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'http://terminology.hl7.org/CodeSystem/condition-category'</span><span style=\"color: navy\">, </span><span style=\"color: blue\">'encounter-diagnosis'</span><span style=\"color: navy\">, </span><span style=\"color: blue\">'Encounter Diagnosis'</span><span style=\"color: navy\">)</span> <i>&quot;setCategory&quot;</i><span style=\"color: navy\">;</span>\r\n          <span style=\"color: navy\">// </span><span style=\"color: green\">create provenance resource to document input/output resources links</span>\r\n          obs<span style=\"color: navy\"><b> -&gt; </b></span> tgt.entry<b> as </b><span style=\"color: maroon\">pentry</span><span style=\"color: navy\">, </span> pentry.resource = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Provenance'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">prov</span><span style=\"color: navy\">, </span> <b>uuid</b><span style=\"color: navy\">(</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">pid</span><span style=\"color: navy\">, </span> pentry.request<b> as </b><span style=\"color: maroon\">prequest</span><b> then</b><span style=\"color: navy\"> {\r\n</span>            obs<span style=\"color: navy\"><b> -&gt; </b></span>prov.id = <span style=\"color: maroon\">pid</span> <i>&quot;setPId&quot;</i><span style=\"color: navy\">;</span>\r\n            obs<span style=\"color: navy\"><b> -&gt; </b></span>pentry.fullUrl = <span style=\"color: navy\">(</span>'urn:uuid:' &amp; pid<span style=\"color: navy\">)</span> <i>&quot;setFullUrl&quot;</i><span style=\"color: navy\">;</span>\r\n            obs<span style=\"color: navy\"><b> -&gt; </b></span> prequest.method = <span style=\"color: blue\">'PUT'</span><span style=\"color: navy\">, </span> prequest.url = <span style=\"color: navy\">(</span>'Provenance/' &amp; pid<span style=\"color: navy\">)</span> <i>&quot;setrequest&quot;</i><span style=\"color: navy\">;</span>\r\n            obs<span style=\"color: navy\"><b> -&gt; </b></span>prov.target<b> as </b><span style=\"color: maroon\">ptarg</span><b> then</b><span style=\"color: navy\"> {\r\n</span>              obs<span style=\"color: navy\"><b> -&gt; </b></span>ptarg.reference = <span style=\"color: navy\">(</span>'urn:uuid:' &amp; cid<span style=\"color: navy\">)</span> <i>&quot;setTargetRef&quot;</i><span style=\"color: navy\">;</span>\r\n            <span style=\"color: navy\">}</span> <i>&quot;setTarget&quot;</i><span style=\"color: navy\">;</span>\r\n            obs<span style=\"color: navy\"><b> -&gt; </b></span>prov.entity<b> as </b><span style=\"color: maroon\">entity</span><b> then</b><span style=\"color: navy\"> {\r\n</span>              obs<span style=\"color: navy\"><b> -&gt; </b></span>entity.role = <span style=\"color: blue\">'source'</span> <i>&quot;setRole&quot;</i><span style=\"color: navy\">;</span>\r\n              obs<span style=\"color: navy\"><b> -&gt; </b></span>entity.what<b> as </b><span style=\"color: maroon\">pwhat</span><b> then </b>setProvenanceFromBundleId<span style=\"color: navy\">(</span><span style=\"color: maroon\">src</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">pwhat</span><span style=\"color: navy\">)</span> <i>&quot;setWhatId&quot;</i><span style=\"color: navy\">;</span>\r\n            <span style=\"color: navy\">}</span> <i>&quot;setEntity&quot;</i><span style=\"color: navy\">;</span>\r\n          <span style=\"color: navy\">}</span> <i>&quot;setProvenance&quot;</i><span style=\"color: navy\">;</span>\r\n        <span style=\"color: navy\">}</span> <i>&quot;setCondition&quot;</i><span style=\"color: navy\">;</span>\r\n      <span style=\"color: navy\">}</span> <i>&quot;getOnARTObservation&quot;</i><span style=\"color: navy\">;</span>\r\n      <span style=\"color: navy\">// </span><span style=\"color: green\">for observations of that patient look for return visit date</span>\r\n      <span style=\"color: navy\">// </span><span style=\"color: green\">create a medication request resource in output with uuid</span>\r\n      src.entry<b> as </b><span style=\"color: maroon\">obsentry</span><b> where </b>resource.is(Observation) and resource.subject.exists(reference = ('Patient/' &amp; patient.id)) and resource.code.exists(coding.exists((system = 'https://cielterminology.org') and (code = '5096')))<span style=\"color: navy\"><b> -&gt; </b></span> tgt.entry<b> as </b><span style=\"color: maroon\">newentry</span><span style=\"color: navy\">, </span> newentry.resource = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'MedicationStatement'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">ms</span><span style=\"color: navy\">, </span> <b>uuid</b><span style=\"color: navy\">(</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">msid</span><b> then</b><span style=\"color: navy\"> {\r\n</span>        obsentry.resource<b> as </b><span style=\"color: maroon\">obs</span><span style=\"color: navy\"><b> -&gt; </b></span> newentry.fullUrl = <span style=\"color: navy\">(</span>'urn:uuid:' &amp; msid<span style=\"color: navy\">)</span><span style=\"color: navy\">, </span> newentry.request<b> as </b><span style=\"color: maroon\">newrequest</span><b> then</b><span style=\"color: navy\"> {\r\n</span>          obsentry<span style=\"color: navy\"><b> -&gt; </b></span>ms.id = <span style=\"color: maroon\">msid</span> <i>&quot;setMSId&quot;</i><span style=\"color: navy\">;</span>\r\n          <span style=\"color: navy\">// </span><span style=\"color: green\">setrequest rule for resource in transaction bundle</span>\r\n          <span style=\"color: navy\">// </span><span style=\"color: green\">needs to be processed properly before putting on existing data on fhir server</span>\r\n          obsentry<span style=\"color: navy\"><b> -&gt; </b></span> newrequest.method = <span style=\"color: blue\">'PUT'</span><span style=\"color: navy\">, </span> newrequest.url = <span style=\"color: navy\">(</span>'MedicationStatement/' &amp; msid<span style=\"color: navy\">)</span> <i>&quot;setrequest&quot;</i><span style=\"color: navy\">;</span>\r\n          patient<span style=\"color: navy\"><b> -&gt; </b></span>ms.subject<b> as </b><span style=\"color: maroon\">subject</span><b> then</b><span style=\"color: navy\"> {\r\n</span>            patient<span style=\"color: navy\"><b> -&gt; </b></span>subject.reference = <b>reference</b><span style=\"color: navy\">(</span><span style=\"color: maroon\">patient</span><span style=\"color: navy\">)</span> <i>&quot;setSubjectRef&quot;</i><span style=\"color: navy\">;</span>\r\n          <span style=\"color: navy\">}</span> <i>&quot;setSubject&quot;</i><span style=\"color: navy\">;</span>\r\n          <span style=\"color: navy\">// </span><span style=\"color: green\">obs.effective as effective -&gt; ms.effective = effective &quot;setEffective&quot;;</span>\r\n          obs.effective<span style=\"color: navy\"> : </span>dateTime<b> as </b><span style=\"color: maroon\">effective</span><span style=\"color: navy\"><b> -&gt; </b></span>ms.effective = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Period'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">mseffective</span><b> then</b><span style=\"color: navy\"> {\r\n</span>            effective<span style=\"color: navy\"><b> -&gt; </b></span>mseffective.start = <span style=\"color: maroon\">effective</span> <i>&quot;setEffectiveStart&quot;</i><span style=\"color: navy\">;</span>\r\n            effective<span style=\"color: navy\"><b> -&gt; </b></span>mseffective.end = <span style=\"color: navy\">(</span>%effective + 30 'days'<span style=\"color: navy\">)</span> <i>&quot;setEffectiveEnd&quot;</i><span style=\"color: navy\">;</span>\r\n          <span style=\"color: navy\">}</span> <i>&quot;setEffective&quot;</i><span style=\"color: navy\">;</span>\r\n          <span style=\"color: navy\">// </span><span style=\"color: green\">not correct in hiv l3</span>\r\n          obsentry<span style=\"color: navy\"><b> -&gt; </b></span>ms.status = <span style=\"color: blue\">'active'</span> <i>&quot;setStatus&quot;</i><span style=\"color: navy\">;</span>\r\n          obsentry<span style=\"color: navy\"><b> -&gt; </b></span>ms.reasonCode = <b>cc</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'http://smart.who.int/hiv/CodeSystem/HIVConcepts'</span><span style=\"color: navy\">, </span><span style=\"color: blue\">'HIV.H.DE47'</span><span style=\"color: navy\">, </span><span style=\"color: blue\">'On ART'</span><span style=\"color: navy\">)</span> <i>&quot;setMSReasonCode&quot;</i><span style=\"color: navy\">;</span>\r\n          obsentry<span style=\"color: navy\"><b> -&gt; </b></span>ms.medication = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'CodeableConcept'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">medication</span><b> then</b><span style=\"color: navy\"> {\r\n</span>            obsentry<span style=\"color: navy\"><b> -&gt; </b></span>medication.coding<b> as </b><span style=\"color: maroon\">coding</span><b> then</b><span style=\"color: navy\"> {\r\n</span>              obsentry<span style=\"color: navy\"><b> -&gt; </b></span> coding.code = <span style=\"color: blue\">'160119'</span><span style=\"color: navy\">, </span> coding.display = <span style=\"color: blue\">'CURRENTLY TAKING ARV'</span><span style=\"color: navy\">, </span> coding.system = <span style=\"color: blue\">'https://cielterminology.org'</span> <i>&quot;setMSCoding&quot;</i><span style=\"color: navy\">;</span>\r\n            <span style=\"color: navy\">}</span> <i>&quot;setMSCoding&quot;</i><span style=\"color: navy\">;</span>\r\n          <span style=\"color: navy\">}</span> <i>&quot;SetMSMedication&quot;</i><span style=\"color: navy\">;</span>\r\n          <span style=\"color: navy\">// </span><span style=\"color: green\">create provenance resource to document input/output resources links</span>\r\n          obs<span style=\"color: navy\"><b> -&gt; </b></span> tgt.entry<b> as </b><span style=\"color: maroon\">pentry</span><span style=\"color: navy\">, </span> pentry.resource = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Provenance'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">prov</span><span style=\"color: navy\">, </span> <b>uuid</b><span style=\"color: navy\">(</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">pid</span><span style=\"color: navy\">, </span> pentry.request<b> as </b><span style=\"color: maroon\">prequest</span><b> then</b><span style=\"color: navy\"> {\r\n</span>            obs<span style=\"color: navy\"><b> -&gt; </b></span>prov.id = <span style=\"color: maroon\">pid</span> <i>&quot;setPId&quot;</i><span style=\"color: navy\">;</span>\r\n            obs<span style=\"color: navy\"><b> -&gt; </b></span>pentry.fullUrl = <span style=\"color: navy\">(</span>'urn:uuid:' &amp; pid<span style=\"color: navy\">)</span> <i>&quot;setFullUrl&quot;</i><span style=\"color: navy\">;</span>\r\n            obs<span style=\"color: navy\"><b> -&gt; </b></span> prequest.method = <span style=\"color: blue\">'PUT'</span><span style=\"color: navy\">, </span> prequest.url = <span style=\"color: navy\">(</span>'Provenance/' &amp; pid<span style=\"color: navy\">)</span> <i>&quot;setrequest&quot;</i><span style=\"color: navy\">;</span>\r\n            obs<span style=\"color: navy\"><b> -&gt; </b></span>prov.target<b> as </b><span style=\"color: maroon\">ptarg</span><b> then</b><span style=\"color: navy\"> {\r\n</span>              obs<span style=\"color: navy\"><b> -&gt; </b></span>ptarg.reference = <span style=\"color: navy\">(</span>'urn:uuid:' &amp; msid<span style=\"color: navy\">)</span> <i>&quot;setTargetRef&quot;</i><span style=\"color: navy\">;</span>\r\n            <span style=\"color: navy\">}</span> <i>&quot;setTarget&quot;</i><span style=\"color: navy\">;</span>\r\n            obs<span style=\"color: navy\"><b> -&gt; </b></span>prov.entity<b> as </b><span style=\"color: maroon\">entity</span><b> then</b><span style=\"color: navy\"> {\r\n</span>              obs<span style=\"color: navy\"><b> -&gt; </b></span>entity.role = <span style=\"color: blue\">'source'</span> <i>&quot;setRole&quot;</i><span style=\"color: navy\">;</span>\r\n              obs<span style=\"color: navy\"><b> -&gt; </b></span>entity.what<b> as </b><span style=\"color: maroon\">pwhat</span><b> then </b>setProvenanceFromBundleId<span style=\"color: navy\">(</span><span style=\"color: maroon\">src</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">pwhat</span><span style=\"color: navy\">)</span> <i>&quot;setWhatId&quot;</i><span style=\"color: navy\">;</span>\r\n            <span style=\"color: navy\">}</span> <i>&quot;setEntity&quot;</i><span style=\"color: navy\">;</span>\r\n          <span style=\"color: navy\">}</span> <i>&quot;setProvenance&quot;</i><span style=\"color: navy\">;</span>\r\n        <span style=\"color: navy\">}</span> <i>&quot;setMedicationStatement&quot;</i><span style=\"color: navy\">;</span>\r\n      <span style=\"color: navy\">}</span> <i>&quot;getVisitObservation&quot;</i><span style=\"color: navy\">;</span>\r\n      <span style=\"color: navy\">// </span><span style=\"color: green\">create observation resource with the positive hiv test codes</span>\r\n      <span style=\"color: navy\">// </span><span style=\"color: green\">this will have to be one for hiv positive and one for hiv negative</span>\r\n      src.entry<b> as </b><span style=\"color: maroon\">obsentry</span><b> where </b>resource.is(Observation) and resource.subject.exists(reference = ('Patient/' &amp; patient.id)) and resource.code.exists(coding.exists((system = 'https://cielterminology.org') and (code = '159427')))<span style=\"color: navy\"><b> -&gt; </b></span> tgt.entry<b> as </b><span style=\"color: maroon\">newentry</span><span style=\"color: navy\">, </span> newentry.resource = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Observation'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">observe</span><span style=\"color: navy\">, </span> <b>uuid</b><span style=\"color: navy\">(</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">obsd</span><b> then</b><span style=\"color: navy\"> {\r\n</span>        obsentry.resource<b> as </b><span style=\"color: maroon\">obs</span><span style=\"color: navy\"><b> -&gt; </b></span> newentry.fullUrl = <span style=\"color: navy\">(</span>'urn:uuid:' &amp; obsd<span style=\"color: navy\">)</span><span style=\"color: navy\">, </span> newentry.request<b> as </b><span style=\"color: maroon\">newrequest</span><b> then</b><span style=\"color: navy\"> {\r\n</span>          obsentry<span style=\"color: navy\"><b> -&gt; </b></span>observe.id = <span style=\"color: maroon\">obsd</span> <i>&quot;setOBSd&quot;</i><span style=\"color: navy\">;</span>\r\n          obsentry<span style=\"color: navy\"><b> -&gt; </b></span> newrequest.method = <span style=\"color: blue\">'PUT'</span><span style=\"color: navy\">, </span> newrequest.url = <span style=\"color: navy\">(</span>'Observation/' &amp; obsd<span style=\"color: navy\">)</span> <i>&quot;setrequest&quot;</i><span style=\"color: navy\">;</span>\r\n          patient<span style=\"color: navy\"><b> -&gt; </b></span>observe.subject<b> as </b><span style=\"color: maroon\">subject</span><b> then</b><span style=\"color: navy\"> {\r\n</span>            patient<span style=\"color: navy\"><b> -&gt; </b></span>subject.reference = <b>reference</b><span style=\"color: navy\">(</span><span style=\"color: maroon\">patient</span><span style=\"color: navy\">)</span> <i>&quot;setSubjectRef&quot;</i><span style=\"color: navy\">;</span>\r\n          <span style=\"color: navy\">}</span> <i>&quot;setSubject&quot;</i><span style=\"color: navy\">;</span>\r\n          obs.effective<b> as </b><span style=\"color: maroon\">effective</span><span style=\"color: navy\"><b> -&gt; </b></span>observe.effective = <span style=\"color: maroon\">effective</span> <i>&quot;setOnset&quot;</i><span style=\"color: navy\">;</span>\r\n          obs.code<b> as </b><span style=\"color: maroon\">code</span><span style=\"color: navy\"><b> -&gt; </b></span>observe.code = <span style=\"color: maroon\">code</span> <i>&quot;setCode&quot;</i><span style=\"color: navy\">;</span>\r\n          obs.value<span style=\"color: navy\"> : </span>CodeableConcept<b> as </b><span style=\"color: maroon\">value</span><b> where </b>coding.exists((system = 'https://cielterminology.org') and (code = '664'))<span style=\"color: navy\"><b> -&gt; </b></span>observe.value = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'CodeableConcept'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">val</span><b> then</b><span style=\"color: navy\"> {\r\n</span>            value<span style=\"color: navy\"><b> -&gt; </b></span>val.coding<b> as </b><span style=\"color: maroon\">coding</span><b> then</b><span style=\"color: navy\"> {\r\n</span>              value<span style=\"color: navy\"><b> -&gt; </b></span> coding.system = <span style=\"color: blue\">'http://smart.who.int/hiv/CodeSystem/HIVConcepts'</span><span style=\"color: navy\">, </span> coding.code = <span style=\"color: blue\">'HIV.B.DE117'</span><span style=\"color: navy\">, </span> coding.display = <span style=\"color: blue\">'HIV-negative'</span> <i>&quot;setNegativeCC&quot;</i><span style=\"color: navy\">;</span>\r\n            <span style=\"color: navy\">}</span> <i>&quot;setNegativeCoding&quot;</i><span style=\"color: navy\">;</span>\r\n          <span style=\"color: navy\">}</span> <i>&quot;setValueNegative&quot;</i><span style=\"color: navy\">;</span>\r\n          obs.value<span style=\"color: navy\"> : </span>CodeableConcept<b> as </b><span style=\"color: maroon\">value</span><b> where </b>coding.exists((system = 'https://cielterminology.org') and (code = '138571'))<span style=\"color: navy\"><b> -&gt; </b></span>observe.value = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'CodeableConcept'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">val</span><b> then</b><span style=\"color: navy\"> {\r\n</span>            value<span style=\"color: navy\"><b> -&gt; </b></span>val.coding<b> as </b><span style=\"color: maroon\">coding</span><b> then</b><span style=\"color: navy\"> {\r\n</span>              value<span style=\"color: navy\"><b> -&gt; </b></span> coding.system = <span style=\"color: blue\">'http://smart.who.int/hiv/CodeSystem/HIVConcepts'</span><span style=\"color: navy\">, </span> coding.code = <span style=\"color: blue\">'HIV.B.DE116'</span><span style=\"color: navy\">, </span> coding.display = <span style=\"color: blue\">'HIV-positive'</span> <i>&quot;setPositiveCC&quot;</i><span style=\"color: navy\">;</span>\r\n            <span style=\"color: navy\">}</span> <i>&quot;setPositiveCoding&quot;</i><span style=\"color: navy\">;</span>\r\n          <span style=\"color: navy\">}</span> <i>&quot;setValuePositive1&quot;</i><span style=\"color: navy\">;</span>\r\n          obs.value<span style=\"color: navy\"> : </span>CodeableConcept<b> as </b><span style=\"color: maroon\">value</span><b> where </b>coding.exists((system = 'https://cielterminology.org') and (code = '703'))<span style=\"color: navy\"><b> -&gt; </b></span>observe.value = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'CodeableConcept'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">val</span><b> then</b><span style=\"color: navy\"> {\r\n</span>            value<span style=\"color: navy\"><b> -&gt; </b></span>val.coding<b> as </b><span style=\"color: maroon\">coding</span><b> then</b><span style=\"color: navy\"> {\r\n</span>              value<span style=\"color: navy\"><b> -&gt; </b></span> coding.system = <span style=\"color: blue\">'http://smart.who.int/hiv/CodeSystem/HIVConcepts'</span><span style=\"color: navy\">, </span> coding.code = <span style=\"color: blue\">'HIV.B.DE116'</span><span style=\"color: navy\">, </span> coding.display = <span style=\"color: blue\">'HIV-positive'</span> <i>&quot;setPositiveCC&quot;</i><span style=\"color: navy\">;</span>\r\n            <span style=\"color: navy\">}</span> <i>&quot;setPositiveCoding&quot;</i><span style=\"color: navy\">;</span>\r\n          <span style=\"color: navy\">}</span> <i>&quot;setValuePositive2&quot;</i><span style=\"color: navy\">;</span>\r\n          obsentry<span style=\"color: navy\"><b> -&gt; </b></span>observe.status = <b>cc</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'http://hl7.org/fhir/observation-status'</span><span style=\"color: navy\">, </span><span style=\"color: blue\">'final'</span><span style=\"color: navy\">, </span><span style=\"color: blue\">'Final'</span><span style=\"color: navy\">)</span> <i>&quot;setStatus&quot;</i><span style=\"color: navy\">;</span>\r\n          obs<span style=\"color: navy\"><b> -&gt; </b></span> tgt.entry<b> as </b><span style=\"color: maroon\">pentry</span><span style=\"color: navy\">, </span> pentry.resource = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Provenance'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">prov</span><span style=\"color: navy\">, </span> <b>uuid</b><span style=\"color: navy\">(</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">pid</span><span style=\"color: navy\">, </span> pentry.request<b> as </b><span style=\"color: maroon\">prequest</span><b> then</b><span style=\"color: navy\"> {\r\n</span>            obs<span style=\"color: navy\"><b> -&gt; </b></span>prov.id = <span style=\"color: maroon\">pid</span> <i>&quot;setPId&quot;</i><span style=\"color: navy\">;</span>\r\n            obs<span style=\"color: navy\"><b> -&gt; </b></span>pentry.fullUrl = <span style=\"color: navy\">(</span>'urn:uuid:' &amp; pid<span style=\"color: navy\">)</span> <i>&quot;setFullUrl&quot;</i><span style=\"color: navy\">;</span>\r\n            obs<span style=\"color: navy\"><b> -&gt; </b></span> prequest.method = <span style=\"color: blue\">'PUT'</span><span style=\"color: navy\">, </span> prequest.url = <span style=\"color: navy\">(</span>'Provenance/' &amp; pid<span style=\"color: navy\">)</span> <i>&quot;setrequest&quot;</i><span style=\"color: navy\">;</span>\r\n            obs<span style=\"color: navy\"><b> -&gt; </b></span>prov.target<b> as </b><span style=\"color: maroon\">ptarg</span><b> then</b><span style=\"color: navy\"> {\r\n</span>              obs<span style=\"color: navy\"><b> -&gt; </b></span>ptarg.reference = <span style=\"color: navy\">(</span>'urn:uuid:' &amp; cid<span style=\"color: navy\">)</span> <i>&quot;setTargetRef&quot;</i><span style=\"color: navy\">;</span>\r\n            <span style=\"color: navy\">}</span> <i>&quot;setTarget&quot;</i><span style=\"color: navy\">;</span>\r\n            obs<span style=\"color: navy\"><b> -&gt; </b></span>prov.entity<b> as </b><span style=\"color: maroon\">entity</span><b> then</b><span style=\"color: navy\"> {\r\n</span>              obs<span style=\"color: navy\"><b> -&gt; </b></span>entity.role = <span style=\"color: blue\">'source'</span> <i>&quot;setRole&quot;</i><span style=\"color: navy\">;</span>\r\n              obs<span style=\"color: navy\"><b> -&gt; </b></span>entity.what<b> as </b><span style=\"color: maroon\">pwhat</span><b> then </b>setProvenanceFromBundleId<span style=\"color: navy\">(</span><span style=\"color: maroon\">src</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">pwhat</span><span style=\"color: navy\">)</span> <i>&quot;setWhatId&quot;</i><span style=\"color: navy\">;</span>\r\n            <span style=\"color: navy\">}</span> <i>&quot;setEntity&quot;</i><span style=\"color: navy\">;</span>\r\n          <span style=\"color: navy\">}</span> <i>&quot;setProvenance&quot;</i><span style=\"color: navy\">;</span>\r\n        <span style=\"color: navy\">}</span> <i>&quot;setHIVPositiveTest&quot;</i><span style=\"color: navy\">;</span>\r\n      <span style=\"color: navy\">}</span> <i>&quot;getOnARTObservation&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;patientResource&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;copyPatient&quot;</i><span style=\"color: navy\">;</span>\r\n<span style=\"color: navy\">}\r\n\r\n</span><b>group </b>setProvenanceFromBundleId<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">bundle</span><span style=\"color: navy\"> : </span>input, <b>target</b> <span style=\"color: maroon\">provwhat</span><span style=\"color: navy\"> : </span>Reference<span style=\"color: navy\">)</span><span style=\"color: navy\"> {\r\n</span>  bundle.id<b> as </b><span style=\"color: maroon\">bundleid</span><span style=\"color: navy\"><b> -&gt; </b></span>provwhat.identifier<b> as </b><span style=\"color: maroon\">whatid</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    bundleid<span style=\"color: navy\"><b> -&gt; </b></span>whatid.value = <span style=\"color: navy\">(</span>'Bundle/' &amp; bundleid<span style=\"color: navy\">)</span> <i>&quot;setWhatIdValue&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;setWhatId&quot;</i><span style=\"color: navy\">;</span>\r\n<span style=\"color: navy\">}\r\n\r\n</span></pre></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/StructureMap/HIVObservationHIVCondition"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "HIVObservationHIVCondition"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2025-01-15T14:05:09+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "intellisoftkenya"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "intellisoftkenya" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.intellisoftkenya.com/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "declare the structure defs used"] ; # 
+  fhir:structure ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/Bundle"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/Bundle>
+     ] ;
+     fhir:mode [ fhir:v "source" ] ;
+     fhir:alias [ fhir:v "input" ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/Bundle"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/Bundle>
+     ] ;
+     fhir:mode [ fhir:v "target" ] ;
+     fhir:alias [ fhir:v "output" ]
+  ] ) ; # 
+  fhir:group ( [
+     fhir:name [ fhir:v "HIVObservationHIVCondition" ] ;
+     fhir:typeMode [ fhir:v "none" ] ;
+     fhir:documentation [ fhir:v "declare group with local vars (src, tgt) and their aliases\r\nanything ending with semicolon is a rule" ] ;
+     fhir:input ( [
+       fhir:name [ fhir:v "src" ] ;
+       fhir:type [ fhir:v "input" ] ;
+       fhir:mode [ fhir:v "source" ]
+     ] [
+       fhir:name [ fhir:v "tgt" ] ;
+       fhir:type [ fhir:v "output" ] ;
+       fhir:mode [ fhir:v "target" ]
+     ] ) ;
+     fhir:rule ( [
+       fhir:name [ fhir:v "setBundleType" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "tgt" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "type" ] ;
+         fhir:transform [ fhir:v "copy" ] ;
+         fhir:parameter ( [
+           fhir:value [ fhir:v "transaction" ]
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "copyPatient" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "entry" ] ;
+         fhir:variable [ fhir:v "entry" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "tgt" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "entry" ] ;
+         fhir:variable [ fhir:v "tentry" ]
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "patientResource" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "entry" ] ;
+           fhir:type [ fhir:v "Patient" ] ;
+           fhir:element [ fhir:v "resource" ] ;
+           fhir:variable [ fhir:v "patient" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "tentry" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "resource" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [ fhir:v "patient" ]
+           ] )
+         ] [
+           fhir:context [ fhir:v "tentry" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "request" ] ;
+           fhir:variable [ fhir:v "newrequest" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "setFullUrl" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "entry" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "tentry" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "fullUrl" ] ;
+             fhir:transform [ fhir:v "evaluate" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "'urn:uuid:' & patient.id" ]
+             ] )
+           ] )
+         ] [
+           fhir:name [ fhir:v "setPatientRequest" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "entry" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "newrequest" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "method" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "PUT" ]
+             ] )
+           ] [
+             fhir:context [ fhir:v "newrequest" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "url" ] ;
+             fhir:transform [ fhir:v "evaluate" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "'Patient/' & patient.id" ]
+             ] )
+           ] )
+         ] [
+           fhir:name [ fhir:v "setProvenance" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "entry" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "tgt" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "entry" ] ;
+             fhir:variable [ fhir:v "pentry" ]
+           ] [
+             fhir:context [ fhir:v "pentry" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "resource" ] ;
+             fhir:variable [ fhir:v "prov" ] ;
+             fhir:transform [ fhir:v "create" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "Provenance" ]
+             ] )
+           ] [
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:variable [ fhir:v "pid" ] ;
+             fhir:transform [ fhir:v "uuid" ]
+           ] [
+             fhir:context [ fhir:v "pentry" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "request" ] ;
+             fhir:variable [ fhir:v "prequest" ]
+           ] ) ;
+           fhir:rule ( [
+             fhir:name [ fhir:v "setPId" ] ;
+             fhir:source ( [
+               fhir:context [ fhir:v "patient" ]
+             ] ) ;
+             fhir:target ( [
+               fhir:context [ fhir:v "prov" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "id" ] ;
+               fhir:transform [ fhir:v "copy" ] ;
+               fhir:parameter ( [
+                 fhir:value [ fhir:v "pid" ]
+               ] )
+             ] )
+           ] [
+             fhir:name [ fhir:v "setFullUrl" ] ;
+             fhir:source ( [
+               fhir:context [ fhir:v "patient" ]
+             ] ) ;
+             fhir:target ( [
+               fhir:context [ fhir:v "pentry" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "fullUrl" ] ;
+               fhir:transform [ fhir:v "evaluate" ] ;
+               fhir:parameter ( [
+                 fhir:value [ fhir:v "'urn:uuid:' & pid" ]
+               ] )
+             ] )
+           ] [
+             fhir:name [ fhir:v "setrequest" ] ;
+             fhir:source ( [
+               fhir:context [ fhir:v "patient" ]
+             ] ) ;
+             fhir:target ( [
+               fhir:context [ fhir:v "prequest" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "method" ] ;
+               fhir:transform [ fhir:v "copy" ] ;
+               fhir:parameter ( [
+                 fhir:value [ fhir:v "PUT" ]
+               ] )
+             ] [
+               fhir:context [ fhir:v "prequest" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "url" ] ;
+               fhir:transform [ fhir:v "evaluate" ] ;
+               fhir:parameter ( [
+                 fhir:value [ fhir:v "'Provenance/' & pid" ]
+               ] )
+             ] )
+           ] [
+             fhir:name [ fhir:v "setTarget" ] ;
+             fhir:source ( [
+               fhir:context [ fhir:v "patient" ]
+             ] ) ;
+             fhir:target ( [
+               fhir:context [ fhir:v "prov" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "target" ] ;
+               fhir:variable [ fhir:v "ptarg" ]
+             ] ) ;
+             fhir:rule ( [
+               fhir:name [ fhir:v "setTargetRef" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "patient" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "ptarg" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "reference" ] ;
+                 fhir:transform [ fhir:v "evaluate" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "'urn:uuid:' & patient.id" ]
+                 ] )
+               ] )
+             ] )
+           ] [
+             fhir:name [ fhir:v "setEntity" ] ;
+             fhir:source ( [
+               fhir:context [ fhir:v "patient" ]
+             ] ) ;
+             fhir:target ( [
+               fhir:context [ fhir:v "prov" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "entity" ] ;
+               fhir:variable [ fhir:v "entity" ]
+             ] ) ;
+             fhir:rule ( [
+               fhir:name [ fhir:v "setRole" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "patient" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "entity" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "role" ] ;
+                 fhir:transform [ fhir:v "copy" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "source" ]
+                 ] )
+               ] )
+             ] [
+               fhir:name [ fhir:v "setWhatId" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "patient" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "entity" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "what" ] ;
+                 fhir:variable [ fhir:v "pwhat" ]
+               ] ) ;
+               fhir:dependent ( [
+                 fhir:name [ fhir:v "setProvenanceFromBundleId" ] ;
+                 fhir:variable ( [ fhir:v "src" ] [ fhir:v "pwhat" ] )
+               ] )
+             ] )
+           ] )
+         ] [
+           fhir:name [ fhir:v "getOnARTObservation" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ] ;
+             fhir:element [ fhir:v "entry" ] ;
+             fhir:variable [ fhir:v "obsentry" ] ;
+             fhir:condition [ fhir:v "resource.is(Observation) and resource.subject.exists(reference = ('Patient/' & patient.id)) and resource.code.exists(coding.exists((system = 'https://cielterminology.org') and (code = '160540')))" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "tgt" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "entry" ] ;
+             fhir:variable [ fhir:v "newentry" ]
+           ] [
+             fhir:context [ fhir:v "newentry" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "resource" ] ;
+             fhir:variable [ fhir:v "cond" ] ;
+             fhir:transform [ fhir:v "create" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "Condition" ]
+             ] )
+           ] [
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:variable [ fhir:v "cid" ] ;
+             fhir:transform [ fhir:v "uuid" ]
+           ] ) ;
+           fhir:rule ( [
+             fhir:name [ fhir:v "setCondition" ] ;
+             fhir:source ( [
+               fhir:context [ fhir:v "obsentry" ] ;
+               fhir:element [ fhir:v "resource" ] ;
+               fhir:variable [ fhir:v "obs" ]
+             ] ) ;
+             fhir:target ( [
+               fhir:context [ fhir:v "newentry" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "fullUrl" ] ;
+               fhir:transform [ fhir:v "evaluate" ] ;
+               fhir:parameter ( [
+                 fhir:value [ fhir:v "'urn:uuid:' & cid" ]
+               ] )
+             ] [
+               fhir:context [ fhir:v "newentry" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "request" ] ;
+               fhir:variable [ fhir:v "newrequest" ]
+             ] ) ;
+             fhir:rule ( [
+               fhir:name [ fhir:v "setCId" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "obsentry" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "cond" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "id" ] ;
+                 fhir:transform [ fhir:v "copy" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "cid" ]
+                 ] )
+               ] )
+             ] [
+               fhir:name [ fhir:v "setrequest" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "obsentry" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "newrequest" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "method" ] ;
+                 fhir:transform [ fhir:v "copy" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "PUT" ]
+                 ] )
+               ] [
+                 fhir:context [ fhir:v "newrequest" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "url" ] ;
+                 fhir:transform [ fhir:v "evaluate" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "'Condition/' & cid" ]
+                 ] )
+               ] )
+             ] [
+               fhir:name [ fhir:v "setSubject" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "patient" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "cond" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "subject" ] ;
+                 fhir:variable [ fhir:v "subject" ]
+               ] ) ;
+               fhir:rule ( [
+                 fhir:name [ fhir:v "setSubjectRef" ] ;
+                 fhir:source ( [
+                   fhir:context [ fhir:v "patient" ]
+                 ] ) ;
+                 fhir:target ( [
+                   fhir:context [ fhir:v "subject" ] ;
+                   fhir:contextType [ fhir:v "variable" ] ;
+                   fhir:element [ fhir:v "reference" ] ;
+                   fhir:transform [ fhir:v "reference" ] ;
+                   fhir:parameter ( [
+                     fhir:value [ fhir:v "patient" ]
+                   ] )
+                 ] )
+               ] )
+             ] [
+               fhir:name [ fhir:v "setOnset" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "obs" ] ;
+                 fhir:element [ fhir:v "effective" ] ;
+                 fhir:variable [ fhir:v "effective" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "cond" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "onset" ] ;
+                 fhir:transform [ fhir:v "copy" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "effective" ]
+                 ] )
+               ] )
+             ] [
+               fhir:name [ fhir:v "setClinicalStatus" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "obsentry" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "cond" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "clinicalStatus" ] ;
+                 fhir:transform [ fhir:v "cc" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-clinical" ]
+                 ] [
+                   fhir:value [ fhir:v "active" ]
+                 ] [
+                   fhir:value [ fhir:v "Active" ]
+                 ] )
+               ] )
+             ] [
+               fhir:name [ fhir:v "setCode" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "obsentry" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "cond" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "code" ] ;
+                 fhir:transform [ fhir:v "cc" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "http://smart.who.int/hiv/CodeSystem/HIVConcepts" ]
+                 ] [
+                   fhir:value [ fhir:v "HIV.B.DE116" ]
+                 ] [
+                   fhir:value [ fhir:v "HIV-positive" ]
+                 ] )
+               ] )
+             ] [
+               fhir:name [ fhir:v "setCategory" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "obsentry" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "cond" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "category" ] ;
+                 fhir:transform [ fhir:v "cc" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-category" ]
+                 ] [
+                   fhir:value [ fhir:v "encounter-diagnosis" ]
+                 ] [
+                   fhir:value [ fhir:v "Encounter Diagnosis" ]
+                 ] )
+               ] )
+             ] [
+               fhir:name [ fhir:v "setProvenance" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "obs" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "tgt" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "entry" ] ;
+                 fhir:variable [ fhir:v "pentry" ]
+               ] [
+                 fhir:context [ fhir:v "pentry" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "resource" ] ;
+                 fhir:variable [ fhir:v "prov" ] ;
+                 fhir:transform [ fhir:v "create" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "Provenance" ]
+                 ] )
+               ] [
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:variable [ fhir:v "pid" ] ;
+                 fhir:transform [ fhir:v "uuid" ]
+               ] [
+                 fhir:context [ fhir:v "pentry" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "request" ] ;
+                 fhir:variable [ fhir:v "prequest" ]
+               ] ) ;
+               fhir:rule ( [
+                 fhir:name [ fhir:v "setPId" ] ;
+                 fhir:source ( [
+                   fhir:context [ fhir:v "obs" ]
+                 ] ) ;
+                 fhir:target ( [
+                   fhir:context [ fhir:v "prov" ] ;
+                   fhir:contextType [ fhir:v "variable" ] ;
+                   fhir:element [ fhir:v "id" ] ;
+                   fhir:transform [ fhir:v "copy" ] ;
+                   fhir:parameter ( [
+                     fhir:value [ fhir:v "pid" ]
+                   ] )
+                 ] )
+               ] [
+                 fhir:name [ fhir:v "setFullUrl" ] ;
+                 fhir:source ( [
+                   fhir:context [ fhir:v "obs" ]
+                 ] ) ;
+                 fhir:target ( [
+                   fhir:context [ fhir:v "pentry" ] ;
+                   fhir:contextType [ fhir:v "variable" ] ;
+                   fhir:element [ fhir:v "fullUrl" ] ;
+                   fhir:transform [ fhir:v "evaluate" ] ;
+                   fhir:parameter ( [
+                     fhir:value [ fhir:v "'urn:uuid:' & pid" ]
+                   ] )
+                 ] )
+               ] [
+                 fhir:name [ fhir:v "setrequest" ] ;
+                 fhir:source ( [
+                   fhir:context [ fhir:v "obs" ]
+                 ] ) ;
+                 fhir:target ( [
+                   fhir:context [ fhir:v "prequest" ] ;
+                   fhir:contextType [ fhir:v "variable" ] ;
+                   fhir:element [ fhir:v "method" ] ;
+                   fhir:transform [ fhir:v "copy" ] ;
+                   fhir:parameter ( [
+                     fhir:value [ fhir:v "PUT" ]
+                   ] )
+                 ] [
+                   fhir:context [ fhir:v "prequest" ] ;
+                   fhir:contextType [ fhir:v "variable" ] ;
+                   fhir:element [ fhir:v "url" ] ;
+                   fhir:transform [ fhir:v "evaluate" ] ;
+                   fhir:parameter ( [
+                     fhir:value [ fhir:v "'Provenance/' & pid" ]
+                   ] )
+                 ] )
+               ] [
+                 fhir:name [ fhir:v "setTarget" ] ;
+                 fhir:source ( [
+                   fhir:context [ fhir:v "obs" ]
+                 ] ) ;
+                 fhir:target ( [
+                   fhir:context [ fhir:v "prov" ] ;
+                   fhir:contextType [ fhir:v "variable" ] ;
+                   fhir:element [ fhir:v "target" ] ;
+                   fhir:variable [ fhir:v "ptarg" ]
+                 ] ) ;
+                 fhir:rule ( [
+                   fhir:name [ fhir:v "setTargetRef" ] ;
+                   fhir:source ( [
+                     fhir:context [ fhir:v "obs" ]
+                   ] ) ;
+                   fhir:target ( [
+                     fhir:context [ fhir:v "ptarg" ] ;
+                     fhir:contextType [ fhir:v "variable" ] ;
+                     fhir:element [ fhir:v "reference" ] ;
+                     fhir:transform [ fhir:v "evaluate" ] ;
+                     fhir:parameter ( [
+                       fhir:value [ fhir:v "'urn:uuid:' & cid" ]
+                     ] )
+                   ] )
+                 ] )
+               ] [
+                 fhir:name [ fhir:v "setEntity" ] ;
+                 fhir:source ( [
+                   fhir:context [ fhir:v "obs" ]
+                 ] ) ;
+                 fhir:target ( [
+                   fhir:context [ fhir:v "prov" ] ;
+                   fhir:contextType [ fhir:v "variable" ] ;
+                   fhir:element [ fhir:v "entity" ] ;
+                   fhir:variable [ fhir:v "entity" ]
+                 ] ) ;
+                 fhir:rule ( [
+                   fhir:name [ fhir:v "setRole" ] ;
+                   fhir:source ( [
+                     fhir:context [ fhir:v "obs" ]
+                   ] ) ;
+                   fhir:target ( [
+                     fhir:context [ fhir:v "entity" ] ;
+                     fhir:contextType [ fhir:v "variable" ] ;
+                     fhir:element [ fhir:v "role" ] ;
+                     fhir:transform [ fhir:v "copy" ] ;
+                     fhir:parameter ( [
+                       fhir:value [ fhir:v "source" ]
+                     ] )
+                   ] )
+                 ] [
+                   fhir:name [ fhir:v "setWhatId" ] ;
+                   fhir:source ( [
+                     fhir:context [ fhir:v "obs" ]
+                   ] ) ;
+                   fhir:target ( [
+                     fhir:context [ fhir:v "entity" ] ;
+                     fhir:contextType [ fhir:v "variable" ] ;
+                     fhir:element [ fhir:v "what" ] ;
+                     fhir:variable [ fhir:v "pwhat" ]
+                   ] ) ;
+                   fhir:dependent ( [
+                     fhir:name [ fhir:v "setProvenanceFromBundleId" ] ;
+                     fhir:variable ( [ fhir:v "src" ] [ fhir:v "pwhat" ] )
+                   ] )
+                 ] )
+               ] )
+             ] )
+           ] )
+         ] [
+           fhir:name [ fhir:v "getVisitObservation" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ] ;
+             fhir:element [ fhir:v "entry" ] ;
+             fhir:variable [ fhir:v "obsentry" ] ;
+             fhir:condition [ fhir:v "resource.is(Observation) and resource.subject.exists(reference = ('Patient/' & patient.id)) and resource.code.exists(coding.exists((system = 'https://cielterminology.org') and (code = '5096')))" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "tgt" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "entry" ] ;
+             fhir:variable [ fhir:v "newentry" ]
+           ] [
+             fhir:context [ fhir:v "newentry" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "resource" ] ;
+             fhir:variable [ fhir:v "ms" ] ;
+             fhir:transform [ fhir:v "create" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "MedicationStatement" ]
+             ] )
+           ] [
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:variable [ fhir:v "msid" ] ;
+             fhir:transform [ fhir:v "uuid" ]
+           ] ) ;
+           fhir:rule ( [
+             fhir:name [ fhir:v "setMedicationStatement" ] ;
+             fhir:source ( [
+               fhir:context [ fhir:v "obsentry" ] ;
+               fhir:element [ fhir:v "resource" ] ;
+               fhir:variable [ fhir:v "obs" ]
+             ] ) ;
+             fhir:target ( [
+               fhir:context [ fhir:v "newentry" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "fullUrl" ] ;
+               fhir:transform [ fhir:v "evaluate" ] ;
+               fhir:parameter ( [
+                 fhir:value [ fhir:v "'urn:uuid:' & msid" ]
+               ] )
+             ] [
+               fhir:context [ fhir:v "newentry" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "request" ] ;
+               fhir:variable [ fhir:v "newrequest" ]
+             ] ) ;
+             fhir:rule ( [
+               fhir:name [ fhir:v "setMSId" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "obsentry" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "ms" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "id" ] ;
+                 fhir:transform [ fhir:v "copy" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "msid" ]
+                 ] )
+               ] )
+             ] [
+               fhir:name [ fhir:v "setrequest" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "obsentry" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "newrequest" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "method" ] ;
+                 fhir:transform [ fhir:v "copy" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "PUT" ]
+                 ] )
+               ] [
+                 fhir:context [ fhir:v "newrequest" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "url" ] ;
+                 fhir:transform [ fhir:v "evaluate" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "'MedicationStatement/' & msid" ]
+                 ] )
+               ] )
+             ] [
+               fhir:name [ fhir:v "setSubject" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "patient" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "ms" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "subject" ] ;
+                 fhir:variable [ fhir:v "subject" ]
+               ] ) ;
+               fhir:rule ( [
+                 fhir:name [ fhir:v "setSubjectRef" ] ;
+                 fhir:source ( [
+                   fhir:context [ fhir:v "patient" ]
+                 ] ) ;
+                 fhir:target ( [
+                   fhir:context [ fhir:v "subject" ] ;
+                   fhir:contextType [ fhir:v "variable" ] ;
+                   fhir:element [ fhir:v "reference" ] ;
+                   fhir:transform [ fhir:v "reference" ] ;
+                   fhir:parameter ( [
+                     fhir:value [ fhir:v "patient" ]
+                   ] )
+                 ] )
+               ] )
+             ] [
+               fhir:name [ fhir:v "setEffective" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "obs" ] ;
+                 fhir:type [ fhir:v "dateTime" ] ;
+                 fhir:element [ fhir:v "effective" ] ;
+                 fhir:variable [ fhir:v "effective" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "ms" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "effective" ] ;
+                 fhir:variable [ fhir:v "mseffective" ] ;
+                 fhir:transform [ fhir:v "create" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "Period" ]
+                 ] )
+               ] ) ;
+               fhir:rule ( [
+                 fhir:name [ fhir:v "setEffectiveStart" ] ;
+                 fhir:source ( [
+                   fhir:context [ fhir:v "effective" ]
+                 ] ) ;
+                 fhir:target ( [
+                   fhir:context [ fhir:v "mseffective" ] ;
+                   fhir:contextType [ fhir:v "variable" ] ;
+                   fhir:element [ fhir:v "start" ] ;
+                   fhir:transform [ fhir:v "copy" ] ;
+                   fhir:parameter ( [
+                     fhir:value [ fhir:v "effective" ]
+                   ] )
+                 ] )
+               ] [
+                 fhir:name [ fhir:v "setEffectiveEnd" ] ;
+                 fhir:source ( [
+                   fhir:context [ fhir:v "effective" ]
+                 ] ) ;
+                 fhir:target ( [
+                   fhir:context [ fhir:v "mseffective" ] ;
+                   fhir:contextType [ fhir:v "variable" ] ;
+                   fhir:element [ fhir:v "end" ] ;
+                   fhir:transform [ fhir:v "evaluate" ] ;
+                   fhir:parameter ( [
+                     fhir:value [ fhir:v "%effective + 30 'days'" ]
+                   ] )
+                 ] )
+               ] )
+             ] [
+               fhir:name [ fhir:v "setStatus" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "obsentry" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "ms" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "status" ] ;
+                 fhir:transform [ fhir:v "copy" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "active" ]
+                 ] )
+               ] )
+             ] [
+               fhir:name [ fhir:v "setMSReasonCode" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "obsentry" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "ms" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "reasonCode" ] ;
+                 fhir:transform [ fhir:v "cc" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "http://smart.who.int/hiv/CodeSystem/HIVConcepts" ]
+                 ] [
+                   fhir:value [ fhir:v "HIV.H.DE47" ]
+                 ] [
+                   fhir:value [ fhir:v "On ART" ]
+                 ] )
+               ] )
+             ] [
+               fhir:name [ fhir:v "SetMSMedication" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "obsentry" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "ms" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "medication" ] ;
+                 fhir:variable [ fhir:v "medication" ] ;
+                 fhir:transform [ fhir:v "create" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "CodeableConcept" ]
+                 ] )
+               ] ) ;
+               fhir:rule ( [
+                 fhir:name [ fhir:v "setMSCoding" ] ;
+                 fhir:source ( [
+                   fhir:context [ fhir:v "obsentry" ]
+                 ] ) ;
+                 fhir:target ( [
+                   fhir:context [ fhir:v "medication" ] ;
+                   fhir:contextType [ fhir:v "variable" ] ;
+                   fhir:element [ fhir:v "coding" ] ;
+                   fhir:variable [ fhir:v "coding" ]
+                 ] ) ;
+                 fhir:rule ( [
+                   fhir:name [ fhir:v "setMSCoding" ] ;
+                   fhir:source ( [
+                     fhir:context [ fhir:v "obsentry" ]
+                   ] ) ;
+                   fhir:target ( [
+                     fhir:context [ fhir:v "coding" ] ;
+                     fhir:contextType [ fhir:v "variable" ] ;
+                     fhir:element [ fhir:v "code" ] ;
+                     fhir:transform [ fhir:v "copy" ] ;
+                     fhir:parameter ( [
+                       fhir:value [ fhir:v "160119" ]
+                     ] )
+                   ] [
+                     fhir:context [ fhir:v "coding" ] ;
+                     fhir:contextType [ fhir:v "variable" ] ;
+                     fhir:element [ fhir:v "display" ] ;
+                     fhir:transform [ fhir:v "copy" ] ;
+                     fhir:parameter ( [
+                       fhir:value [ fhir:v "CURRENTLY TAKING ARV" ]
+                     ] )
+                   ] [
+                     fhir:context [ fhir:v "coding" ] ;
+                     fhir:contextType [ fhir:v "variable" ] ;
+                     fhir:element [ fhir:v "system" ] ;
+                     fhir:transform [ fhir:v "copy" ] ;
+                     fhir:parameter ( [
+                       fhir:value [ fhir:v "https://cielterminology.org" ]
+                     ] )
+                   ] )
+                 ] )
+               ] )
+             ] [
+               fhir:name [ fhir:v "setProvenance" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "obs" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "tgt" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "entry" ] ;
+                 fhir:variable [ fhir:v "pentry" ]
+               ] [
+                 fhir:context [ fhir:v "pentry" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "resource" ] ;
+                 fhir:variable [ fhir:v "prov" ] ;
+                 fhir:transform [ fhir:v "create" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "Provenance" ]
+                 ] )
+               ] [
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:variable [ fhir:v "pid" ] ;
+                 fhir:transform [ fhir:v "uuid" ]
+               ] [
+                 fhir:context [ fhir:v "pentry" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "request" ] ;
+                 fhir:variable [ fhir:v "prequest" ]
+               ] ) ;
+               fhir:rule ( [
+                 fhir:name [ fhir:v "setPId" ] ;
+                 fhir:source ( [
+                   fhir:context [ fhir:v "obs" ]
+                 ] ) ;
+                 fhir:target ( [
+                   fhir:context [ fhir:v "prov" ] ;
+                   fhir:contextType [ fhir:v "variable" ] ;
+                   fhir:element [ fhir:v "id" ] ;
+                   fhir:transform [ fhir:v "copy" ] ;
+                   fhir:parameter ( [
+                     fhir:value [ fhir:v "pid" ]
+                   ] )
+                 ] )
+               ] [
+                 fhir:name [ fhir:v "setFullUrl" ] ;
+                 fhir:source ( [
+                   fhir:context [ fhir:v "obs" ]
+                 ] ) ;
+                 fhir:target ( [
+                   fhir:context [ fhir:v "pentry" ] ;
+                   fhir:contextType [ fhir:v "variable" ] ;
+                   fhir:element [ fhir:v "fullUrl" ] ;
+                   fhir:transform [ fhir:v "evaluate" ] ;
+                   fhir:parameter ( [
+                     fhir:value [ fhir:v "'urn:uuid:' & pid" ]
+                   ] )
+                 ] )
+               ] [
+                 fhir:name [ fhir:v "setrequest" ] ;
+                 fhir:source ( [
+                   fhir:context [ fhir:v "obs" ]
+                 ] ) ;
+                 fhir:target ( [
+                   fhir:context [ fhir:v "prequest" ] ;
+                   fhir:contextType [ fhir:v "variable" ] ;
+                   fhir:element [ fhir:v "method" ] ;
+                   fhir:transform [ fhir:v "copy" ] ;
+                   fhir:parameter ( [
+                     fhir:value [ fhir:v "PUT" ]
+                   ] )
+                 ] [
+                   fhir:context [ fhir:v "prequest" ] ;
+                   fhir:contextType [ fhir:v "variable" ] ;
+                   fhir:element [ fhir:v "url" ] ;
+                   fhir:transform [ fhir:v "evaluate" ] ;
+                   fhir:parameter ( [
+                     fhir:value [ fhir:v "'Provenance/' & pid" ]
+                   ] )
+                 ] )
+               ] [
+                 fhir:name [ fhir:v "setTarget" ] ;
+                 fhir:source ( [
+                   fhir:context [ fhir:v "obs" ]
+                 ] ) ;
+                 fhir:target ( [
+                   fhir:context [ fhir:v "prov" ] ;
+                   fhir:contextType [ fhir:v "variable" ] ;
+                   fhir:element [ fhir:v "target" ] ;
+                   fhir:variable [ fhir:v "ptarg" ]
+                 ] ) ;
+                 fhir:rule ( [
+                   fhir:name [ fhir:v "setTargetRef" ] ;
+                   fhir:source ( [
+                     fhir:context [ fhir:v "obs" ]
+                   ] ) ;
+                   fhir:target ( [
+                     fhir:context [ fhir:v "ptarg" ] ;
+                     fhir:contextType [ fhir:v "variable" ] ;
+                     fhir:element [ fhir:v "reference" ] ;
+                     fhir:transform [ fhir:v "evaluate" ] ;
+                     fhir:parameter ( [
+                       fhir:value [ fhir:v "'urn:uuid:' & msid" ]
+                     ] )
+                   ] )
+                 ] )
+               ] [
+                 fhir:name [ fhir:v "setEntity" ] ;
+                 fhir:source ( [
+                   fhir:context [ fhir:v "obs" ]
+                 ] ) ;
+                 fhir:target ( [
+                   fhir:context [ fhir:v "prov" ] ;
+                   fhir:contextType [ fhir:v "variable" ] ;
+                   fhir:element [ fhir:v "entity" ] ;
+                   fhir:variable [ fhir:v "entity" ]
+                 ] ) ;
+                 fhir:rule ( [
+                   fhir:name [ fhir:v "setRole" ] ;
+                   fhir:source ( [
+                     fhir:context [ fhir:v "obs" ]
+                   ] ) ;
+                   fhir:target ( [
+                     fhir:context [ fhir:v "entity" ] ;
+                     fhir:contextType [ fhir:v "variable" ] ;
+                     fhir:element [ fhir:v "role" ] ;
+                     fhir:transform [ fhir:v "copy" ] ;
+                     fhir:parameter ( [
+                       fhir:value [ fhir:v "source" ]
+                     ] )
+                   ] )
+                 ] [
+                   fhir:name [ fhir:v "setWhatId" ] ;
+                   fhir:source ( [
+                     fhir:context [ fhir:v "obs" ]
+                   ] ) ;
+                   fhir:target ( [
+                     fhir:context [ fhir:v "entity" ] ;
+                     fhir:contextType [ fhir:v "variable" ] ;
+                     fhir:element [ fhir:v "what" ] ;
+                     fhir:variable [ fhir:v "pwhat" ]
+                   ] ) ;
+                   fhir:dependent ( [
+                     fhir:name [ fhir:v "setProvenanceFromBundleId" ] ;
+                     fhir:variable ( [ fhir:v "src" ] [ fhir:v "pwhat" ] )
+                   ] )
+                 ] )
+               ] )
+             ] )
+           ] )
+         ] [
+           fhir:name [ fhir:v "getOnARTObservation" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ] ;
+             fhir:element [ fhir:v "entry" ] ;
+             fhir:variable [ fhir:v "obsentry" ] ;
+             fhir:condition [ fhir:v "resource.is(Observation) and resource.subject.exists(reference = ('Patient/' & patient.id)) and resource.code.exists(coding.exists((system = 'https://cielterminology.org') and (code = '159427')))" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "tgt" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "entry" ] ;
+             fhir:variable [ fhir:v "newentry" ]
+           ] [
+             fhir:context [ fhir:v "newentry" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "resource" ] ;
+             fhir:variable [ fhir:v "observe" ] ;
+             fhir:transform [ fhir:v "create" ] ;
+             fhir:parameter ( [
+               fhir:value [ fhir:v "Observation" ]
+             ] )
+           ] [
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:variable [ fhir:v "obsd" ] ;
+             fhir:transform [ fhir:v "uuid" ]
+           ] ) ;
+           fhir:rule ( [
+             fhir:name [ fhir:v "setHIVPositiveTest" ] ;
+             fhir:source ( [
+               fhir:context [ fhir:v "obsentry" ] ;
+               fhir:element [ fhir:v "resource" ] ;
+               fhir:variable [ fhir:v "obs" ]
+             ] ) ;
+             fhir:target ( [
+               fhir:context [ fhir:v "newentry" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "fullUrl" ] ;
+               fhir:transform [ fhir:v "evaluate" ] ;
+               fhir:parameter ( [
+                 fhir:value [ fhir:v "'urn:uuid:' & obsd" ]
+               ] )
+             ] [
+               fhir:context [ fhir:v "newentry" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "request" ] ;
+               fhir:variable [ fhir:v "newrequest" ]
+             ] ) ;
+             fhir:rule ( [
+               fhir:name [ fhir:v "setOBSd" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "obsentry" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "observe" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "id" ] ;
+                 fhir:transform [ fhir:v "copy" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "obsd" ]
+                 ] )
+               ] )
+             ] [
+               fhir:name [ fhir:v "setrequest" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "obsentry" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "newrequest" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "method" ] ;
+                 fhir:transform [ fhir:v "copy" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "PUT" ]
+                 ] )
+               ] [
+                 fhir:context [ fhir:v "newrequest" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "url" ] ;
+                 fhir:transform [ fhir:v "evaluate" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "'Observation/' & obsd" ]
+                 ] )
+               ] )
+             ] [
+               fhir:name [ fhir:v "setSubject" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "patient" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "observe" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "subject" ] ;
+                 fhir:variable [ fhir:v "subject" ]
+               ] ) ;
+               fhir:rule ( [
+                 fhir:name [ fhir:v "setSubjectRef" ] ;
+                 fhir:source ( [
+                   fhir:context [ fhir:v "patient" ]
+                 ] ) ;
+                 fhir:target ( [
+                   fhir:context [ fhir:v "subject" ] ;
+                   fhir:contextType [ fhir:v "variable" ] ;
+                   fhir:element [ fhir:v "reference" ] ;
+                   fhir:transform [ fhir:v "reference" ] ;
+                   fhir:parameter ( [
+                     fhir:value [ fhir:v "patient" ]
+                   ] )
+                 ] )
+               ] )
+             ] [
+               fhir:name [ fhir:v "setOnset" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "obs" ] ;
+                 fhir:element [ fhir:v "effective" ] ;
+                 fhir:variable [ fhir:v "effective" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "observe" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "effective" ] ;
+                 fhir:transform [ fhir:v "copy" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "effective" ]
+                 ] )
+               ] )
+             ] [
+               fhir:name [ fhir:v "setCode" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "obs" ] ;
+                 fhir:element [ fhir:v "code" ] ;
+                 fhir:variable [ fhir:v "code" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "observe" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "code" ] ;
+                 fhir:transform [ fhir:v "copy" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "code" ]
+                 ] )
+               ] )
+             ] [
+               fhir:name [ fhir:v "setValueNegative" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "obs" ] ;
+                 fhir:type [ fhir:v "CodeableConcept" ] ;
+                 fhir:element [ fhir:v "value" ] ;
+                 fhir:variable [ fhir:v "value" ] ;
+                 fhir:condition [ fhir:v "coding.exists((system = 'https://cielterminology.org') and (code = '664'))" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "observe" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "value" ] ;
+                 fhir:variable [ fhir:v "val" ] ;
+                 fhir:transform [ fhir:v "create" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "CodeableConcept" ]
+                 ] )
+               ] ) ;
+               fhir:rule ( [
+                 fhir:name [ fhir:v "setNegativeCoding" ] ;
+                 fhir:source ( [
+                   fhir:context [ fhir:v "value" ]
+                 ] ) ;
+                 fhir:target ( [
+                   fhir:context [ fhir:v "val" ] ;
+                   fhir:contextType [ fhir:v "variable" ] ;
+                   fhir:element [ fhir:v "coding" ] ;
+                   fhir:variable [ fhir:v "coding" ]
+                 ] ) ;
+                 fhir:rule ( [
+                   fhir:name [ fhir:v "setNegativeCC" ] ;
+                   fhir:source ( [
+                     fhir:context [ fhir:v "value" ]
+                   ] ) ;
+                   fhir:target ( [
+                     fhir:context [ fhir:v "coding" ] ;
+                     fhir:contextType [ fhir:v "variable" ] ;
+                     fhir:element [ fhir:v "system" ] ;
+                     fhir:transform [ fhir:v "copy" ] ;
+                     fhir:parameter ( [
+                       fhir:value [ fhir:v "http://smart.who.int/hiv/CodeSystem/HIVConcepts" ]
+                     ] )
+                   ] [
+                     fhir:context [ fhir:v "coding" ] ;
+                     fhir:contextType [ fhir:v "variable" ] ;
+                     fhir:element [ fhir:v "code" ] ;
+                     fhir:transform [ fhir:v "copy" ] ;
+                     fhir:parameter ( [
+                       fhir:value [ fhir:v "HIV.B.DE117" ]
+                     ] )
+                   ] [
+                     fhir:context [ fhir:v "coding" ] ;
+                     fhir:contextType [ fhir:v "variable" ] ;
+                     fhir:element [ fhir:v "display" ] ;
+                     fhir:transform [ fhir:v "copy" ] ;
+                     fhir:parameter ( [
+                       fhir:value [ fhir:v "HIV-negative" ]
+                     ] )
+                   ] )
+                 ] )
+               ] )
+             ] [
+               fhir:name [ fhir:v "setValuePositive1" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "obs" ] ;
+                 fhir:type [ fhir:v "CodeableConcept" ] ;
+                 fhir:element [ fhir:v "value" ] ;
+                 fhir:variable [ fhir:v "value" ] ;
+                 fhir:condition [ fhir:v "coding.exists((system = 'https://cielterminology.org') and (code = '138571'))" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "observe" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "value" ] ;
+                 fhir:variable [ fhir:v "val" ] ;
+                 fhir:transform [ fhir:v "create" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "CodeableConcept" ]
+                 ] )
+               ] ) ;
+               fhir:rule ( [
+                 fhir:name [ fhir:v "setPositiveCoding" ] ;
+                 fhir:source ( [
+                   fhir:context [ fhir:v "value" ]
+                 ] ) ;
+                 fhir:target ( [
+                   fhir:context [ fhir:v "val" ] ;
+                   fhir:contextType [ fhir:v "variable" ] ;
+                   fhir:element [ fhir:v "coding" ] ;
+                   fhir:variable [ fhir:v "coding" ]
+                 ] ) ;
+                 fhir:rule ( [
+                   fhir:name [ fhir:v "setPositiveCC" ] ;
+                   fhir:source ( [
+                     fhir:context [ fhir:v "value" ]
+                   ] ) ;
+                   fhir:target ( [
+                     fhir:context [ fhir:v "coding" ] ;
+                     fhir:contextType [ fhir:v "variable" ] ;
+                     fhir:element [ fhir:v "system" ] ;
+                     fhir:transform [ fhir:v "copy" ] ;
+                     fhir:parameter ( [
+                       fhir:value [ fhir:v "http://smart.who.int/hiv/CodeSystem/HIVConcepts" ]
+                     ] )
+                   ] [
+                     fhir:context [ fhir:v "coding" ] ;
+                     fhir:contextType [ fhir:v "variable" ] ;
+                     fhir:element [ fhir:v "code" ] ;
+                     fhir:transform [ fhir:v "copy" ] ;
+                     fhir:parameter ( [
+                       fhir:value [ fhir:v "HIV.B.DE116" ]
+                     ] )
+                   ] [
+                     fhir:context [ fhir:v "coding" ] ;
+                     fhir:contextType [ fhir:v "variable" ] ;
+                     fhir:element [ fhir:v "display" ] ;
+                     fhir:transform [ fhir:v "copy" ] ;
+                     fhir:parameter ( [
+                       fhir:value [ fhir:v "HIV-positive" ]
+                     ] )
+                   ] )
+                 ] )
+               ] )
+             ] [
+               fhir:name [ fhir:v "setValuePositive2" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "obs" ] ;
+                 fhir:type [ fhir:v "CodeableConcept" ] ;
+                 fhir:element [ fhir:v "value" ] ;
+                 fhir:variable [ fhir:v "value" ] ;
+                 fhir:condition [ fhir:v "coding.exists((system = 'https://cielterminology.org') and (code = '703'))" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "observe" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "value" ] ;
+                 fhir:variable [ fhir:v "val" ] ;
+                 fhir:transform [ fhir:v "create" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "CodeableConcept" ]
+                 ] )
+               ] ) ;
+               fhir:rule ( [
+                 fhir:name [ fhir:v "setPositiveCoding" ] ;
+                 fhir:source ( [
+                   fhir:context [ fhir:v "value" ]
+                 ] ) ;
+                 fhir:target ( [
+                   fhir:context [ fhir:v "val" ] ;
+                   fhir:contextType [ fhir:v "variable" ] ;
+                   fhir:element [ fhir:v "coding" ] ;
+                   fhir:variable [ fhir:v "coding" ]
+                 ] ) ;
+                 fhir:rule ( [
+                   fhir:name [ fhir:v "setPositiveCC" ] ;
+                   fhir:source ( [
+                     fhir:context [ fhir:v "value" ]
+                   ] ) ;
+                   fhir:target ( [
+                     fhir:context [ fhir:v "coding" ] ;
+                     fhir:contextType [ fhir:v "variable" ] ;
+                     fhir:element [ fhir:v "system" ] ;
+                     fhir:transform [ fhir:v "copy" ] ;
+                     fhir:parameter ( [
+                       fhir:value [ fhir:v "http://smart.who.int/hiv/CodeSystem/HIVConcepts" ]
+                     ] )
+                   ] [
+                     fhir:context [ fhir:v "coding" ] ;
+                     fhir:contextType [ fhir:v "variable" ] ;
+                     fhir:element [ fhir:v "code" ] ;
+                     fhir:transform [ fhir:v "copy" ] ;
+                     fhir:parameter ( [
+                       fhir:value [ fhir:v "HIV.B.DE116" ]
+                     ] )
+                   ] [
+                     fhir:context [ fhir:v "coding" ] ;
+                     fhir:contextType [ fhir:v "variable" ] ;
+                     fhir:element [ fhir:v "display" ] ;
+                     fhir:transform [ fhir:v "copy" ] ;
+                     fhir:parameter ( [
+                       fhir:value [ fhir:v "HIV-positive" ]
+                     ] )
+                   ] )
+                 ] )
+               ] )
+             ] [
+               fhir:name [ fhir:v "setStatus" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "obsentry" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "observe" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "status" ] ;
+                 fhir:transform [ fhir:v "cc" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "http://hl7.org/fhir/observation-status" ]
+                 ] [
+                   fhir:value [ fhir:v "final" ]
+                 ] [
+                   fhir:value [ fhir:v "Final" ]
+                 ] )
+               ] )
+             ] [
+               fhir:name [ fhir:v "setProvenance" ] ;
+               fhir:source ( [
+                 fhir:context [ fhir:v "obs" ]
+               ] ) ;
+               fhir:target ( [
+                 fhir:context [ fhir:v "tgt" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "entry" ] ;
+                 fhir:variable [ fhir:v "pentry" ]
+               ] [
+                 fhir:context [ fhir:v "pentry" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "resource" ] ;
+                 fhir:variable [ fhir:v "prov" ] ;
+                 fhir:transform [ fhir:v "create" ] ;
+                 fhir:parameter ( [
+                   fhir:value [ fhir:v "Provenance" ]
+                 ] )
+               ] [
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:variable [ fhir:v "pid" ] ;
+                 fhir:transform [ fhir:v "uuid" ]
+               ] [
+                 fhir:context [ fhir:v "pentry" ] ;
+                 fhir:contextType [ fhir:v "variable" ] ;
+                 fhir:element [ fhir:v "request" ] ;
+                 fhir:variable [ fhir:v "prequest" ]
+               ] ) ;
+               fhir:rule ( [
+                 fhir:name [ fhir:v "setPId" ] ;
+                 fhir:source ( [
+                   fhir:context [ fhir:v "obs" ]
+                 ] ) ;
+                 fhir:target ( [
+                   fhir:context [ fhir:v "prov" ] ;
+                   fhir:contextType [ fhir:v "variable" ] ;
+                   fhir:element [ fhir:v "id" ] ;
+                   fhir:transform [ fhir:v "copy" ] ;
+                   fhir:parameter ( [
+                     fhir:value [ fhir:v "pid" ]
+                   ] )
+                 ] )
+               ] [
+                 fhir:name [ fhir:v "setFullUrl" ] ;
+                 fhir:source ( [
+                   fhir:context [ fhir:v "obs" ]
+                 ] ) ;
+                 fhir:target ( [
+                   fhir:context [ fhir:v "pentry" ] ;
+                   fhir:contextType [ fhir:v "variable" ] ;
+                   fhir:element [ fhir:v "fullUrl" ] ;
+                   fhir:transform [ fhir:v "evaluate" ] ;
+                   fhir:parameter ( [
+                     fhir:value [ fhir:v "'urn:uuid:' & pid" ]
+                   ] )
+                 ] )
+               ] [
+                 fhir:name [ fhir:v "setrequest" ] ;
+                 fhir:source ( [
+                   fhir:context [ fhir:v "obs" ]
+                 ] ) ;
+                 fhir:target ( [
+                   fhir:context [ fhir:v "prequest" ] ;
+                   fhir:contextType [ fhir:v "variable" ] ;
+                   fhir:element [ fhir:v "method" ] ;
+                   fhir:transform [ fhir:v "copy" ] ;
+                   fhir:parameter ( [
+                     fhir:value [ fhir:v "PUT" ]
+                   ] )
+                 ] [
+                   fhir:context [ fhir:v "prequest" ] ;
+                   fhir:contextType [ fhir:v "variable" ] ;
+                   fhir:element [ fhir:v "url" ] ;
+                   fhir:transform [ fhir:v "evaluate" ] ;
+                   fhir:parameter ( [
+                     fhir:value [ fhir:v "'Provenance/' & pid" ]
+                   ] )
+                 ] )
+               ] [
+                 fhir:name [ fhir:v "setTarget" ] ;
+                 fhir:source ( [
+                   fhir:context [ fhir:v "obs" ]
+                 ] ) ;
+                 fhir:target ( [
+                   fhir:context [ fhir:v "prov" ] ;
+                   fhir:contextType [ fhir:v "variable" ] ;
+                   fhir:element [ fhir:v "target" ] ;
+                   fhir:variable [ fhir:v "ptarg" ]
+                 ] ) ;
+                 fhir:rule ( [
+                   fhir:name [ fhir:v "setTargetRef" ] ;
+                   fhir:source ( [
+                     fhir:context [ fhir:v "obs" ]
+                   ] ) ;
+                   fhir:target ( [
+                     fhir:context [ fhir:v "ptarg" ] ;
+                     fhir:contextType [ fhir:v "variable" ] ;
+                     fhir:element [ fhir:v "reference" ] ;
+                     fhir:transform [ fhir:v "evaluate" ] ;
+                     fhir:parameter ( [
+                       fhir:value [ fhir:v "'urn:uuid:' & cid" ]
+                     ] )
+                   ] )
+                 ] )
+               ] [
+                 fhir:name [ fhir:v "setEntity" ] ;
+                 fhir:source ( [
+                   fhir:context [ fhir:v "obs" ]
+                 ] ) ;
+                 fhir:target ( [
+                   fhir:context [ fhir:v "prov" ] ;
+                   fhir:contextType [ fhir:v "variable" ] ;
+                   fhir:element [ fhir:v "entity" ] ;
+                   fhir:variable [ fhir:v "entity" ]
+                 ] ) ;
+                 fhir:rule ( [
+                   fhir:name [ fhir:v "setRole" ] ;
+                   fhir:source ( [
+                     fhir:context [ fhir:v "obs" ]
+                   ] ) ;
+                   fhir:target ( [
+                     fhir:context [ fhir:v "entity" ] ;
+                     fhir:contextType [ fhir:v "variable" ] ;
+                     fhir:element [ fhir:v "role" ] ;
+                     fhir:transform [ fhir:v "copy" ] ;
+                     fhir:parameter ( [
+                       fhir:value [ fhir:v "source" ]
+                     ] )
+                   ] )
+                 ] [
+                   fhir:name [ fhir:v "setWhatId" ] ;
+                   fhir:source ( [
+                     fhir:context [ fhir:v "obs" ]
+                   ] ) ;
+                   fhir:target ( [
+                     fhir:context [ fhir:v "entity" ] ;
+                     fhir:contextType [ fhir:v "variable" ] ;
+                     fhir:element [ fhir:v "what" ] ;
+                     fhir:variable [ fhir:v "pwhat" ]
+                   ] ) ;
+                   fhir:dependent ( [
+                     fhir:name [ fhir:v "setProvenanceFromBundleId" ] ;
+                     fhir:variable ( [ fhir:v "src" ] [ fhir:v "pwhat" ] )
+                   ] )
+                 ] )
+               ] )
+             ] )
+           ] )
+         ] )
+       ] )
+     ] )
+  ] [
+     fhir:name [ fhir:v "setProvenanceFromBundleId" ] ;
+     fhir:typeMode [ fhir:v "none" ] ;
+     fhir:input ( [
+       fhir:name [ fhir:v "bundle" ] ;
+       fhir:type [ fhir:v "input" ] ;
+       fhir:mode [ fhir:v "source" ]
+     ] [
+       fhir:name [ fhir:v "provwhat" ] ;
+       fhir:type [ fhir:v "Reference" ] ;
+       fhir:mode [ fhir:v "target" ]
+     ] ) ;
+     fhir:rule ( [
+       fhir:name [ fhir:v "setWhatId" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "bundle" ] ;
+         fhir:element [ fhir:v "id" ] ;
+         fhir:variable [ fhir:v "bundleid" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "provwhat" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "identifier" ] ;
+         fhir:variable [ fhir:v "whatid" ]
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "setWhatIdValue" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "bundleid" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "whatid" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "value" ] ;
+           fhir:transform [ fhir:v "evaluate" ] ;
+           fhir:parameter ( [
+             fhir:value [ fhir:v "'Bundle/' & bundleid" ]
+           ] )
+         ] )
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

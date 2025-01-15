@@ -1,0 +1,13 @@
+URL,Version,Status,OIDs,Name,Title,Descriptino,Uses,Used,Sources
+http://hl7.org/fhir/ValueSet/adverse-event-type,0.1.0,draft,"2.16.840.1.113883.4.642.3.835,2.16.840.1.113883.4.642.3.808",AdverseEventType,AdverseEvent Type,"This value set includes codes that describe the adverse event or incident that occurred or was averted.",,"SCT"
+http://hl7.org/fhir/us/covid19library/ValueSet/pregnancy-status-value-set,0.1.0,active,,PregnancyStatusVS,Pregnancy Status Value Set,"The set of codes that describe one's state of pregnancy.",,"SCT"
+https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/HIV.B.DE3,0.1.0,active,,New Enrollment,New Enrollment,"0.1.0",,"Other"
+https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/HIV.D.DE5,0.1.0,active,,Entry point for community-level testing,Entry point for community-level testing,"0.1.1",,"Other"
+https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/HIV.D.DE6,0.1.0,active,,Entry point for facility-level testing,Entry point for facility-level testing,"0.1.0",,"Other"
+https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/HIV.D.DE7,0.1.0,active,,Test result,Test result,"0.1.0",,"Other"
+https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/HIV.D.DE8,0.1.0,active,,Test results received,Test results received,"0.1.0",,"Other"
+https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/HTS.setting,0.1.0,active,,HTS Setting,HIV Testing Services Setting,"0.1.1",,"Other"
+https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/OnARV,0.1.0,active,,OnARV,History of antiretroviral therapy (situation),"0.1.1",,"SCT,Other"
+https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/entry.point,0.1.0,active,,Entry Point,Entry Point,"0.1.0",,"Other"
+https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/transfer.in,0.1.0,active,,Transfer in,Transfer in,"0.1.1",,"Other"
+https://path-global-health.github.io/MERindicators/ValueSet/EnrollmentMethodsforHIVProgram,0.1.0,draft,,EnrollmentMethodsforHIVProgram,EnrollmentMethodsforHIVProgram,"1",,"Other"

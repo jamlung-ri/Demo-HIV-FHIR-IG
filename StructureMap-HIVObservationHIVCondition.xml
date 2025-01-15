@@ -1,0 +1,1797 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureMap xmlns="http://hl7.org/fhir">
+  <id value="HIVObservationHIVCondition"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: StructureMap HIVObservationHIVCondition</b></p><a name="HIVObservationHIVCondition"> </a><a name="hcHIVObservationHIVCondition"> </a><a name="HIVObservationHIVCondition-en-US"> </a><pre class="fml">
+<b>map</b><span style="color: navy"> &quot;</span>https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/StructureMap/HIVObservationHIVCondition<span style="color: navy">&quot; = &quot;</span>HIVObservationHIVCondition<span style="color: navy">&quot;
+
+</span><span style="color: navy">// </span><span style="color: green">declare the structure defs used</span>
+
+<b>uses</b><span style="color: navy"> &quot;</span><a href="http://hl7.org/fhir/R4/bundle.html" title="Bundle">http://hl7.org/fhir/StructureDefinition/Bundle</a><span style="color: navy">&quot; </span><b>alias </b>input <b>as </b><b>source</b>
+<b>uses</b><span style="color: navy"> &quot;</span><a href="http://hl7.org/fhir/R4/bundle.html" title="Bundle">http://hl7.org/fhir/StructureDefinition/Bundle</a><span style="color: navy">&quot; </span><b>alias </b>output <b>as </b><b>target</b>
+
+<span style="color: navy">// </span><span style="color: green">declare group with local vars (src, tgt) and their aliases</span>
+<span style="color: navy">// </span><span style="color: green">anything ending with semicolon is a rule</span>
+<b>group </b>HIVObservationHIVCondition<span style="color: navy">(</span><b>source</b> <span style="color: maroon">src</span><span style="color: navy"> : </span>input, <b>target</b> <span style="color: maroon">tgt</span><span style="color: navy"> : </span>output<span style="color: navy">)</span><span style="color: navy"> {
+</span>  <span style="color: navy">// </span><span style="color: green">set bundle type for the output bundle</span>
+  src<span style="color: navy"><b> -&gt; </b></span>tgt.type = <span style="color: blue">'transaction'</span> <i>&quot;setBundleType&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">// </span><span style="color: green">loop through patients in input bundle</span>
+  src.entry<b> as </b><span style="color: maroon">entry</span><span style="color: navy"><b> -&gt; </b></span>tgt.entry<b> as </b><span style="color: maroon">tentry</span><b> then</b><span style="color: navy"> {
+</span>    entry.resource<span style="color: navy"> : </span>Patient<b> as </b><span style="color: maroon">patient</span><span style="color: navy"><b> -&gt; </b></span> tentry.resource = <span style="color: maroon">patient</span><span style="color: navy">, </span> tentry.request<b> as </b><span style="color: maroon">newrequest</span><b> then</b><span style="color: navy"> {
+</span>      entry<span style="color: navy"><b> -&gt; </b></span>tentry.fullUrl = <span style="color: navy">(</span>'urn:uuid:' &amp; patient.id<span style="color: navy">)</span> <i>&quot;setFullUrl&quot;</i><span style="color: navy">;</span>
+      entry<span style="color: navy"><b> -&gt; </b></span> newrequest.method = <span style="color: blue">'PUT'</span><span style="color: navy">, </span> newrequest.url = <span style="color: navy">(</span>'Patient/' &amp; patient.id<span style="color: navy">)</span> <i>&quot;setPatientRequest&quot;</i><span style="color: navy">;</span>
+      entry<span style="color: navy"><b> -&gt; </b></span> tgt.entry<b> as </b><span style="color: maroon">pentry</span><span style="color: navy">, </span> pentry.resource = <b>create</b><span style="color: navy">(</span><span style="color: blue">'Provenance'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">prov</span><span style="color: navy">, </span> <b>uuid</b><span style="color: navy">(</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">pid</span><span style="color: navy">, </span> pentry.request<b> as </b><span style="color: maroon">prequest</span><b> then</b><span style="color: navy"> {
+</span>        patient<span style="color: navy"><b> -&gt; </b></span>prov.id = <span style="color: maroon">pid</span> <i>&quot;setPId&quot;</i><span style="color: navy">;</span>
+        patient<span style="color: navy"><b> -&gt; </b></span>pentry.fullUrl = <span style="color: navy">(</span>'urn:uuid:' &amp; pid<span style="color: navy">)</span> <i>&quot;setFullUrl&quot;</i><span style="color: navy">;</span>
+        patient<span style="color: navy"><b> -&gt; </b></span> prequest.method = <span style="color: blue">'PUT'</span><span style="color: navy">, </span> prequest.url = <span style="color: navy">(</span>'Provenance/' &amp; pid<span style="color: navy">)</span> <i>&quot;setrequest&quot;</i><span style="color: navy">;</span>
+        patient<span style="color: navy"><b> -&gt; </b></span>prov.target<b> as </b><span style="color: maroon">ptarg</span><b> then</b><span style="color: navy"> {
+</span>          patient<span style="color: navy"><b> -&gt; </b></span>ptarg.reference = <span style="color: navy">(</span>'urn:uuid:' &amp; patient.id<span style="color: navy">)</span> <i>&quot;setTargetRef&quot;</i><span style="color: navy">;</span>
+        <span style="color: navy">}</span> <i>&quot;setTarget&quot;</i><span style="color: navy">;</span>
+        patient<span style="color: navy"><b> -&gt; </b></span>prov.entity<b> as </b><span style="color: maroon">entity</span><b> then</b><span style="color: navy"> {
+</span>          patient<span style="color: navy"><b> -&gt; </b></span>entity.role = <span style="color: blue">'source'</span> <i>&quot;setRole&quot;</i><span style="color: navy">;</span>
+          patient<span style="color: navy"><b> -&gt; </b></span>entity.what<b> as </b><span style="color: maroon">pwhat</span><b> then </b>setProvenanceFromBundleId<span style="color: navy">(</span><span style="color: maroon">src</span><span style="color: navy">, </span><span style="color: maroon">pwhat</span><span style="color: navy">)</span> <i>&quot;setWhatId&quot;</i><span style="color: navy">;</span>
+        <span style="color: navy">}</span> <i>&quot;setEntity&quot;</i><span style="color: navy">;</span>
+      <span style="color: navy">}</span> <i>&quot;setProvenance&quot;</i><span style="color: navy">;</span>
+      <span style="color: navy">// </span><span style="color: green">for observations of that patient look for art program enrollment</span>
+      <span style="color: navy">// </span><span style="color: green">create a condition resource in output with uuid</span>
+      src.entry<b> as </b><span style="color: maroon">obsentry</span><b> where </b>resource.is(Observation) and resource.subject.exists(reference = ('Patient/' &amp; patient.id)) and resource.code.exists(coding.exists((system = 'https://cielterminology.org') and (code = '160540')))<span style="color: navy"><b> -&gt; </b></span> tgt.entry<b> as </b><span style="color: maroon">newentry</span><span style="color: navy">, </span> newentry.resource = <b>create</b><span style="color: navy">(</span><span style="color: blue">'Condition'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">cond</span><span style="color: navy">, </span> <b>uuid</b><span style="color: navy">(</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">cid</span><b> then</b><span style="color: navy"> {
+</span>        obsentry.resource<b> as </b><span style="color: maroon">obs</span><span style="color: navy"><b> -&gt; </b></span> newentry.fullUrl = <span style="color: navy">(</span>'urn:uuid:' &amp; cid<span style="color: navy">)</span><span style="color: navy">, </span> newentry.request<b> as </b><span style="color: maroon">newrequest</span><b> then</b><span style="color: navy"> {
+</span>          obsentry<span style="color: navy"><b> -&gt; </b></span>cond.id = <span style="color: maroon">cid</span> <i>&quot;setCId&quot;</i><span style="color: navy">;</span>
+          <span style="color: navy">// </span><span style="color: green">setrequest rule for resource in transaction bundle</span>
+          <span style="color: navy">// </span><span style="color: green">needs to be processed properly before putting on existing data on fhir server</span>
+          obsentry<span style="color: navy"><b> -&gt; </b></span> newrequest.method = <span style="color: blue">'PUT'</span><span style="color: navy">, </span> newrequest.url = <span style="color: navy">(</span>'Condition/' &amp; cid<span style="color: navy">)</span> <i>&quot;setrequest&quot;</i><span style="color: navy">;</span>
+          patient<span style="color: navy"><b> -&gt; </b></span>cond.subject<b> as </b><span style="color: maroon">subject</span><b> then</b><span style="color: navy"> {
+</span>            patient<span style="color: navy"><b> -&gt; </b></span>subject.reference = <b>reference</b><span style="color: navy">(</span><span style="color: maroon">patient</span><span style="color: navy">)</span> <i>&quot;setSubjectRef&quot;</i><span style="color: navy">;</span>
+          <span style="color: navy">}</span> <i>&quot;setSubject&quot;</i><span style="color: navy">;</span>
+          obs.effective<b> as </b><span style="color: maroon">effective</span><span style="color: navy"><b> -&gt; </b></span>cond.onset = <span style="color: maroon">effective</span> <i>&quot;setOnset&quot;</i><span style="color: navy">;</span>
+          obsentry<span style="color: navy"><b> -&gt; </b></span>cond.clinicalStatus = <b>cc</b><span style="color: navy">(</span><span style="color: blue">'http://terminology.hl7.org/CodeSystem/condition-clinical'</span><span style="color: navy">, </span><span style="color: blue">'active'</span><span style="color: navy">, </span><span style="color: blue">'Active'</span><span style="color: navy">)</span> <i>&quot;setClinicalStatus&quot;</i><span style="color: navy">;</span>
+          obsentry<span style="color: navy"><b> -&gt; </b></span>cond.code = <b>cc</b><span style="color: navy">(</span><span style="color: blue">'http://smart.who.int/hiv/CodeSystem/HIVConcepts'</span><span style="color: navy">, </span><span style="color: blue">'HIV.B.DE116'</span><span style="color: navy">, </span><span style="color: blue">'HIV-positive'</span><span style="color: navy">)</span> <i>&quot;setCode&quot;</i><span style="color: navy">;</span>
+          obsentry<span style="color: navy"><b> -&gt; </b></span>cond.category = <b>cc</b><span style="color: navy">(</span><span style="color: blue">'http://terminology.hl7.org/CodeSystem/condition-category'</span><span style="color: navy">, </span><span style="color: blue">'encounter-diagnosis'</span><span style="color: navy">, </span><span style="color: blue">'Encounter Diagnosis'</span><span style="color: navy">)</span> <i>&quot;setCategory&quot;</i><span style="color: navy">;</span>
+          <span style="color: navy">// </span><span style="color: green">create provenance resource to document input/output resources links</span>
+          obs<span style="color: navy"><b> -&gt; </b></span> tgt.entry<b> as </b><span style="color: maroon">pentry</span><span style="color: navy">, </span> pentry.resource = <b>create</b><span style="color: navy">(</span><span style="color: blue">'Provenance'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">prov</span><span style="color: navy">, </span> <b>uuid</b><span style="color: navy">(</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">pid</span><span style="color: navy">, </span> pentry.request<b> as </b><span style="color: maroon">prequest</span><b> then</b><span style="color: navy"> {
+</span>            obs<span style="color: navy"><b> -&gt; </b></span>prov.id = <span style="color: maroon">pid</span> <i>&quot;setPId&quot;</i><span style="color: navy">;</span>
+            obs<span style="color: navy"><b> -&gt; </b></span>pentry.fullUrl = <span style="color: navy">(</span>'urn:uuid:' &amp; pid<span style="color: navy">)</span> <i>&quot;setFullUrl&quot;</i><span style="color: navy">;</span>
+            obs<span style="color: navy"><b> -&gt; </b></span> prequest.method = <span style="color: blue">'PUT'</span><span style="color: navy">, </span> prequest.url = <span style="color: navy">(</span>'Provenance/' &amp; pid<span style="color: navy">)</span> <i>&quot;setrequest&quot;</i><span style="color: navy">;</span>
+            obs<span style="color: navy"><b> -&gt; </b></span>prov.target<b> as </b><span style="color: maroon">ptarg</span><b> then</b><span style="color: navy"> {
+</span>              obs<span style="color: navy"><b> -&gt; </b></span>ptarg.reference = <span style="color: navy">(</span>'urn:uuid:' &amp; cid<span style="color: navy">)</span> <i>&quot;setTargetRef&quot;</i><span style="color: navy">;</span>
+            <span style="color: navy">}</span> <i>&quot;setTarget&quot;</i><span style="color: navy">;</span>
+            obs<span style="color: navy"><b> -&gt; </b></span>prov.entity<b> as </b><span style="color: maroon">entity</span><b> then</b><span style="color: navy"> {
+</span>              obs<span style="color: navy"><b> -&gt; </b></span>entity.role = <span style="color: blue">'source'</span> <i>&quot;setRole&quot;</i><span style="color: navy">;</span>
+              obs<span style="color: navy"><b> -&gt; </b></span>entity.what<b> as </b><span style="color: maroon">pwhat</span><b> then </b>setProvenanceFromBundleId<span style="color: navy">(</span><span style="color: maroon">src</span><span style="color: navy">, </span><span style="color: maroon">pwhat</span><span style="color: navy">)</span> <i>&quot;setWhatId&quot;</i><span style="color: navy">;</span>
+            <span style="color: navy">}</span> <i>&quot;setEntity&quot;</i><span style="color: navy">;</span>
+          <span style="color: navy">}</span> <i>&quot;setProvenance&quot;</i><span style="color: navy">;</span>
+        <span style="color: navy">}</span> <i>&quot;setCondition&quot;</i><span style="color: navy">;</span>
+      <span style="color: navy">}</span> <i>&quot;getOnARTObservation&quot;</i><span style="color: navy">;</span>
+      <span style="color: navy">// </span><span style="color: green">for observations of that patient look for return visit date</span>
+      <span style="color: navy">// </span><span style="color: green">create a medication request resource in output with uuid</span>
+      src.entry<b> as </b><span style="color: maroon">obsentry</span><b> where </b>resource.is(Observation) and resource.subject.exists(reference = ('Patient/' &amp; patient.id)) and resource.code.exists(coding.exists((system = 'https://cielterminology.org') and (code = '5096')))<span style="color: navy"><b> -&gt; </b></span> tgt.entry<b> as </b><span style="color: maroon">newentry</span><span style="color: navy">, </span> newentry.resource = <b>create</b><span style="color: navy">(</span><span style="color: blue">'MedicationStatement'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">ms</span><span style="color: navy">, </span> <b>uuid</b><span style="color: navy">(</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">msid</span><b> then</b><span style="color: navy"> {
+</span>        obsentry.resource<b> as </b><span style="color: maroon">obs</span><span style="color: navy"><b> -&gt; </b></span> newentry.fullUrl = <span style="color: navy">(</span>'urn:uuid:' &amp; msid<span style="color: navy">)</span><span style="color: navy">, </span> newentry.request<b> as </b><span style="color: maroon">newrequest</span><b> then</b><span style="color: navy"> {
+</span>          obsentry<span style="color: navy"><b> -&gt; </b></span>ms.id = <span style="color: maroon">msid</span> <i>&quot;setMSId&quot;</i><span style="color: navy">;</span>
+          <span style="color: navy">// </span><span style="color: green">setrequest rule for resource in transaction bundle</span>
+          <span style="color: navy">// </span><span style="color: green">needs to be processed properly before putting on existing data on fhir server</span>
+          obsentry<span style="color: navy"><b> -&gt; </b></span> newrequest.method = <span style="color: blue">'PUT'</span><span style="color: navy">, </span> newrequest.url = <span style="color: navy">(</span>'MedicationStatement/' &amp; msid<span style="color: navy">)</span> <i>&quot;setrequest&quot;</i><span style="color: navy">;</span>
+          patient<span style="color: navy"><b> -&gt; </b></span>ms.subject<b> as </b><span style="color: maroon">subject</span><b> then</b><span style="color: navy"> {
+</span>            patient<span style="color: navy"><b> -&gt; </b></span>subject.reference = <b>reference</b><span style="color: navy">(</span><span style="color: maroon">patient</span><span style="color: navy">)</span> <i>&quot;setSubjectRef&quot;</i><span style="color: navy">;</span>
+          <span style="color: navy">}</span> <i>&quot;setSubject&quot;</i><span style="color: navy">;</span>
+          <span style="color: navy">// </span><span style="color: green">obs.effective as effective -&gt; ms.effective = effective &quot;setEffective&quot;;</span>
+          obs.effective<span style="color: navy"> : </span>dateTime<b> as </b><span style="color: maroon">effective</span><span style="color: navy"><b> -&gt; </b></span>ms.effective = <b>create</b><span style="color: navy">(</span><span style="color: blue">'Period'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">mseffective</span><b> then</b><span style="color: navy"> {
+</span>            effective<span style="color: navy"><b> -&gt; </b></span>mseffective.start = <span style="color: maroon">effective</span> <i>&quot;setEffectiveStart&quot;</i><span style="color: navy">;</span>
+            effective<span style="color: navy"><b> -&gt; </b></span>mseffective.end = <span style="color: navy">(</span>%effective + 30 'days'<span style="color: navy">)</span> <i>&quot;setEffectiveEnd&quot;</i><span style="color: navy">;</span>
+          <span style="color: navy">}</span> <i>&quot;setEffective&quot;</i><span style="color: navy">;</span>
+          <span style="color: navy">// </span><span style="color: green">not correct in hiv l3</span>
+          obsentry<span style="color: navy"><b> -&gt; </b></span>ms.status = <span style="color: blue">'active'</span> <i>&quot;setStatus&quot;</i><span style="color: navy">;</span>
+          obsentry<span style="color: navy"><b> -&gt; </b></span>ms.reasonCode = <b>cc</b><span style="color: navy">(</span><span style="color: blue">'http://smart.who.int/hiv/CodeSystem/HIVConcepts'</span><span style="color: navy">, </span><span style="color: blue">'HIV.H.DE47'</span><span style="color: navy">, </span><span style="color: blue">'On ART'</span><span style="color: navy">)</span> <i>&quot;setMSReasonCode&quot;</i><span style="color: navy">;</span>
+          obsentry<span style="color: navy"><b> -&gt; </b></span>ms.medication = <b>create</b><span style="color: navy">(</span><span style="color: blue">'CodeableConcept'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">medication</span><b> then</b><span style="color: navy"> {
+</span>            obsentry<span style="color: navy"><b> -&gt; </b></span>medication.coding<b> as </b><span style="color: maroon">coding</span><b> then</b><span style="color: navy"> {
+</span>              obsentry<span style="color: navy"><b> -&gt; </b></span> coding.code = <span style="color: blue">'160119'</span><span style="color: navy">, </span> coding.display = <span style="color: blue">'CURRENTLY TAKING ARV'</span><span style="color: navy">, </span> coding.system = <span style="color: blue">'https://cielterminology.org'</span> <i>&quot;setMSCoding&quot;</i><span style="color: navy">;</span>
+            <span style="color: navy">}</span> <i>&quot;setMSCoding&quot;</i><span style="color: navy">;</span>
+          <span style="color: navy">}</span> <i>&quot;SetMSMedication&quot;</i><span style="color: navy">;</span>
+          <span style="color: navy">// </span><span style="color: green">create provenance resource to document input/output resources links</span>
+          obs<span style="color: navy"><b> -&gt; </b></span> tgt.entry<b> as </b><span style="color: maroon">pentry</span><span style="color: navy">, </span> pentry.resource = <b>create</b><span style="color: navy">(</span><span style="color: blue">'Provenance'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">prov</span><span style="color: navy">, </span> <b>uuid</b><span style="color: navy">(</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">pid</span><span style="color: navy">, </span> pentry.request<b> as </b><span style="color: maroon">prequest</span><b> then</b><span style="color: navy"> {
+</span>            obs<span style="color: navy"><b> -&gt; </b></span>prov.id = <span style="color: maroon">pid</span> <i>&quot;setPId&quot;</i><span style="color: navy">;</span>
+            obs<span style="color: navy"><b> -&gt; </b></span>pentry.fullUrl = <span style="color: navy">(</span>'urn:uuid:' &amp; pid<span style="color: navy">)</span> <i>&quot;setFullUrl&quot;</i><span style="color: navy">;</span>
+            obs<span style="color: navy"><b> -&gt; </b></span> prequest.method = <span style="color: blue">'PUT'</span><span style="color: navy">, </span> prequest.url = <span style="color: navy">(</span>'Provenance/' &amp; pid<span style="color: navy">)</span> <i>&quot;setrequest&quot;</i><span style="color: navy">;</span>
+            obs<span style="color: navy"><b> -&gt; </b></span>prov.target<b> as </b><span style="color: maroon">ptarg</span><b> then</b><span style="color: navy"> {
+</span>              obs<span style="color: navy"><b> -&gt; </b></span>ptarg.reference = <span style="color: navy">(</span>'urn:uuid:' &amp; msid<span style="color: navy">)</span> <i>&quot;setTargetRef&quot;</i><span style="color: navy">;</span>
+            <span style="color: navy">}</span> <i>&quot;setTarget&quot;</i><span style="color: navy">;</span>
+            obs<span style="color: navy"><b> -&gt; </b></span>prov.entity<b> as </b><span style="color: maroon">entity</span><b> then</b><span style="color: navy"> {
+</span>              obs<span style="color: navy"><b> -&gt; </b></span>entity.role = <span style="color: blue">'source'</span> <i>&quot;setRole&quot;</i><span style="color: navy">;</span>
+              obs<span style="color: navy"><b> -&gt; </b></span>entity.what<b> as </b><span style="color: maroon">pwhat</span><b> then </b>setProvenanceFromBundleId<span style="color: navy">(</span><span style="color: maroon">src</span><span style="color: navy">, </span><span style="color: maroon">pwhat</span><span style="color: navy">)</span> <i>&quot;setWhatId&quot;</i><span style="color: navy">;</span>
+            <span style="color: navy">}</span> <i>&quot;setEntity&quot;</i><span style="color: navy">;</span>
+          <span style="color: navy">}</span> <i>&quot;setProvenance&quot;</i><span style="color: navy">;</span>
+        <span style="color: navy">}</span> <i>&quot;setMedicationStatement&quot;</i><span style="color: navy">;</span>
+      <span style="color: navy">}</span> <i>&quot;getVisitObservation&quot;</i><span style="color: navy">;</span>
+      <span style="color: navy">// </span><span style="color: green">create observation resource with the positive hiv test codes</span>
+      <span style="color: navy">// </span><span style="color: green">this will have to be one for hiv positive and one for hiv negative</span>
+      src.entry<b> as </b><span style="color: maroon">obsentry</span><b> where </b>resource.is(Observation) and resource.subject.exists(reference = ('Patient/' &amp; patient.id)) and resource.code.exists(coding.exists((system = 'https://cielterminology.org') and (code = '159427')))<span style="color: navy"><b> -&gt; </b></span> tgt.entry<b> as </b><span style="color: maroon">newentry</span><span style="color: navy">, </span> newentry.resource = <b>create</b><span style="color: navy">(</span><span style="color: blue">'Observation'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">observe</span><span style="color: navy">, </span> <b>uuid</b><span style="color: navy">(</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">obsd</span><b> then</b><span style="color: navy"> {
+</span>        obsentry.resource<b> as </b><span style="color: maroon">obs</span><span style="color: navy"><b> -&gt; </b></span> newentry.fullUrl = <span style="color: navy">(</span>'urn:uuid:' &amp; obsd<span style="color: navy">)</span><span style="color: navy">, </span> newentry.request<b> as </b><span style="color: maroon">newrequest</span><b> then</b><span style="color: navy"> {
+</span>          obsentry<span style="color: navy"><b> -&gt; </b></span>observe.id = <span style="color: maroon">obsd</span> <i>&quot;setOBSd&quot;</i><span style="color: navy">;</span>
+          obsentry<span style="color: navy"><b> -&gt; </b></span> newrequest.method = <span style="color: blue">'PUT'</span><span style="color: navy">, </span> newrequest.url = <span style="color: navy">(</span>'Observation/' &amp; obsd<span style="color: navy">)</span> <i>&quot;setrequest&quot;</i><span style="color: navy">;</span>
+          patient<span style="color: navy"><b> -&gt; </b></span>observe.subject<b> as </b><span style="color: maroon">subject</span><b> then</b><span style="color: navy"> {
+</span>            patient<span style="color: navy"><b> -&gt; </b></span>subject.reference = <b>reference</b><span style="color: navy">(</span><span style="color: maroon">patient</span><span style="color: navy">)</span> <i>&quot;setSubjectRef&quot;</i><span style="color: navy">;</span>
+          <span style="color: navy">}</span> <i>&quot;setSubject&quot;</i><span style="color: navy">;</span>
+          obs.effective<b> as </b><span style="color: maroon">effective</span><span style="color: navy"><b> -&gt; </b></span>observe.effective = <span style="color: maroon">effective</span> <i>&quot;setOnset&quot;</i><span style="color: navy">;</span>
+          obs.code<b> as </b><span style="color: maroon">code</span><span style="color: navy"><b> -&gt; </b></span>observe.code = <span style="color: maroon">code</span> <i>&quot;setCode&quot;</i><span style="color: navy">;</span>
+          obs.value<span style="color: navy"> : </span>CodeableConcept<b> as </b><span style="color: maroon">value</span><b> where </b>coding.exists((system = 'https://cielterminology.org') and (code = '664'))<span style="color: navy"><b> -&gt; </b></span>observe.value = <b>create</b><span style="color: navy">(</span><span style="color: blue">'CodeableConcept'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">val</span><b> then</b><span style="color: navy"> {
+</span>            value<span style="color: navy"><b> -&gt; </b></span>val.coding<b> as </b><span style="color: maroon">coding</span><b> then</b><span style="color: navy"> {
+</span>              value<span style="color: navy"><b> -&gt; </b></span> coding.system = <span style="color: blue">'http://smart.who.int/hiv/CodeSystem/HIVConcepts'</span><span style="color: navy">, </span> coding.code = <span style="color: blue">'HIV.B.DE117'</span><span style="color: navy">, </span> coding.display = <span style="color: blue">'HIV-negative'</span> <i>&quot;setNegativeCC&quot;</i><span style="color: navy">;</span>
+            <span style="color: navy">}</span> <i>&quot;setNegativeCoding&quot;</i><span style="color: navy">;</span>
+          <span style="color: navy">}</span> <i>&quot;setValueNegative&quot;</i><span style="color: navy">;</span>
+          obs.value<span style="color: navy"> : </span>CodeableConcept<b> as </b><span style="color: maroon">value</span><b> where </b>coding.exists((system = 'https://cielterminology.org') and (code = '138571'))<span style="color: navy"><b> -&gt; </b></span>observe.value = <b>create</b><span style="color: navy">(</span><span style="color: blue">'CodeableConcept'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">val</span><b> then</b><span style="color: navy"> {
+</span>            value<span style="color: navy"><b> -&gt; </b></span>val.coding<b> as </b><span style="color: maroon">coding</span><b> then</b><span style="color: navy"> {
+</span>              value<span style="color: navy"><b> -&gt; </b></span> coding.system = <span style="color: blue">'http://smart.who.int/hiv/CodeSystem/HIVConcepts'</span><span style="color: navy">, </span> coding.code = <span style="color: blue">'HIV.B.DE116'</span><span style="color: navy">, </span> coding.display = <span style="color: blue">'HIV-positive'</span> <i>&quot;setPositiveCC&quot;</i><span style="color: navy">;</span>
+            <span style="color: navy">}</span> <i>&quot;setPositiveCoding&quot;</i><span style="color: navy">;</span>
+          <span style="color: navy">}</span> <i>&quot;setValuePositive1&quot;</i><span style="color: navy">;</span>
+          obs.value<span style="color: navy"> : </span>CodeableConcept<b> as </b><span style="color: maroon">value</span><b> where </b>coding.exists((system = 'https://cielterminology.org') and (code = '703'))<span style="color: navy"><b> -&gt; </b></span>observe.value = <b>create</b><span style="color: navy">(</span><span style="color: blue">'CodeableConcept'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">val</span><b> then</b><span style="color: navy"> {
+</span>            value<span style="color: navy"><b> -&gt; </b></span>val.coding<b> as </b><span style="color: maroon">coding</span><b> then</b><span style="color: navy"> {
+</span>              value<span style="color: navy"><b> -&gt; </b></span> coding.system = <span style="color: blue">'http://smart.who.int/hiv/CodeSystem/HIVConcepts'</span><span style="color: navy">, </span> coding.code = <span style="color: blue">'HIV.B.DE116'</span><span style="color: navy">, </span> coding.display = <span style="color: blue">'HIV-positive'</span> <i>&quot;setPositiveCC&quot;</i><span style="color: navy">;</span>
+            <span style="color: navy">}</span> <i>&quot;setPositiveCoding&quot;</i><span style="color: navy">;</span>
+          <span style="color: navy">}</span> <i>&quot;setValuePositive2&quot;</i><span style="color: navy">;</span>
+          obsentry<span style="color: navy"><b> -&gt; </b></span>observe.status = <b>cc</b><span style="color: navy">(</span><span style="color: blue">'http://hl7.org/fhir/observation-status'</span><span style="color: navy">, </span><span style="color: blue">'final'</span><span style="color: navy">, </span><span style="color: blue">'Final'</span><span style="color: navy">)</span> <i>&quot;setStatus&quot;</i><span style="color: navy">;</span>
+          obs<span style="color: navy"><b> -&gt; </b></span> tgt.entry<b> as </b><span style="color: maroon">pentry</span><span style="color: navy">, </span> pentry.resource = <b>create</b><span style="color: navy">(</span><span style="color: blue">'Provenance'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">prov</span><span style="color: navy">, </span> <b>uuid</b><span style="color: navy">(</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">pid</span><span style="color: navy">, </span> pentry.request<b> as </b><span style="color: maroon">prequest</span><b> then</b><span style="color: navy"> {
+</span>            obs<span style="color: navy"><b> -&gt; </b></span>prov.id = <span style="color: maroon">pid</span> <i>&quot;setPId&quot;</i><span style="color: navy">;</span>
+            obs<span style="color: navy"><b> -&gt; </b></span>pentry.fullUrl = <span style="color: navy">(</span>'urn:uuid:' &amp; pid<span style="color: navy">)</span> <i>&quot;setFullUrl&quot;</i><span style="color: navy">;</span>
+            obs<span style="color: navy"><b> -&gt; </b></span> prequest.method = <span style="color: blue">'PUT'</span><span style="color: navy">, </span> prequest.url = <span style="color: navy">(</span>'Provenance/' &amp; pid<span style="color: navy">)</span> <i>&quot;setrequest&quot;</i><span style="color: navy">;</span>
+            obs<span style="color: navy"><b> -&gt; </b></span>prov.target<b> as </b><span style="color: maroon">ptarg</span><b> then</b><span style="color: navy"> {
+</span>              obs<span style="color: navy"><b> -&gt; </b></span>ptarg.reference = <span style="color: navy">(</span>'urn:uuid:' &amp; cid<span style="color: navy">)</span> <i>&quot;setTargetRef&quot;</i><span style="color: navy">;</span>
+            <span style="color: navy">}</span> <i>&quot;setTarget&quot;</i><span style="color: navy">;</span>
+            obs<span style="color: navy"><b> -&gt; </b></span>prov.entity<b> as </b><span style="color: maroon">entity</span><b> then</b><span style="color: navy"> {
+</span>              obs<span style="color: navy"><b> -&gt; </b></span>entity.role = <span style="color: blue">'source'</span> <i>&quot;setRole&quot;</i><span style="color: navy">;</span>
+              obs<span style="color: navy"><b> -&gt; </b></span>entity.what<b> as </b><span style="color: maroon">pwhat</span><b> then </b>setProvenanceFromBundleId<span style="color: navy">(</span><span style="color: maroon">src</span><span style="color: navy">, </span><span style="color: maroon">pwhat</span><span style="color: navy">)</span> <i>&quot;setWhatId&quot;</i><span style="color: navy">;</span>
+            <span style="color: navy">}</span> <i>&quot;setEntity&quot;</i><span style="color: navy">;</span>
+          <span style="color: navy">}</span> <i>&quot;setProvenance&quot;</i><span style="color: navy">;</span>
+        <span style="color: navy">}</span> <i>&quot;setHIVPositiveTest&quot;</i><span style="color: navy">;</span>
+      <span style="color: navy">}</span> <i>&quot;getOnARTObservation&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;patientResource&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;copyPatient&quot;</i><span style="color: navy">;</span>
+<span style="color: navy">}
+
+</span><b>group </b>setProvenanceFromBundleId<span style="color: navy">(</span><b>source</b> <span style="color: maroon">bundle</span><span style="color: navy"> : </span>input, <b>target</b> <span style="color: maroon">provwhat</span><span style="color: navy"> : </span>Reference<span style="color: navy">)</span><span style="color: navy"> {
+</span>  bundle.id<b> as </b><span style="color: maroon">bundleid</span><span style="color: navy"><b> -&gt; </b></span>provwhat.identifier<b> as </b><span style="color: maroon">whatid</span><b> then</b><span style="color: navy"> {
+</span>    bundleid<span style="color: navy"><b> -&gt; </b></span>whatid.value = <span style="color: navy">(</span>'Bundle/' &amp; bundleid<span style="color: navy">)</span> <i>&quot;setWhatIdValue&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;setWhatId&quot;</i><span style="color: navy">;</span>
+<span style="color: navy">}
+
+</span></pre></div>
+  </text>
+  <url value="https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/StructureMap/HIVObservationHIVCondition"/>
+  <version value="0.1.0"/>
+  <name value="HIVObservationHIVCondition"/>
+  <status value="draft"/>
+  <date value="2025-01-15T14:05:09+00:00"/>
+  <publisher value="intellisoftkenya"/>
+  <contact>
+    <name value="intellisoftkenya"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.intellisoftkenya.com/"/>
+    </telecom>
+  </contact>
+  <description value="declare the structure defs used"/>
+  <structure>
+    <url value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
+    <mode value="source"/>
+    <alias value="input"/>
+  </structure>
+  <structure>
+    <url value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
+    <mode value="target"/>
+    <alias value="output"/>
+  </structure>
+  <group>
+    <name value="HIVObservationHIVCondition"/>
+    <typeMode value="none"/>
+    <documentation value="declare group with local vars (src, tgt) and their aliases&#xD;&#xA;anything ending with semicolon is a rule"/>
+    <input>
+      <name value="src"/>
+      <type value="input"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="tgt"/>
+      <type value="output"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="setBundleType"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="type"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueString value="transaction"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="copyPatient"/>
+      <source>
+        <context value="src"/>
+        <element value="entry"/>
+        <variable value="entry"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="entry"/>
+        <variable value="tentry"/>
+      </target>
+      <rule>
+        <name value="patientResource"/>
+        <source>
+          <context value="entry"/>
+          <type value="Patient"/>
+          <element value="resource"/>
+          <variable value="patient"/>
+        </source>
+        <target>
+          <context value="tentry"/>
+          <contextType value="variable"/>
+          <element value="resource"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueId value="patient"/>
+          </parameter>
+        </target>
+        <target>
+          <context value="tentry"/>
+          <contextType value="variable"/>
+          <element value="request"/>
+          <variable value="newrequest"/>
+        </target>
+        <rule>
+          <name value="setFullUrl"/>
+          <source>
+            <context value="entry"/>
+          </source>
+          <target>
+            <context value="tentry"/>
+            <contextType value="variable"/>
+            <element value="fullUrl"/>
+            <transform value="evaluate"/>
+            <parameter>
+              <valueString value="'urn:uuid:' &amp; patient.id"/>
+            </parameter>
+          </target>
+        </rule>
+        <rule>
+          <name value="setPatientRequest"/>
+          <source>
+            <context value="entry"/>
+          </source>
+          <target>
+            <context value="newrequest"/>
+            <contextType value="variable"/>
+            <element value="method"/>
+            <transform value="copy"/>
+            <parameter>
+              <valueString value="PUT"/>
+            </parameter>
+          </target>
+          <target>
+            <context value="newrequest"/>
+            <contextType value="variable"/>
+            <element value="url"/>
+            <transform value="evaluate"/>
+            <parameter>
+              <valueString value="'Patient/' &amp; patient.id"/>
+            </parameter>
+          </target>
+        </rule>
+        <rule>
+          <name value="setProvenance"/>
+          <source>
+            <context value="entry"/>
+          </source>
+          <target>
+            <context value="tgt"/>
+            <contextType value="variable"/>
+            <element value="entry"/>
+            <variable value="pentry"/>
+          </target>
+          <target>
+            <context value="pentry"/>
+            <contextType value="variable"/>
+            <element value="resource"/>
+            <variable value="prov"/>
+            <transform value="create"/>
+            <parameter>
+              <valueString value="Provenance"/>
+            </parameter>
+          </target>
+          <target>
+            <contextType value="variable"/>
+            <variable value="pid"/>
+            <transform value="uuid"/>
+          </target>
+          <target>
+            <context value="pentry"/>
+            <contextType value="variable"/>
+            <element value="request"/>
+            <variable value="prequest"/>
+          </target>
+          <rule>
+            <name value="setPId"/>
+            <source>
+              <context value="patient"/>
+            </source>
+            <target>
+              <context value="prov"/>
+              <contextType value="variable"/>
+              <element value="id"/>
+              <transform value="copy"/>
+              <parameter>
+                <valueId value="pid"/>
+              </parameter>
+            </target>
+          </rule>
+          <rule>
+            <name value="setFullUrl"/>
+            <source>
+              <context value="patient"/>
+            </source>
+            <target>
+              <context value="pentry"/>
+              <contextType value="variable"/>
+              <element value="fullUrl"/>
+              <transform value="evaluate"/>
+              <parameter>
+                <valueString value="'urn:uuid:' &amp; pid"/>
+              </parameter>
+            </target>
+          </rule>
+          <rule>
+            <name value="setrequest"/>
+            <source>
+              <context value="patient"/>
+            </source>
+            <target>
+              <context value="prequest"/>
+              <contextType value="variable"/>
+              <element value="method"/>
+              <transform value="copy"/>
+              <parameter>
+                <valueString value="PUT"/>
+              </parameter>
+            </target>
+            <target>
+              <context value="prequest"/>
+              <contextType value="variable"/>
+              <element value="url"/>
+              <transform value="evaluate"/>
+              <parameter>
+                <valueString value="'Provenance/' &amp; pid"/>
+              </parameter>
+            </target>
+          </rule>
+          <rule>
+            <name value="setTarget"/>
+            <source>
+              <context value="patient"/>
+            </source>
+            <target>
+              <context value="prov"/>
+              <contextType value="variable"/>
+              <element value="target"/>
+              <variable value="ptarg"/>
+            </target>
+            <rule>
+              <name value="setTargetRef"/>
+              <source>
+                <context value="patient"/>
+              </source>
+              <target>
+                <context value="ptarg"/>
+                <contextType value="variable"/>
+                <element value="reference"/>
+                <transform value="evaluate"/>
+                <parameter>
+                  <valueString value="'urn:uuid:' &amp; patient.id"/>
+                </parameter>
+              </target>
+            </rule>
+          </rule>
+          <rule>
+            <name value="setEntity"/>
+            <source>
+              <context value="patient"/>
+            </source>
+            <target>
+              <context value="prov"/>
+              <contextType value="variable"/>
+              <element value="entity"/>
+              <variable value="entity"/>
+            </target>
+            <rule>
+              <name value="setRole"/>
+              <source>
+                <context value="patient"/>
+              </source>
+              <target>
+                <context value="entity"/>
+                <contextType value="variable"/>
+                <element value="role"/>
+                <transform value="copy"/>
+                <parameter>
+                  <valueString value="source"/>
+                </parameter>
+              </target>
+            </rule>
+            <rule>
+              <name value="setWhatId"/>
+              <source>
+                <context value="patient"/>
+              </source>
+              <target>
+                <context value="entity"/>
+                <contextType value="variable"/>
+                <element value="what"/>
+                <variable value="pwhat"/>
+              </target>
+              <dependent>
+                <name value="setProvenanceFromBundleId"/>
+                <variable value="src"/>
+                <variable value="pwhat"/>
+              </dependent>
+            </rule>
+          </rule>
+        </rule>
+        <rule>
+          <name value="getOnARTObservation"/>
+          <source>
+            <context value="src"/>
+            <element value="entry"/>
+            <variable value="obsentry"/>
+            <condition value="resource.is(Observation) and resource.subject.exists(reference = ('Patient/' &amp; patient.id)) and resource.code.exists(coding.exists((system = 'https://cielterminology.org') and (code = '160540')))"/>
+          </source>
+          <target>
+            <context value="tgt"/>
+            <contextType value="variable"/>
+            <element value="entry"/>
+            <variable value="newentry"/>
+          </target>
+          <target>
+            <context value="newentry"/>
+            <contextType value="variable"/>
+            <element value="resource"/>
+            <variable value="cond"/>
+            <transform value="create"/>
+            <parameter>
+              <valueString value="Condition"/>
+            </parameter>
+          </target>
+          <target>
+            <contextType value="variable"/>
+            <variable value="cid"/>
+            <transform value="uuid"/>
+          </target>
+          <rule>
+            <name value="setCondition"/>
+            <source>
+              <context value="obsentry"/>
+              <element value="resource"/>
+              <variable value="obs"/>
+            </source>
+            <target>
+              <context value="newentry"/>
+              <contextType value="variable"/>
+              <element value="fullUrl"/>
+              <transform value="evaluate"/>
+              <parameter>
+                <valueString value="'urn:uuid:' &amp; cid"/>
+              </parameter>
+            </target>
+            <target>
+              <context value="newentry"/>
+              <contextType value="variable"/>
+              <element value="request"/>
+              <variable value="newrequest"/>
+            </target>
+            <rule>
+              <name value="setCId"/>
+              <source>
+                <context value="obsentry"/>
+              </source>
+              <target>
+                <context value="cond"/>
+                <contextType value="variable"/>
+                <element value="id"/>
+                <transform value="copy"/>
+                <parameter>
+                  <valueId value="cid"/>
+                </parameter>
+              </target>
+            </rule>
+            <rule>
+              <name value="setrequest"/>
+              <source>
+                <context value="obsentry"/>
+              </source>
+              <target>
+                <context value="newrequest"/>
+                <contextType value="variable"/>
+                <element value="method"/>
+                <transform value="copy"/>
+                <parameter>
+                  <valueString value="PUT"/>
+                </parameter>
+              </target>
+              <target>
+                <context value="newrequest"/>
+                <contextType value="variable"/>
+                <element value="url"/>
+                <transform value="evaluate"/>
+                <parameter>
+                  <valueString value="'Condition/' &amp; cid"/>
+                </parameter>
+              </target>
+            </rule>
+            <rule>
+              <name value="setSubject"/>
+              <source>
+                <context value="patient"/>
+              </source>
+              <target>
+                <context value="cond"/>
+                <contextType value="variable"/>
+                <element value="subject"/>
+                <variable value="subject"/>
+              </target>
+              <rule>
+                <name value="setSubjectRef"/>
+                <source>
+                  <context value="patient"/>
+                </source>
+                <target>
+                  <context value="subject"/>
+                  <contextType value="variable"/>
+                  <element value="reference"/>
+                  <transform value="reference"/>
+                  <parameter>
+                    <valueId value="patient"/>
+                  </parameter>
+                </target>
+              </rule>
+            </rule>
+            <rule>
+              <name value="setOnset"/>
+              <source>
+                <context value="obs"/>
+                <element value="effective"/>
+                <variable value="effective"/>
+              </source>
+              <target>
+                <context value="cond"/>
+                <contextType value="variable"/>
+                <element value="onset"/>
+                <transform value="copy"/>
+                <parameter>
+                  <valueId value="effective"/>
+                </parameter>
+              </target>
+            </rule>
+            <rule>
+              <name value="setClinicalStatus"/>
+              <source>
+                <context value="obsentry"/>
+              </source>
+              <target>
+                <context value="cond"/>
+                <contextType value="variable"/>
+                <element value="clinicalStatus"/>
+                <transform value="cc"/>
+                <parameter>
+                  <valueString value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+                </parameter>
+                <parameter>
+                  <valueString value="active"/>
+                </parameter>
+                <parameter>
+                  <valueString value="Active"/>
+                </parameter>
+              </target>
+            </rule>
+            <rule>
+              <name value="setCode"/>
+              <source>
+                <context value="obsentry"/>
+              </source>
+              <target>
+                <context value="cond"/>
+                <contextType value="variable"/>
+                <element value="code"/>
+                <transform value="cc"/>
+                <parameter>
+                  <valueString value="http://smart.who.int/hiv/CodeSystem/HIVConcepts"/>
+                </parameter>
+                <parameter>
+                  <valueString value="HIV.B.DE116"/>
+                </parameter>
+                <parameter>
+                  <valueString value="HIV-positive"/>
+                </parameter>
+              </target>
+            </rule>
+            <rule>
+              <name value="setCategory"/>
+              <source>
+                <context value="obsentry"/>
+              </source>
+              <target>
+                <context value="cond"/>
+                <contextType value="variable"/>
+                <element value="category"/>
+                <transform value="cc"/>
+                <parameter>
+                  <valueString value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+                </parameter>
+                <parameter>
+                  <valueString value="encounter-diagnosis"/>
+                </parameter>
+                <parameter>
+                  <valueString value="Encounter Diagnosis"/>
+                </parameter>
+              </target>
+            </rule>
+            <rule>
+              <name value="setProvenance"/>
+              <source>
+                <context value="obs"/>
+              </source>
+              <target>
+                <context value="tgt"/>
+                <contextType value="variable"/>
+                <element value="entry"/>
+                <variable value="pentry"/>
+              </target>
+              <target>
+                <context value="pentry"/>
+                <contextType value="variable"/>
+                <element value="resource"/>
+                <variable value="prov"/>
+                <transform value="create"/>
+                <parameter>
+                  <valueString value="Provenance"/>
+                </parameter>
+              </target>
+              <target>
+                <contextType value="variable"/>
+                <variable value="pid"/>
+                <transform value="uuid"/>
+              </target>
+              <target>
+                <context value="pentry"/>
+                <contextType value="variable"/>
+                <element value="request"/>
+                <variable value="prequest"/>
+              </target>
+              <rule>
+                <name value="setPId"/>
+                <source>
+                  <context value="obs"/>
+                </source>
+                <target>
+                  <context value="prov"/>
+                  <contextType value="variable"/>
+                  <element value="id"/>
+                  <transform value="copy"/>
+                  <parameter>
+                    <valueId value="pid"/>
+                  </parameter>
+                </target>
+              </rule>
+              <rule>
+                <name value="setFullUrl"/>
+                <source>
+                  <context value="obs"/>
+                </source>
+                <target>
+                  <context value="pentry"/>
+                  <contextType value="variable"/>
+                  <element value="fullUrl"/>
+                  <transform value="evaluate"/>
+                  <parameter>
+                    <valueString value="'urn:uuid:' &amp; pid"/>
+                  </parameter>
+                </target>
+              </rule>
+              <rule>
+                <name value="setrequest"/>
+                <source>
+                  <context value="obs"/>
+                </source>
+                <target>
+                  <context value="prequest"/>
+                  <contextType value="variable"/>
+                  <element value="method"/>
+                  <transform value="copy"/>
+                  <parameter>
+                    <valueString value="PUT"/>
+                  </parameter>
+                </target>
+                <target>
+                  <context value="prequest"/>
+                  <contextType value="variable"/>
+                  <element value="url"/>
+                  <transform value="evaluate"/>
+                  <parameter>
+                    <valueString value="'Provenance/' &amp; pid"/>
+                  </parameter>
+                </target>
+              </rule>
+              <rule>
+                <name value="setTarget"/>
+                <source>
+                  <context value="obs"/>
+                </source>
+                <target>
+                  <context value="prov"/>
+                  <contextType value="variable"/>
+                  <element value="target"/>
+                  <variable value="ptarg"/>
+                </target>
+                <rule>
+                  <name value="setTargetRef"/>
+                  <source>
+                    <context value="obs"/>
+                  </source>
+                  <target>
+                    <context value="ptarg"/>
+                    <contextType value="variable"/>
+                    <element value="reference"/>
+                    <transform value="evaluate"/>
+                    <parameter>
+                      <valueString value="'urn:uuid:' &amp; cid"/>
+                    </parameter>
+                  </target>
+                </rule>
+              </rule>
+              <rule>
+                <name value="setEntity"/>
+                <source>
+                  <context value="obs"/>
+                </source>
+                <target>
+                  <context value="prov"/>
+                  <contextType value="variable"/>
+                  <element value="entity"/>
+                  <variable value="entity"/>
+                </target>
+                <rule>
+                  <name value="setRole"/>
+                  <source>
+                    <context value="obs"/>
+                  </source>
+                  <target>
+                    <context value="entity"/>
+                    <contextType value="variable"/>
+                    <element value="role"/>
+                    <transform value="copy"/>
+                    <parameter>
+                      <valueString value="source"/>
+                    </parameter>
+                  </target>
+                </rule>
+                <rule>
+                  <name value="setWhatId"/>
+                  <source>
+                    <context value="obs"/>
+                  </source>
+                  <target>
+                    <context value="entity"/>
+                    <contextType value="variable"/>
+                    <element value="what"/>
+                    <variable value="pwhat"/>
+                  </target>
+                  <dependent>
+                    <name value="setProvenanceFromBundleId"/>
+                    <variable value="src"/>
+                    <variable value="pwhat"/>
+                  </dependent>
+                </rule>
+              </rule>
+            </rule>
+          </rule>
+        </rule>
+        <rule>
+          <name value="getVisitObservation"/>
+          <source>
+            <context value="src"/>
+            <element value="entry"/>
+            <variable value="obsentry"/>
+            <condition value="resource.is(Observation) and resource.subject.exists(reference = ('Patient/' &amp; patient.id)) and resource.code.exists(coding.exists((system = 'https://cielterminology.org') and (code = '5096')))"/>
+          </source>
+          <target>
+            <context value="tgt"/>
+            <contextType value="variable"/>
+            <element value="entry"/>
+            <variable value="newentry"/>
+          </target>
+          <target>
+            <context value="newentry"/>
+            <contextType value="variable"/>
+            <element value="resource"/>
+            <variable value="ms"/>
+            <transform value="create"/>
+            <parameter>
+              <valueString value="MedicationStatement"/>
+            </parameter>
+          </target>
+          <target>
+            <contextType value="variable"/>
+            <variable value="msid"/>
+            <transform value="uuid"/>
+          </target>
+          <rule>
+            <name value="setMedicationStatement"/>
+            <source>
+              <context value="obsentry"/>
+              <element value="resource"/>
+              <variable value="obs"/>
+            </source>
+            <target>
+              <context value="newentry"/>
+              <contextType value="variable"/>
+              <element value="fullUrl"/>
+              <transform value="evaluate"/>
+              <parameter>
+                <valueString value="'urn:uuid:' &amp; msid"/>
+              </parameter>
+            </target>
+            <target>
+              <context value="newentry"/>
+              <contextType value="variable"/>
+              <element value="request"/>
+              <variable value="newrequest"/>
+            </target>
+            <rule>
+              <name value="setMSId"/>
+              <source>
+                <context value="obsentry"/>
+              </source>
+              <target>
+                <context value="ms"/>
+                <contextType value="variable"/>
+                <element value="id"/>
+                <transform value="copy"/>
+                <parameter>
+                  <valueId value="msid"/>
+                </parameter>
+              </target>
+            </rule>
+            <rule>
+              <name value="setrequest"/>
+              <source>
+                <context value="obsentry"/>
+              </source>
+              <target>
+                <context value="newrequest"/>
+                <contextType value="variable"/>
+                <element value="method"/>
+                <transform value="copy"/>
+                <parameter>
+                  <valueString value="PUT"/>
+                </parameter>
+              </target>
+              <target>
+                <context value="newrequest"/>
+                <contextType value="variable"/>
+                <element value="url"/>
+                <transform value="evaluate"/>
+                <parameter>
+                  <valueString value="'MedicationStatement/' &amp; msid"/>
+                </parameter>
+              </target>
+            </rule>
+            <rule>
+              <name value="setSubject"/>
+              <source>
+                <context value="patient"/>
+              </source>
+              <target>
+                <context value="ms"/>
+                <contextType value="variable"/>
+                <element value="subject"/>
+                <variable value="subject"/>
+              </target>
+              <rule>
+                <name value="setSubjectRef"/>
+                <source>
+                  <context value="patient"/>
+                </source>
+                <target>
+                  <context value="subject"/>
+                  <contextType value="variable"/>
+                  <element value="reference"/>
+                  <transform value="reference"/>
+                  <parameter>
+                    <valueId value="patient"/>
+                  </parameter>
+                </target>
+              </rule>
+            </rule>
+            <rule>
+              <name value="setEffective"/>
+              <source>
+                <context value="obs"/>
+                <type value="dateTime"/>
+                <element value="effective"/>
+                <variable value="effective"/>
+              </source>
+              <target>
+                <context value="ms"/>
+                <contextType value="variable"/>
+                <element value="effective"/>
+                <variable value="mseffective"/>
+                <transform value="create"/>
+                <parameter>
+                  <valueString value="Period"/>
+                </parameter>
+              </target>
+              <rule>
+                <name value="setEffectiveStart"/>
+                <source>
+                  <context value="effective"/>
+                </source>
+                <target>
+                  <context value="mseffective"/>
+                  <contextType value="variable"/>
+                  <element value="start"/>
+                  <transform value="copy"/>
+                  <parameter>
+                    <valueId value="effective"/>
+                  </parameter>
+                </target>
+              </rule>
+              <rule>
+                <name value="setEffectiveEnd"/>
+                <source>
+                  <context value="effective"/>
+                </source>
+                <target>
+                  <context value="mseffective"/>
+                  <contextType value="variable"/>
+                  <element value="end"/>
+                  <transform value="evaluate"/>
+                  <parameter>
+                    <valueString value="%effective + 30 'days'"/>
+                  </parameter>
+                </target>
+              </rule>
+            </rule>
+            <rule>
+              <name value="setStatus"/>
+              <source>
+                <context value="obsentry"/>
+              </source>
+              <target>
+                <context value="ms"/>
+                <contextType value="variable"/>
+                <element value="status"/>
+                <transform value="copy"/>
+                <parameter>
+                  <valueString value="active"/>
+                </parameter>
+              </target>
+            </rule>
+            <rule>
+              <name value="setMSReasonCode"/>
+              <source>
+                <context value="obsentry"/>
+              </source>
+              <target>
+                <context value="ms"/>
+                <contextType value="variable"/>
+                <element value="reasonCode"/>
+                <transform value="cc"/>
+                <parameter>
+                  <valueString value="http://smart.who.int/hiv/CodeSystem/HIVConcepts"/>
+                </parameter>
+                <parameter>
+                  <valueString value="HIV.H.DE47"/>
+                </parameter>
+                <parameter>
+                  <valueString value="On ART"/>
+                </parameter>
+              </target>
+            </rule>
+            <rule>
+              <name value="SetMSMedication"/>
+              <source>
+                <context value="obsentry"/>
+              </source>
+              <target>
+                <context value="ms"/>
+                <contextType value="variable"/>
+                <element value="medication"/>
+                <variable value="medication"/>
+                <transform value="create"/>
+                <parameter>
+                  <valueString value="CodeableConcept"/>
+                </parameter>
+              </target>
+              <rule>
+                <name value="setMSCoding"/>
+                <source>
+                  <context value="obsentry"/>
+                </source>
+                <target>
+                  <context value="medication"/>
+                  <contextType value="variable"/>
+                  <element value="coding"/>
+                  <variable value="coding"/>
+                </target>
+                <rule>
+                  <name value="setMSCoding"/>
+                  <source>
+                    <context value="obsentry"/>
+                  </source>
+                  <target>
+                    <context value="coding"/>
+                    <contextType value="variable"/>
+                    <element value="code"/>
+                    <transform value="copy"/>
+                    <parameter>
+                      <valueString value="160119"/>
+                    </parameter>
+                  </target>
+                  <target>
+                    <context value="coding"/>
+                    <contextType value="variable"/>
+                    <element value="display"/>
+                    <transform value="copy"/>
+                    <parameter>
+                      <valueString value="CURRENTLY TAKING ARV"/>
+                    </parameter>
+                  </target>
+                  <target>
+                    <context value="coding"/>
+                    <contextType value="variable"/>
+                    <element value="system"/>
+                    <transform value="copy"/>
+                    <parameter>
+                      <valueString value="https://cielterminology.org"/>
+                    </parameter>
+                  </target>
+                </rule>
+              </rule>
+            </rule>
+            <rule>
+              <name value="setProvenance"/>
+              <source>
+                <context value="obs"/>
+              </source>
+              <target>
+                <context value="tgt"/>
+                <contextType value="variable"/>
+                <element value="entry"/>
+                <variable value="pentry"/>
+              </target>
+              <target>
+                <context value="pentry"/>
+                <contextType value="variable"/>
+                <element value="resource"/>
+                <variable value="prov"/>
+                <transform value="create"/>
+                <parameter>
+                  <valueString value="Provenance"/>
+                </parameter>
+              </target>
+              <target>
+                <contextType value="variable"/>
+                <variable value="pid"/>
+                <transform value="uuid"/>
+              </target>
+              <target>
+                <context value="pentry"/>
+                <contextType value="variable"/>
+                <element value="request"/>
+                <variable value="prequest"/>
+              </target>
+              <rule>
+                <name value="setPId"/>
+                <source>
+                  <context value="obs"/>
+                </source>
+                <target>
+                  <context value="prov"/>
+                  <contextType value="variable"/>
+                  <element value="id"/>
+                  <transform value="copy"/>
+                  <parameter>
+                    <valueId value="pid"/>
+                  </parameter>
+                </target>
+              </rule>
+              <rule>
+                <name value="setFullUrl"/>
+                <source>
+                  <context value="obs"/>
+                </source>
+                <target>
+                  <context value="pentry"/>
+                  <contextType value="variable"/>
+                  <element value="fullUrl"/>
+                  <transform value="evaluate"/>
+                  <parameter>
+                    <valueString value="'urn:uuid:' &amp; pid"/>
+                  </parameter>
+                </target>
+              </rule>
+              <rule>
+                <name value="setrequest"/>
+                <source>
+                  <context value="obs"/>
+                </source>
+                <target>
+                  <context value="prequest"/>
+                  <contextType value="variable"/>
+                  <element value="method"/>
+                  <transform value="copy"/>
+                  <parameter>
+                    <valueString value="PUT"/>
+                  </parameter>
+                </target>
+                <target>
+                  <context value="prequest"/>
+                  <contextType value="variable"/>
+                  <element value="url"/>
+                  <transform value="evaluate"/>
+                  <parameter>
+                    <valueString value="'Provenance/' &amp; pid"/>
+                  </parameter>
+                </target>
+              </rule>
+              <rule>
+                <name value="setTarget"/>
+                <source>
+                  <context value="obs"/>
+                </source>
+                <target>
+                  <context value="prov"/>
+                  <contextType value="variable"/>
+                  <element value="target"/>
+                  <variable value="ptarg"/>
+                </target>
+                <rule>
+                  <name value="setTargetRef"/>
+                  <source>
+                    <context value="obs"/>
+                  </source>
+                  <target>
+                    <context value="ptarg"/>
+                    <contextType value="variable"/>
+                    <element value="reference"/>
+                    <transform value="evaluate"/>
+                    <parameter>
+                      <valueString value="'urn:uuid:' &amp; msid"/>
+                    </parameter>
+                  </target>
+                </rule>
+              </rule>
+              <rule>
+                <name value="setEntity"/>
+                <source>
+                  <context value="obs"/>
+                </source>
+                <target>
+                  <context value="prov"/>
+                  <contextType value="variable"/>
+                  <element value="entity"/>
+                  <variable value="entity"/>
+                </target>
+                <rule>
+                  <name value="setRole"/>
+                  <source>
+                    <context value="obs"/>
+                  </source>
+                  <target>
+                    <context value="entity"/>
+                    <contextType value="variable"/>
+                    <element value="role"/>
+                    <transform value="copy"/>
+                    <parameter>
+                      <valueString value="source"/>
+                    </parameter>
+                  </target>
+                </rule>
+                <rule>
+                  <name value="setWhatId"/>
+                  <source>
+                    <context value="obs"/>
+                  </source>
+                  <target>
+                    <context value="entity"/>
+                    <contextType value="variable"/>
+                    <element value="what"/>
+                    <variable value="pwhat"/>
+                  </target>
+                  <dependent>
+                    <name value="setProvenanceFromBundleId"/>
+                    <variable value="src"/>
+                    <variable value="pwhat"/>
+                  </dependent>
+                </rule>
+              </rule>
+            </rule>
+          </rule>
+        </rule>
+        <rule>
+          <name value="getOnARTObservation"/>
+          <source>
+            <context value="src"/>
+            <element value="entry"/>
+            <variable value="obsentry"/>
+            <condition value="resource.is(Observation) and resource.subject.exists(reference = ('Patient/' &amp; patient.id)) and resource.code.exists(coding.exists((system = 'https://cielterminology.org') and (code = '159427')))"/>
+          </source>
+          <target>
+            <context value="tgt"/>
+            <contextType value="variable"/>
+            <element value="entry"/>
+            <variable value="newentry"/>
+          </target>
+          <target>
+            <context value="newentry"/>
+            <contextType value="variable"/>
+            <element value="resource"/>
+            <variable value="observe"/>
+            <transform value="create"/>
+            <parameter>
+              <valueString value="Observation"/>
+            </parameter>
+          </target>
+          <target>
+            <contextType value="variable"/>
+            <variable value="obsd"/>
+            <transform value="uuid"/>
+          </target>
+          <rule>
+            <name value="setHIVPositiveTest"/>
+            <source>
+              <context value="obsentry"/>
+              <element value="resource"/>
+              <variable value="obs"/>
+            </source>
+            <target>
+              <context value="newentry"/>
+              <contextType value="variable"/>
+              <element value="fullUrl"/>
+              <transform value="evaluate"/>
+              <parameter>
+                <valueString value="'urn:uuid:' &amp; obsd"/>
+              </parameter>
+            </target>
+            <target>
+              <context value="newentry"/>
+              <contextType value="variable"/>
+              <element value="request"/>
+              <variable value="newrequest"/>
+            </target>
+            <rule>
+              <name value="setOBSd"/>
+              <source>
+                <context value="obsentry"/>
+              </source>
+              <target>
+                <context value="observe"/>
+                <contextType value="variable"/>
+                <element value="id"/>
+                <transform value="copy"/>
+                <parameter>
+                  <valueId value="obsd"/>
+                </parameter>
+              </target>
+            </rule>
+            <rule>
+              <name value="setrequest"/>
+              <source>
+                <context value="obsentry"/>
+              </source>
+              <target>
+                <context value="newrequest"/>
+                <contextType value="variable"/>
+                <element value="method"/>
+                <transform value="copy"/>
+                <parameter>
+                  <valueString value="PUT"/>
+                </parameter>
+              </target>
+              <target>
+                <context value="newrequest"/>
+                <contextType value="variable"/>
+                <element value="url"/>
+                <transform value="evaluate"/>
+                <parameter>
+                  <valueString value="'Observation/' &amp; obsd"/>
+                </parameter>
+              </target>
+            </rule>
+            <rule>
+              <name value="setSubject"/>
+              <source>
+                <context value="patient"/>
+              </source>
+              <target>
+                <context value="observe"/>
+                <contextType value="variable"/>
+                <element value="subject"/>
+                <variable value="subject"/>
+              </target>
+              <rule>
+                <name value="setSubjectRef"/>
+                <source>
+                  <context value="patient"/>
+                </source>
+                <target>
+                  <context value="subject"/>
+                  <contextType value="variable"/>
+                  <element value="reference"/>
+                  <transform value="reference"/>
+                  <parameter>
+                    <valueId value="patient"/>
+                  </parameter>
+                </target>
+              </rule>
+            </rule>
+            <rule>
+              <name value="setOnset"/>
+              <source>
+                <context value="obs"/>
+                <element value="effective"/>
+                <variable value="effective"/>
+              </source>
+              <target>
+                <context value="observe"/>
+                <contextType value="variable"/>
+                <element value="effective"/>
+                <transform value="copy"/>
+                <parameter>
+                  <valueId value="effective"/>
+                </parameter>
+              </target>
+            </rule>
+            <rule>
+              <name value="setCode"/>
+              <source>
+                <context value="obs"/>
+                <element value="code"/>
+                <variable value="code"/>
+              </source>
+              <target>
+                <context value="observe"/>
+                <contextType value="variable"/>
+                <element value="code"/>
+                <transform value="copy"/>
+                <parameter>
+                  <valueId value="code"/>
+                </parameter>
+              </target>
+            </rule>
+            <rule>
+              <name value="setValueNegative"/>
+              <source>
+                <context value="obs"/>
+                <type value="CodeableConcept"/>
+                <element value="value"/>
+                <variable value="value"/>
+                <condition value="coding.exists((system = 'https://cielterminology.org') and (code = '664'))"/>
+              </source>
+              <target>
+                <context value="observe"/>
+                <contextType value="variable"/>
+                <element value="value"/>
+                <variable value="val"/>
+                <transform value="create"/>
+                <parameter>
+                  <valueString value="CodeableConcept"/>
+                </parameter>
+              </target>
+              <rule>
+                <name value="setNegativeCoding"/>
+                <source>
+                  <context value="value"/>
+                </source>
+                <target>
+                  <context value="val"/>
+                  <contextType value="variable"/>
+                  <element value="coding"/>
+                  <variable value="coding"/>
+                </target>
+                <rule>
+                  <name value="setNegativeCC"/>
+                  <source>
+                    <context value="value"/>
+                  </source>
+                  <target>
+                    <context value="coding"/>
+                    <contextType value="variable"/>
+                    <element value="system"/>
+                    <transform value="copy"/>
+                    <parameter>
+                      <valueString value="http://smart.who.int/hiv/CodeSystem/HIVConcepts"/>
+                    </parameter>
+                  </target>
+                  <target>
+                    <context value="coding"/>
+                    <contextType value="variable"/>
+                    <element value="code"/>
+                    <transform value="copy"/>
+                    <parameter>
+                      <valueString value="HIV.B.DE117"/>
+                    </parameter>
+                  </target>
+                  <target>
+                    <context value="coding"/>
+                    <contextType value="variable"/>
+                    <element value="display"/>
+                    <transform value="copy"/>
+                    <parameter>
+                      <valueString value="HIV-negative"/>
+                    </parameter>
+                  </target>
+                </rule>
+              </rule>
+            </rule>
+            <rule>
+              <name value="setValuePositive1"/>
+              <source>
+                <context value="obs"/>
+                <type value="CodeableConcept"/>
+                <element value="value"/>
+                <variable value="value"/>
+                <condition value="coding.exists((system = 'https://cielterminology.org') and (code = '138571'))"/>
+              </source>
+              <target>
+                <context value="observe"/>
+                <contextType value="variable"/>
+                <element value="value"/>
+                <variable value="val"/>
+                <transform value="create"/>
+                <parameter>
+                  <valueString value="CodeableConcept"/>
+                </parameter>
+              </target>
+              <rule>
+                <name value="setPositiveCoding"/>
+                <source>
+                  <context value="value"/>
+                </source>
+                <target>
+                  <context value="val"/>
+                  <contextType value="variable"/>
+                  <element value="coding"/>
+                  <variable value="coding"/>
+                </target>
+                <rule>
+                  <name value="setPositiveCC"/>
+                  <source>
+                    <context value="value"/>
+                  </source>
+                  <target>
+                    <context value="coding"/>
+                    <contextType value="variable"/>
+                    <element value="system"/>
+                    <transform value="copy"/>
+                    <parameter>
+                      <valueString value="http://smart.who.int/hiv/CodeSystem/HIVConcepts"/>
+                    </parameter>
+                  </target>
+                  <target>
+                    <context value="coding"/>
+                    <contextType value="variable"/>
+                    <element value="code"/>
+                    <transform value="copy"/>
+                    <parameter>
+                      <valueString value="HIV.B.DE116"/>
+                    </parameter>
+                  </target>
+                  <target>
+                    <context value="coding"/>
+                    <contextType value="variable"/>
+                    <element value="display"/>
+                    <transform value="copy"/>
+                    <parameter>
+                      <valueString value="HIV-positive"/>
+                    </parameter>
+                  </target>
+                </rule>
+              </rule>
+            </rule>
+            <rule>
+              <name value="setValuePositive2"/>
+              <source>
+                <context value="obs"/>
+                <type value="CodeableConcept"/>
+                <element value="value"/>
+                <variable value="value"/>
+                <condition value="coding.exists((system = 'https://cielterminology.org') and (code = '703'))"/>
+              </source>
+              <target>
+                <context value="observe"/>
+                <contextType value="variable"/>
+                <element value="value"/>
+                <variable value="val"/>
+                <transform value="create"/>
+                <parameter>
+                  <valueString value="CodeableConcept"/>
+                </parameter>
+              </target>
+              <rule>
+                <name value="setPositiveCoding"/>
+                <source>
+                  <context value="value"/>
+                </source>
+                <target>
+                  <context value="val"/>
+                  <contextType value="variable"/>
+                  <element value="coding"/>
+                  <variable value="coding"/>
+                </target>
+                <rule>
+                  <name value="setPositiveCC"/>
+                  <source>
+                    <context value="value"/>
+                  </source>
+                  <target>
+                    <context value="coding"/>
+                    <contextType value="variable"/>
+                    <element value="system"/>
+                    <transform value="copy"/>
+                    <parameter>
+                      <valueString value="http://smart.who.int/hiv/CodeSystem/HIVConcepts"/>
+                    </parameter>
+                  </target>
+                  <target>
+                    <context value="coding"/>
+                    <contextType value="variable"/>
+                    <element value="code"/>
+                    <transform value="copy"/>
+                    <parameter>
+                      <valueString value="HIV.B.DE116"/>
+                    </parameter>
+                  </target>
+                  <target>
+                    <context value="coding"/>
+                    <contextType value="variable"/>
+                    <element value="display"/>
+                    <transform value="copy"/>
+                    <parameter>
+                      <valueString value="HIV-positive"/>
+                    </parameter>
+                  </target>
+                </rule>
+              </rule>
+            </rule>
+            <rule>
+              <name value="setStatus"/>
+              <source>
+                <context value="obsentry"/>
+              </source>
+              <target>
+                <context value="observe"/>
+                <contextType value="variable"/>
+                <element value="status"/>
+                <transform value="cc"/>
+                <parameter>
+                  <valueString value="http://hl7.org/fhir/observation-status"/>
+                </parameter>
+                <parameter>
+                  <valueString value="final"/>
+                </parameter>
+                <parameter>
+                  <valueString value="Final"/>
+                </parameter>
+              </target>
+            </rule>
+            <rule>
+              <name value="setProvenance"/>
+              <source>
+                <context value="obs"/>
+              </source>
+              <target>
+                <context value="tgt"/>
+                <contextType value="variable"/>
+                <element value="entry"/>
+                <variable value="pentry"/>
+              </target>
+              <target>
+                <context value="pentry"/>
+                <contextType value="variable"/>
+                <element value="resource"/>
+                <variable value="prov"/>
+                <transform value="create"/>
+                <parameter>
+                  <valueString value="Provenance"/>
+                </parameter>
+              </target>
+              <target>
+                <contextType value="variable"/>
+                <variable value="pid"/>
+                <transform value="uuid"/>
+              </target>
+              <target>
+                <context value="pentry"/>
+                <contextType value="variable"/>
+                <element value="request"/>
+                <variable value="prequest"/>
+              </target>
+              <rule>
+                <name value="setPId"/>
+                <source>
+                  <context value="obs"/>
+                </source>
+                <target>
+                  <context value="prov"/>
+                  <contextType value="variable"/>
+                  <element value="id"/>
+                  <transform value="copy"/>
+                  <parameter>
+                    <valueId value="pid"/>
+                  </parameter>
+                </target>
+              </rule>
+              <rule>
+                <name value="setFullUrl"/>
+                <source>
+                  <context value="obs"/>
+                </source>
+                <target>
+                  <context value="pentry"/>
+                  <contextType value="variable"/>
+                  <element value="fullUrl"/>
+                  <transform value="evaluate"/>
+                  <parameter>
+                    <valueString value="'urn:uuid:' &amp; pid"/>
+                  </parameter>
+                </target>
+              </rule>
+              <rule>
+                <name value="setrequest"/>
+                <source>
+                  <context value="obs"/>
+                </source>
+                <target>
+                  <context value="prequest"/>
+                  <contextType value="variable"/>
+                  <element value="method"/>
+                  <transform value="copy"/>
+                  <parameter>
+                    <valueString value="PUT"/>
+                  </parameter>
+                </target>
+                <target>
+                  <context value="prequest"/>
+                  <contextType value="variable"/>
+                  <element value="url"/>
+                  <transform value="evaluate"/>
+                  <parameter>
+                    <valueString value="'Provenance/' &amp; pid"/>
+                  </parameter>
+                </target>
+              </rule>
+              <rule>
+                <name value="setTarget"/>
+                <source>
+                  <context value="obs"/>
+                </source>
+                <target>
+                  <context value="prov"/>
+                  <contextType value="variable"/>
+                  <element value="target"/>
+                  <variable value="ptarg"/>
+                </target>
+                <rule>
+                  <name value="setTargetRef"/>
+                  <source>
+                    <context value="obs"/>
+                  </source>
+                  <target>
+                    <context value="ptarg"/>
+                    <contextType value="variable"/>
+                    <element value="reference"/>
+                    <transform value="evaluate"/>
+                    <parameter>
+                      <valueString value="'urn:uuid:' &amp; cid"/>
+                    </parameter>
+                  </target>
+                </rule>
+              </rule>
+              <rule>
+                <name value="setEntity"/>
+                <source>
+                  <context value="obs"/>
+                </source>
+                <target>
+                  <context value="prov"/>
+                  <contextType value="variable"/>
+                  <element value="entity"/>
+                  <variable value="entity"/>
+                </target>
+                <rule>
+                  <name value="setRole"/>
+                  <source>
+                    <context value="obs"/>
+                  </source>
+                  <target>
+                    <context value="entity"/>
+                    <contextType value="variable"/>
+                    <element value="role"/>
+                    <transform value="copy"/>
+                    <parameter>
+                      <valueString value="source"/>
+                    </parameter>
+                  </target>
+                </rule>
+                <rule>
+                  <name value="setWhatId"/>
+                  <source>
+                    <context value="obs"/>
+                  </source>
+                  <target>
+                    <context value="entity"/>
+                    <contextType value="variable"/>
+                    <element value="what"/>
+                    <variable value="pwhat"/>
+                  </target>
+                  <dependent>
+                    <name value="setProvenanceFromBundleId"/>
+                    <variable value="src"/>
+                    <variable value="pwhat"/>
+                  </dependent>
+                </rule>
+              </rule>
+            </rule>
+          </rule>
+        </rule>
+      </rule>
+    </rule>
+  </group>
+  <group>
+    <name value="setProvenanceFromBundleId"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="bundle"/>
+      <type value="input"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="provwhat"/>
+      <type value="Reference"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="setWhatId"/>
+      <source>
+        <context value="bundle"/>
+        <element value="id"/>
+        <variable value="bundleid"/>
+      </source>
+      <target>
+        <context value="provwhat"/>
+        <contextType value="variable"/>
+        <element value="identifier"/>
+        <variable value="whatid"/>
+      </target>
+      <rule>
+        <name value="setWhatIdValue"/>
+        <source>
+          <context value="bundleid"/>
+        </source>
+        <target>
+          <context value="whatid"/>
+          <contextType value="variable"/>
+          <element value="value"/>
+          <transform value="evaluate"/>
+          <parameter>
+            <valueString value="'Bundle/' &amp; bundleid"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+  </group>
+</StructureMap>

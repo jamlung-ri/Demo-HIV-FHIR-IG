@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="HIV.D.DE6"/>
+  <meta>
+    <lastUpdated value="2024-06-18T13:53:01.296973Z"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet HIV.D.DE6</b></p><a name="HIV.D.DE6"> </a><a name="hcHIV.D.DE6"> </a><a name="HIV.D.DE6-en-US"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Last updated: 2024-06-18 13:53:01+0000</p></div><ul><li>Include these codes as defined in <code>https://fhir.staging.openconceptlab.org/orgs/Kenya_SMART_Guidelines/ValueSet/HIV.D.DE6/</code><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>emergency</td><td/></tr><tr><td>pmtct-anc1-only</td><td/></tr><tr><td>post-anc1-pregnancy</td><td/></tr><tr><td>tb</td><td/></tr><tr><td>pediatric-less-than-five-clinic</td><td/></tr><tr><td>pmtct-anc1-breastfeeding</td><td/></tr><tr><td>vct</td><td/></tr><tr><td>vmmc</td><td/></tr><tr><td>Index</td><td/></tr><tr><td>malnutrition</td><td/></tr><tr><td>inpatient</td><td/></tr><tr><td>sns</td><td/></tr><tr><td>sti</td><td/></tr><tr><td>other-pitc</td><td/></tr></table></li></ul></div>
+  </text>
+  <url value="https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/HIV.D.DE6"/>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://hl7.org/fhir/v2/0203"/>
+        <code value="ACSN"/>
+        <display value="Accession ID"/>
+      </coding>
+      <text value="Accession ID"/>
+    </type>
+    <system value="https://api.staging.openconceptlab.org"/>
+  </identifier>
+  <version value="0.1.0"/>
+  <name value="Entry point for facility-level testing"/>
+  <title value="Entry point for facility-level testing"/>
+  <status value="active"/>
+  <date value="2025-01-15T14:05:09+00:00"/>
+  <publisher value="intellisoftkenya"/>
+  <contact>
+    <name value="intellisoftkenya"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.intellisoftkenya.com/"/>
+    </telecom>
+  </contact>
+  <description value="0.1.0"/>
+  <compose>
+    <include>
+      <system value="https://fhir.staging.openconceptlab.org/orgs/Kenya_SMART_Guidelines/ValueSet/HIV.D.DE6/"/>
+      <concept>
+        <code value="emergency"/>
+      </concept>
+      <concept>
+        <code value="pmtct-anc1-only"/>
+      </concept>
+      <concept>
+        <code value="post-anc1-pregnancy"/>
+      </concept>
+      <concept>
+        <code value="tb"/>
+      </concept>
+      <concept>
+        <code value="pediatric-less-than-five-clinic"/>
+      </concept>
+      <concept>
+        <code value="pmtct-anc1-breastfeeding"/>
+      </concept>
+      <concept>
+        <code value="vct"/>
+      </concept>
+      <concept>
+        <code value="vmmc"/>
+      </concept>
+      <concept>
+        <code value="Index"/>
+      </concept>
+      <concept>
+        <code value="malnutrition"/>
+      </concept>
+      <concept>
+        <code value="inpatient"/>
+      </concept>
+      <concept>
+        <code value="sns"/>
+      </concept>
+      <concept>
+        <code value="sti"/>
+      </concept>
+      <concept>
+        <code value="other-pitc"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

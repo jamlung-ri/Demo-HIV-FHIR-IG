@@ -1,0 +1,57 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/HIV.D.DE8> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "HIV.D.DE8"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2024-07-02T08:39:15.775424Z"^^xsd:dateTime ]
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet HIV.D.DE8</b></p><a name=\"HIV.D.DE8\"> </a><a name=\"hcHIV.D.DE8\"> </a><a name=\"HIV.D.DE8-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2024-07-02 08:39:15+0000</p></div><ul><li>Include these codes as defined in <code>https://fhir.staging.openconceptlab.org/orgs/Kenya_SMART_Guidelines/ValueSet/HIV.D.DE8/</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>9860129</td><td/></tr><tr><td>9860127</td><td/></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/HIV.D.DE8"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/v2/0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "ACSN" ] ;
+         fhir:display [ fhir:v "Accession ID" ]
+       ] ) ;
+       fhir:text [ fhir:v "Accession ID" ]
+     ] ;
+     fhir:system [ fhir:v "https://api.staging.openconceptlab.org"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "/orgs/Kenya_SMART_Guidelines/ValueSet/HIV.D.DE8/" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "Test results received"] ; # 
+  fhir:title [ fhir:v "Test results received"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2025-01-15T14:05:09+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "intellisoftkenya"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "intellisoftkenya" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.intellisoftkenya.com/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "0.1.0"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "https://fhir.staging.openconceptlab.org/orgs/Kenya_SMART_Guidelines/ValueSet/HIV.D.DE8/"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "9860129" ]
+       ] [
+         fhir:code [ fhir:v "9860127" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

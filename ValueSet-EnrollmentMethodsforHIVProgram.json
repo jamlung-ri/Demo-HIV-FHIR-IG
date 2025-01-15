@@ -1,0 +1,43 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "EnrollmentMethodsforHIVProgram",
+  "meta" : {
+    "lastUpdated" : "2023-09-01T14:06:03.742108Z"
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet EnrollmentMethodsforHIVProgram</b></p><a name=\"EnrollmentMethodsforHIVProgram\"> </a><a name=\"hcEnrollmentMethodsforHIVProgram\"> </a><a name=\"EnrollmentMethodsforHIVProgram-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2023-09-01 14:06:03+0000</p></div><ul><li>Include all codes defined in <code>https://path-global-health.github.io/MERindicators/CodeSystem/EnrollmentMethods</code></li></ul></div>"
+  },
+  "url" : "https://path-global-health.github.io/MERindicators/ValueSet/EnrollmentMethodsforHIVProgram",
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/v2/0203",
+        "code" : "ACSN",
+        "display" : "Accession ID"
+      }],
+      "text" : "Accession ID"
+    },
+    "system" : "https://api.staging.openconceptlab.org",
+    "value" : "/orgs/Kenya_SMART_Guidelines/ValueSet/EnrollmentMethodsforHIVProgram/"
+  }],
+  "version" : "0.1.0",
+  "name" : "EnrollmentMethodsforHIVProgram",
+  "title" : "EnrollmentMethodsforHIVProgram",
+  "status" : "draft",
+  "date" : "2023-09-01T00:14:22Z",
+  "publisher" : "intellisoftkenya",
+  "contact" : [{
+    "name" : "intellisoftkenya",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.intellisoftkenya.com/"
+    }]
+  }],
+  "description" : "1",
+  "compose" : {
+    "include" : [{
+      "system" : "https://path-global-health.github.io/MERindicators/CodeSystem/EnrollmentMethods"
+    }]
+  }
+}

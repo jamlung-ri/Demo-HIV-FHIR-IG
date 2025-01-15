@@ -1,0 +1,136 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/adverse-event-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "AdverseEventType",
+      "title" : "AdverseEvent Type",
+      "description" : "This value set includes codes that describe the adverse event or incident that occurred or was averted.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.835",
+        "2.16.840.1.113883.4.642.3.808"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.835",
+        "2.16.840.1.113883.4.642.3.808"
+      ]
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/covid19library/ValueSet/pregnancy-status-value-set",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "PregnancyStatusVS",
+      "title" : "Pregnancy Status Value Set",
+      "description" : "The set of codes that describe one's state of pregnancy.",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/HIV.B.DE3",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "New Enrollment",
+      "title" : "New Enrollment",
+      "description" : "0.1.0",
+      "systems" : [
+        "https://fhir.staging.openconceptlab.org/orgs/Kenya_SMART_Guidelines"
+      ]
+    },
+    {
+      "url" : "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/HIV.D.DE5",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "Entry point for community-level testing",
+      "title" : "Entry point for community-level testing",
+      "description" : "0.1.1",
+      "systems" : [
+        "https://fhir.staging.openconceptlab.org/orgs/Kenya_SMART_Guidelines/ValueSet"
+      ]
+    },
+    {
+      "url" : "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/HIV.D.DE6",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "Entry point for facility-level testing",
+      "title" : "Entry point for facility-level testing",
+      "description" : "0.1.0",
+      "systems" : [
+        "https://fhir.staging.openconceptlab.org/orgs/Kenya_SMART_Guidelines/ValueSet/HIV.D.DE6/"
+      ]
+    },
+    {
+      "url" : "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/HIV.D.DE7",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "Test result",
+      "title" : "Test result",
+      "description" : "0.1.0",
+      "systems" : [
+        "https://fhir.staging.openconceptlab.org/orgs/Kenya_SMART_Guidelines/ValueSet/HIV.D.DE7/"
+      ]
+    },
+    {
+      "url" : "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/HIV.D.DE8",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "Test results received",
+      "title" : "Test results received",
+      "description" : "0.1.0",
+      "systems" : [
+        "https://fhir.staging.openconceptlab.org/orgs/Kenya_SMART_Guidelines/ValueSet/HIV.D.DE8/"
+      ]
+    },
+    {
+      "url" : "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/HTS.setting",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "HTS Setting",
+      "title" : "HIV Testing Services Setting",
+      "description" : "0.1.1",
+      "systems" : ["https://app.staging.openconceptlab.org/hts.setting"]
+    },
+    {
+      "url" : "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/OnARV",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "OnARV",
+      "title" : "History of antiretroviral therapy (situation)",
+      "description" : "0.1.1",
+      "systems" : [
+        "https://cielterminology.org",
+        "https://path-global-health.github.io/MERindicators/CodeSystem/OpenHIE",
+        "http://snomed.info/sct"
+      ]
+    },
+    {
+      "url" : "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/entry.point",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "Entry Point",
+      "title" : "Entry Point",
+      "description" : "0.1.0",
+      "systems" : ["https://app.staging.openconceptlab.org/entry.point"]
+    },
+    {
+      "url" : "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/transfer.in",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "Transfer in",
+      "title" : "Transfer in",
+      "description" : "0.1.1",
+      "systems" : ["https://app.staging.openconceptlab.org/transfer.in"]
+    },
+    {
+      "url" : "https://path-global-health.github.io/MERindicators/ValueSet/EnrollmentMethodsforHIVProgram",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "EnrollmentMethodsforHIVProgram",
+      "title" : "EnrollmentMethodsforHIVProgram",
+      "description" : "1",
+      "systems" : [
+        "https://path-global-health.github.io/MERindicators/CodeSystem/EnrollmentMethods"
+      ]
+    }
+  ]
+}

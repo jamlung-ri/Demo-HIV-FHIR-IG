@@ -1,0 +1,1011 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "tx-curr",
+  "meta" : {
+    "lastUpdated" : "2024-07-16T12:55:55.565774Z"
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem tx-curr</b></p><a name=\"tx-curr\"> </a><a name=\"hctx-curr\"> </a><a name=\"tx-curr-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2024-07-16 12:55:55+0000; Language: en</p></div><p><b>Properties</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class=\"grid\"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>URI</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>conceptclass</td><td>conceptclass</td><td>https://api.staging.openconceptlab.org/orgs/OCL/sources/Classes/concepts</td><td>string</td><td>Standard list of concept classes.</td></tr><tr><td>datatype</td><td>datatype</td><td>https://api.staging.openconceptlab.org/orgs/OCL/sources/Datatypes/concepts</td><td>string</td><td>Standard list of concept datatypes.</td></tr><tr><td>inactive</td><td>inactive</td><td>http://hl7.org/fhir/concept-properties</td><td>Coding</td><td>True if the concept is not considered active.</td></tr></table><p><b>Concepts</b></p><p>This  code system <code>https://app.staging.openconceptlab.org/#/orgs/Kenya_SMART_Guidelines/sources/tx_curr</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td><td><b>inactive</b></td></tr><tr style=\"background-color: #ffeeee\"><td style=\"white-space:nowrap\">discontinuation_date<a name=\"tx-curr-discontinuation_date\"> </a></td><td>Discontinuation date</td><td/><td>true</td></tr><tr style=\"background-color: #ffeeee\"><td style=\"white-space:nowrap\">9860125<a name=\"tx-curr-9860125\"> </a></td><td>New client</td><td/><td>true</td></tr><tr style=\"background-color: #ffeeee\"><td style=\"white-space:nowrap\">9860119<a name=\"tx-curr-9860119\"> </a></td><td>Transfer in date</td><td/><td>true</td></tr><tr style=\"background-color: #ffeeee\"><td style=\"white-space:nowrap\">9860123<a name=\"tx-curr-9860123\"> </a></td><td>Yes</td><td>Generic answer to a question.</td><td>true</td></tr><tr style=\"background-color: #ffeeee\"><td style=\"white-space:nowrap\">9860121<a name=\"tx-curr-9860121\"> </a></td><td>No</td><td>Generic answer to a question.</td><td>true</td></tr><tr><td style=\"white-space:nowrap\">patient_age_group<a name=\"tx-curr-patient_age_group\"> </a></td><td>Patient Age group</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">new_enrollment<a name=\"tx-curr-new_enrollment\"> </a></td><td>New Enrollment</td><td>Indication of whether the patient is newly initiating ART during the reporting period.</td><td/></tr><tr><td style=\"white-space:nowrap\">current_on_art<a name=\"tx-curr-current_on_art\"> </a></td><td>Current on ART (TX_CURR)</td><td>Identifies patients currently receiving ongoing ART treatment.</td><td/></tr><tr><td style=\"white-space:nowrap\">date_of_art_initiation<a name=\"tx-curr-date_of_art_initiation\"> </a></td><td>Date of ART Initiation</td><td>Date the patient started ART</td><td/></tr><tr><td style=\"white-space:nowrap\">previous_art_experience<a name=\"tx-curr-previous_art_experience\"> </a></td><td>Previous ART experience</td><td>Capture if the patient has ever been on ART before.</td><td/></tr><tr><td style=\"white-space:nowrap\">reason-for-treatment-interruption<a name=\"tx-curr-reason-for-treatment-interruption\"> </a></td><td>Reason for treatment interruption</td><td>Could be collected for patients restarting treatment.</td><td/></tr><tr><td style=\"white-space:nowrap\">HIV.C.DE2<a name=\"tx-curr-HIV.46C.46DE2\"> </a></td><td>TX_CURR at Beginning of Period</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">HIV.C.DE3<a name=\"tx-curr-HIV.46C.46DE3\"> </a></td><td>Date of Last Expected Contact</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">HIV.C.DE4<a name=\"tx-curr-HIV.46C.46DE4\"> </a></td><td>Date Last Seen</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">HIV.C.DE6<a name=\"tx-curr-HIV.46C.46DE6\"> </a></td><td>Duration of Treatment Interruption</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">HIV.C.DE7<a name=\"tx-curr-HIV.46C.46DE7\"> </a></td><td>Date LTF Identified</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">HIV.D.DE3<a name=\"tx-curr-HIV.46D.46DE3\"> </a></td><td>HIV testing services visit</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">HIV.D.DE4<a name=\"tx-curr-HIV.46D.46DE4\"> </a></td><td>HTS Setting</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">HIV.D.DE5<a name=\"tx-curr-HIV.46D.46DE5\"> </a></td><td>Entry point for community-level testing</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">community-based<a name=\"tx-curr-community-based\"> </a></td><td>Community Based</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">other-community-based-testing<a name=\"tx-curr-other-community-based-testing\"> </a></td><td>Other community-based testing</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">HIV.D.DE6<a name=\"tx-curr-HIV.46D.46DE6\"> </a></td><td>Entry point for facility-level testing</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">Index<a name=\"tx-curr-Index\"> </a></td><td>Index</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">emergency<a name=\"tx-curr-emergency\"> </a></td><td>Emergency</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">inpatient<a name=\"tx-curr-inpatient\"> </a></td><td>Inpatient</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">malnutrition<a name=\"tx-curr-malnutrition\"> </a></td><td>Malnutrition</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">pediatric-less-than-five-clinic<a name=\"tx-curr-pediatric-less-than-five-clinic\"> </a></td><td>Pediatric &lt;5 Clinic</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">pmtct-anc1-only<a name=\"tx-curr-pmtct-anc1-only\"> </a></td><td>PMTCT [ANC1-Only]</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">post-anc1-pregnancy<a name=\"tx-curr-post-anc1-pregnancy\"> </a></td><td>PMTCT [Post ANC1: Pregnancy/L&amp;D]</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">pmtct-anc1-breastfeeding<a name=\"tx-curr-pmtct-anc1-breastfeeding\"> </a></td><td>PMTCT [Post ANC1: Breastfeeding]</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">sns<a name=\"tx-curr-sns\"> </a></td><td>SNS</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">sti<a name=\"tx-curr-sti\"> </a></td><td>STI</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">tb<a name=\"tx-curr-tb\"> </a></td><td>TB</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">vct<a name=\"tx-curr-vct\"> </a></td><td>VCT</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">vmmc<a name=\"tx-curr-vmmc\"> </a></td><td>VMMC</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">other-pitc<a name=\"tx-curr-other-pitc\"> </a></td><td>Other PITC</td><td/><td/></tr><tr><td style=\"white-space:nowrap\">9921305<a name=\"tx-curr-9921305\"> </a></td><td>index</td><td>Refers to a document providing an index for the current document.</td><td/></tr></table><p><b>Additional Language Displays</b></p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Bengali (bn)</b></td><td><b>Spanish (es)</b></td><td><b>French (fr)</b></td><td><b>ht</b></td><td><b>Italian (it)</b></td><td><b>km</b></td><td><b>ne</b></td><td><b>Portuguese (pt)</b></td><td><b>Русский (Russian, ru)</b></td><td><b>rw</b></td><td><b>ti</b></td><td><b>ur</b></td></tr><tr><td>discontinuation_date</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860125</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860119</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860123</td><td>হ্যাঁ</td><td>Verdadero</td><td>Vrai</td><td>Vre</td><td>Vero</td><td>ចាស</td><td>हुन्छ</td><td>Verdadeiro</td><td>Да</td><td>Yego</td><td>እወ</td><td>ہاں</td></tr><tr><td>9860121</td><td>না</td><td>Falso</td><td>Faux</td><td>Fo</td><td>Falso</td><td>ទេ</td><td>हुँदैन</td><td>Falso</td><td>Нет</td><td>Muzima</td><td>ኣይትጥቀምን</td><td>نہیں</td></tr><tr><td>patient_age_group</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>new_enrollment</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>current_on_art</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>date_of_art_initiation</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>previous_art_experience</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>reason-for-treatment-interruption</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>HIV.C.DE2</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>HIV.C.DE3</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>HIV.C.DE4</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>HIV.C.DE6</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>HIV.C.DE7</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>HIV.D.DE3</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>HIV.D.DE4</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>HIV.D.DE5</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>community-based</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>other-community-based-testing</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>HIV.D.DE6</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Index</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>emergency</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>inpatient</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>malnutrition</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>pediatric-less-than-five-clinic</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>pmtct-anc1-only</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>post-anc1-pregnancy</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>pmtct-anc1-breastfeeding</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>sns</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>sti</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>tb</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>vct</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>vmmc</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>other-pitc</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9921305</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table></div>"
+  },
+  "url" : "https://app.staging.openconceptlab.org/#/orgs/Kenya_SMART_Guidelines/sources/tx_curr",
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/v2/0203",
+        "code" : "ACSN",
+        "display" : "Accession ID"
+      }],
+      "text" : "Accession ID"
+    },
+    "system" : "https://api.staging.openconceptlab.org",
+    "value" : "/orgs/Kenya_SMART_Guidelines/CodeSystem/tx_curr/"
+  }],
+  "version" : "0.1.0",
+  "name" : "HIV-Indicators",
+  "title" : "HIV Indicators",
+  "status" : "active",
+  "date" : "2025-01-15T14:05:09+00:00",
+  "publisher" : "intellisoftkenya",
+  "contact" : [{
+    "name" : "intellisoftkenya",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.intellisoftkenya.com/"
+    }]
+  }],
+  "description" : "0.1.1",
+  "content" : "complete",
+  "count" : 37,
+  "property" : [{
+    "code" : "conceptclass",
+    "uri" : "https://api.staging.openconceptlab.org/orgs/OCL/sources/Classes/concepts",
+    "description" : "Standard list of concept classes.",
+    "type" : "string"
+  },
+  {
+    "code" : "datatype",
+    "uri" : "https://api.staging.openconceptlab.org/orgs/OCL/sources/Datatypes/concepts",
+    "description" : "Standard list of concept datatypes.",
+    "type" : "string"
+  },
+  {
+    "code" : "inactive",
+    "uri" : "http://hl7.org/fhir/concept-properties",
+    "description" : "True if the concept is not considered active.",
+    "type" : "Coding"
+  }],
+  "concept" : [{
+    "code" : "discontinuation_date",
+    "display" : "Discontinuation date",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "Fully-Specified"
+      },
+      "value" : "Discontinuation date"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "Date"
+    },
+    {
+      "code" : "inactive",
+      "valueBoolean" : true
+    }]
+  },
+  {
+    "code" : "9860125",
+    "display" : "New client",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "FULLY_SPECIFIED"
+      },
+      "value" : "New client"
+    },
+    {
+      "language" : "en",
+      "value" : "New patient"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Question"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "Coded"
+    },
+    {
+      "code" : "inactive",
+      "valueBoolean" : true
+    }]
+  },
+  {
+    "code" : "9860119",
+    "display" : "Transfer in date",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "FULLY_SPECIFIED"
+      },
+      "value" : "Transfer in date"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Question"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "Date"
+    },
+    {
+      "code" : "inactive",
+      "valueBoolean" : true
+    }]
+  },
+  {
+    "code" : "9860123",
+    "display" : "Yes",
+    "definition" : "Generic answer to a question.",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "FULLY_SPECIFIED"
+      },
+      "value" : "Yes"
+    },
+    {
+      "language" : "fr",
+      "use" : {
+        "code" : "FULLY_SPECIFIED"
+      },
+      "value" : "Oui"
+    },
+    {
+      "language" : "rw",
+      "use" : {
+        "code" : "FULLY_SPECIFIED"
+      },
+      "value" : "Yego"
+    },
+    {
+      "language" : "ti",
+      "use" : {
+        "code" : "FULLY_SPECIFIED"
+      },
+      "value" : "እወ"
+    },
+    {
+      "language" : "es",
+      "use" : {
+        "code" : "FULLY_SPECIFIED"
+      },
+      "value" : "Sí"
+    },
+    {
+      "language" : "ru",
+      "use" : {
+        "code" : "FULLY_SPECIFIED"
+      },
+      "value" : "Да"
+    },
+    {
+      "language" : "en",
+      "value" : "True"
+    },
+    {
+      "language" : "fr",
+      "value" : "Vrai"
+    },
+    {
+      "language" : "es",
+      "value" : "Verdadero"
+    },
+    {
+      "language" : "it",
+      "use" : {
+        "code" : "FULLY_SPECIFIED"
+      },
+      "value" : "Sì"
+    },
+    {
+      "language" : "it",
+      "value" : "Vero"
+    },
+    {
+      "language" : "pt",
+      "use" : {
+        "code" : "FULLY_SPECIFIED"
+      },
+      "value" : "Sim"
+    },
+    {
+      "language" : "pt",
+      "value" : "Verdadeiro"
+    },
+    {
+      "language" : "bn",
+      "use" : {
+        "code" : "FULLY_SPECIFIED"
+      },
+      "value" : "হ্যাঁ"
+    },
+    {
+      "language" : "ht",
+      "use" : {
+        "code" : "FULLY_SPECIFIED"
+      },
+      "value" : "Wi"
+    },
+    {
+      "language" : "ht",
+      "value" : "Vre"
+    },
+    {
+      "language" : "ur",
+      "use" : {
+        "code" : "FULLY_SPECIFIED"
+      },
+      "value" : "ہاں"
+    },
+    {
+      "language" : "km",
+      "use" : {
+        "code" : "FULLY_SPECIFIED"
+      },
+      "value" : "បាទ"
+    },
+    {
+      "language" : "km",
+      "value" : "ចាស"
+    },
+    {
+      "language" : "ne",
+      "use" : {
+        "code" : "FULLY_SPECIFIED"
+      },
+      "value" : "हुन्छ"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "N/A"
+    },
+    {
+      "code" : "inactive",
+      "valueBoolean" : true
+    }]
+  },
+  {
+    "code" : "9860121",
+    "display" : "No",
+    "definition" : "Generic answer to a question.",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "FULLY_SPECIFIED"
+      },
+      "value" : "No"
+    },
+    {
+      "language" : "fr",
+      "use" : {
+        "code" : "FULLY_SPECIFIED"
+      },
+      "value" : "Non"
+    },
+    {
+      "language" : "rw",
+      "use" : {
+        "code" : "FULLY_SPECIFIED"
+      },
+      "value" : "Muzima"
+    },
+    {
+      "language" : "ti",
+      "use" : {
+        "code" : "FULLY_SPECIFIED"
+      },
+      "value" : "ኣይትጥቀምን"
+    },
+    {
+      "language" : "es",
+      "use" : {
+        "code" : "FULLY_SPECIFIED"
+      },
+      "value" : "No"
+    },
+    {
+      "language" : "ru",
+      "use" : {
+        "code" : "FULLY_SPECIFIED"
+      },
+      "value" : "Нет"
+    },
+    {
+      "language" : "en",
+      "value" : "False"
+    },
+    {
+      "language" : "fr",
+      "value" : "Faux"
+    },
+    {
+      "language" : "es",
+      "value" : "Falso"
+    },
+    {
+      "language" : "it",
+      "use" : {
+        "code" : "FULLY_SPECIFIED"
+      },
+      "value" : "No"
+    },
+    {
+      "language" : "it",
+      "value" : "Falso"
+    },
+    {
+      "language" : "pt",
+      "use" : {
+        "code" : "FULLY_SPECIFIED"
+      },
+      "value" : "Não"
+    },
+    {
+      "language" : "pt",
+      "value" : "Falso"
+    },
+    {
+      "language" : "bn",
+      "use" : {
+        "code" : "FULLY_SPECIFIED"
+      },
+      "value" : "না"
+    },
+    {
+      "language" : "ht",
+      "use" : {
+        "code" : "FULLY_SPECIFIED"
+      },
+      "value" : "Non"
+    },
+    {
+      "language" : "ht",
+      "value" : "Fo"
+    },
+    {
+      "language" : "ur",
+      "use" : {
+        "code" : "FULLY_SPECIFIED"
+      },
+      "value" : "نہیں"
+    },
+    {
+      "language" : "km",
+      "use" : {
+        "code" : "FULLY_SPECIFIED"
+      },
+      "value" : "ទេ"
+    },
+    {
+      "language" : "ne",
+      "use" : {
+        "code" : "FULLY_SPECIFIED"
+      },
+      "value" : "हुँदैन"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "N/A"
+    },
+    {
+      "code" : "inactive",
+      "valueBoolean" : true
+    }]
+  },
+  {
+    "code" : "patient_age_group",
+    "display" : "Patient Age group",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "Fully-Specified"
+      },
+      "value" : "Patient Age group"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "Coded"
+    }]
+  },
+  {
+    "code" : "new_enrollment",
+    "display" : "New Enrollment",
+    "definition" : "Indication of whether the patient is newly initiating ART during the reporting period.",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "Fully-Specified"
+      },
+      "value" : "New Enrollment"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "Boolean"
+    }]
+  },
+  {
+    "code" : "current_on_art",
+    "display" : "Current on ART (TX_CURR)",
+    "definition" : "Identifies patients currently receiving ongoing ART treatment.",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "Fully-Specified"
+      },
+      "value" : "Current on ART (TX_CURR)"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "Boolean"
+    }]
+  },
+  {
+    "code" : "date_of_art_initiation",
+    "display" : "Date of ART Initiation",
+    "definition" : "Date the patient started ART",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "Fully-Specified"
+      },
+      "value" : "Date of ART Initiation"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "Date"
+    }]
+  },
+  {
+    "code" : "previous_art_experience",
+    "display" : "Previous ART experience",
+    "definition" : "Capture if the patient has ever been on ART before.",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "Fully-Specified"
+      },
+      "value" : "Previous ART experience"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "Text"
+    }]
+  },
+  {
+    "code" : "reason-for-treatment-interruption",
+    "display" : "Reason for treatment interruption",
+    "definition" : "Could be collected for patients restarting treatment.",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "Fully-Specified"
+      },
+      "value" : "Reason for treatment interruption"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "Coded"
+    }]
+  },
+  {
+    "code" : "HIV.C.DE2",
+    "display" : "TX_CURR at Beginning of Period",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "Fully-Specified"
+      },
+      "value" : "TX_CURR at Beginning of Period"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "Numeric"
+    }]
+  },
+  {
+    "code" : "HIV.C.DE3",
+    "display" : "Date of Last Expected Contact",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "Fully-Specified"
+      },
+      "value" : "Date of Last Expected Contact"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "Date"
+    }]
+  },
+  {
+    "code" : "HIV.C.DE4",
+    "display" : "Date Last Seen",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "Fully-Specified"
+      },
+      "value" : "Date Last Seen"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "Date"
+    }]
+  },
+  {
+    "code" : "HIV.C.DE6",
+    "display" : "Duration of Treatment Interruption",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "Fully-Specified"
+      },
+      "value" : "Duration of Treatment Interruption"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "Date"
+    }]
+  },
+  {
+    "code" : "HIV.C.DE7",
+    "display" : "Date LTF Identified",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "Fully-Specified"
+      },
+      "value" : "Date LTF Identified"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "Date"
+    }]
+  },
+  {
+    "code" : "HIV.D.DE3",
+    "display" : "HIV testing services visit",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "Fully-Specified"
+      },
+      "value" : "HIV testing services visit"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "None"
+    }]
+  },
+  {
+    "code" : "HIV.D.DE4",
+    "display" : "HTS Setting",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "Fully-Specified"
+      },
+      "value" : "HTS Setting"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "Text"
+    }]
+  },
+  {
+    "code" : "HIV.D.DE5",
+    "display" : "Entry point for community-level testing",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "Fully-Specified"
+      },
+      "value" : "Entry point for community-level testing"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "Coded"
+    }]
+  },
+  {
+    "code" : "community-based",
+    "display" : "Community Based",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "Fully-Specified"
+      },
+      "value" : "Community Based"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "None"
+    }]
+  },
+  {
+    "code" : "other-community-based-testing",
+    "display" : "Other community-based testing",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "Fully-Specified"
+      },
+      "value" : "Other community-based testing"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "None"
+    }]
+  },
+  {
+    "code" : "HIV.D.DE6",
+    "display" : "Entry point for facility-level testing",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "Fully-Specified"
+      },
+      "value" : "Entry point for facility-level testing"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "Coded"
+    }]
+  },
+  {
+    "code" : "Index",
+    "display" : "Index",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "Fully-Specified"
+      },
+      "value" : "Index"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "None"
+    }]
+  },
+  {
+    "code" : "emergency",
+    "display" : "Emergency",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "Fully-Specified"
+      },
+      "value" : "Emergency"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "None"
+    }]
+  },
+  {
+    "code" : "inpatient",
+    "display" : "Inpatient",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "Fully-Specified"
+      },
+      "value" : "Inpatient"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "None"
+    }]
+  },
+  {
+    "code" : "malnutrition",
+    "display" : "Malnutrition",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "Fully-Specified"
+      },
+      "value" : "Malnutrition"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "None"
+    }]
+  },
+  {
+    "code" : "pediatric-less-than-five-clinic",
+    "display" : "Pediatric <5 Clinic",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "Fully-Specified"
+      },
+      "value" : "Pediatric <5 Clinic"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "None"
+    }]
+  },
+  {
+    "code" : "pmtct-anc1-only",
+    "display" : "PMTCT [ANC1-Only]",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "Fully-Specified"
+      },
+      "value" : "PMTCT [ANC1-Only]"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "None"
+    }]
+  },
+  {
+    "code" : "post-anc1-pregnancy",
+    "display" : "PMTCT [Post ANC1: Pregnancy/L&D]",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "Fully-Specified"
+      },
+      "value" : "PMTCT [Post ANC1: Pregnancy/L&D]"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "None"
+    }]
+  },
+  {
+    "code" : "pmtct-anc1-breastfeeding",
+    "display" : "PMTCT [Post ANC1: Breastfeeding]",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "Fully-Specified"
+      },
+      "value" : "PMTCT [Post ANC1: Breastfeeding]"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "None"
+    }]
+  },
+  {
+    "code" : "sns",
+    "display" : "SNS",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "Fully-Specified"
+      },
+      "value" : "SNS"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "None"
+    }]
+  },
+  {
+    "code" : "sti",
+    "display" : "STI",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "Fully-Specified"
+      },
+      "value" : "STI"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "None"
+    }]
+  },
+  {
+    "code" : "tb",
+    "display" : "TB",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "Fully-Specified"
+      },
+      "value" : "TB"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "None"
+    }]
+  },
+  {
+    "code" : "vct",
+    "display" : "VCT",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "Fully-Specified"
+      },
+      "value" : "VCT"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "None"
+    }]
+  },
+  {
+    "code" : "vmmc",
+    "display" : "VMMC",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "Fully-Specified"
+      },
+      "value" : "VMMC"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "None"
+    }]
+  },
+  {
+    "code" : "other-pitc",
+    "display" : "Other PITC",
+    "designation" : [{
+      "language" : "en",
+      "use" : {
+        "code" : "Fully-Specified"
+      },
+      "value" : "Other PITC"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "None"
+    }]
+  },
+  {
+    "code" : "9921305",
+    "display" : "index",
+    "definition" : "Refers to a document providing an index for the current document.",
+    "designation" : [{
+      "language" : "en",
+      "value" : "index"
+    }],
+    "property" : [{
+      "code" : "conceptclass",
+      "valueString" : "Misc"
+    },
+    {
+      "code" : "datatype",
+      "valueString" : "N/A"
+    }]
+  }]
+}

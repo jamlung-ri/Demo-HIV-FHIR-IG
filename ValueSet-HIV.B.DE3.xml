@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="HIV.B.DE3"/>
+  <meta>
+    <lastUpdated value="2024-06-18T14:05:13.470948Z"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet HIV.B.DE3</b></p><a name="HIV.B.DE3"> </a><a name="hcHIV.B.DE3"> </a><a name="HIV.B.DE3-en-US"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Last updated: 2024-06-18 14:05:13+0000</p></div><ul><li>Include these codes as defined in <code>https://fhir.staging.openconceptlab.org/orgs/Kenya_SMART_Guidelines</code><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>9860129</td><td/></tr><tr><td>9860127</td><td/></tr></table></li></ul></div>
+  </text>
+  <url value="https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/HIV.B.DE3"/>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://hl7.org/fhir/v2/0203"/>
+        <code value="ACSN"/>
+        <display value="Accession ID"/>
+      </coding>
+      <text value="Accession ID"/>
+    </type>
+    <system value="https://api.staging.openconceptlab.org"/>
+    <value value="/orgs/Kenya_SMART_Guidelines/ValueSet/HIV.B.DE3/"/>
+  </identifier>
+  <version value="0.1.0"/>
+  <name value="New Enrollment"/>
+  <title value="New Enrollment"/>
+  <status value="active"/>
+  <date value="2025-01-15T14:05:09+00:00"/>
+  <publisher value="intellisoftkenya"/>
+  <contact>
+    <name value="intellisoftkenya"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.intellisoftkenya.com/"/>
+    </telecom>
+  </contact>
+  <description value="0.1.0"/>
+  <compose>
+    <include>
+      <system value="https://fhir.staging.openconceptlab.org/orgs/Kenya_SMART_Guidelines"/>
+      <concept>
+        <code value="9860129"/>
+      </concept>
+      <concept>
+        <code value="9860127"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

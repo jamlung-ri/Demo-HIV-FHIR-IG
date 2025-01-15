@@ -1,0 +1,2877 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="CIEL"/>
+  <meta>
+    <lastUpdated value="2024-06-10T13:12:40.540000Z"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><p class="res-header-id"><b>Generated Narrative: CodeSystem CIEL</b></p><a name="CIEL"> </a><a name="hcCIEL"> </a><a name="CIEL-en-US"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Last updated: 2024-06-10 13:12:40+0000; Language: en</p></div><p><b>Properties</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class="grid"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>URI</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>conceptclass</td><td>conceptclass</td><td>https://api.staging.openconceptlab.org/orgs/OCL/sources/Classes/concepts</td><td>string</td><td>Standard list of concept classes.</td></tr><tr><td>datatype</td><td>datatype</td><td>https://api.staging.openconceptlab.org/orgs/OCL/sources/Datatypes/concepts</td><td>string</td><td>Standard list of concept datatypes.</td></tr><tr><td>inactive</td><td>inactive</td><td>http://hl7.org/fhir/concept-properties</td><td>Coding</td><td>True if the concept is not considered active.</td></tr></table><p><b>Concepts</b></p><p>This case-insensitive code system <code>https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/CodeSystem/CIEL</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">1065<a name="CIEL-1065"> </a></td><td>YES</td><td/></tr><tr><td style="white-space:nowrap">1066<a name="CIEL-1066"> </a></td><td>NO</td><td/></tr><tr><td style="white-space:nowrap">1067<a name="CIEL-1067"> </a></td><td>Unknown</td><td/></tr><tr><td style="white-space:nowrap">1434<a name="CIEL-1434"> </a></td><td>Currently pregnant</td><td/></tr><tr><td style="white-space:nowrap">138405<a name="CIEL-138405"> </a></td><td>Human immunodeficiency virus (HIV) disease</td><td/></tr><tr><td style="white-space:nowrap">160119<a name="CIEL-160119"> </a></td><td>CURRENTLY TAKING ARV</td><td/></tr><tr><td style="white-space:nowrap">116128<a name="CIEL-116128"> </a></td><td>Malaria</td><td/></tr><tr><td style="white-space:nowrap">160540<a name="CIEL-160540"> </a></td><td>Method of enrollment</td><td/></tr><tr><td style="white-space:nowrap">160542<a name="CIEL-160542"> </a></td><td>Outpatient department</td><td/></tr><tr><td style="white-space:nowrap">1193<a name="CIEL-1193"> </a></td><td>CURRENT DRUGS USED</td><td/></tr><tr><td style="white-space:nowrap">5096<a name="CIEL-5096"> </a></td><td>RETURN VISIT DATE</td><td/></tr><tr><td style="white-space:nowrap">160104<a name="CIEL-160104"> </a></td><td>Efavirenz / Lamivudine / Stavudine</td><td/></tr><tr><td style="white-space:nowrap">160105<a name="CIEL-160105"> </a></td><td>Efavirenz / Stavudine / Zidovudine</td><td/></tr><tr><td style="white-space:nowrap">160124<a name="CIEL-160124"> </a></td><td>Efavirenz / Lamivudine / Zidovudine</td><td/></tr><tr><td style="white-space:nowrap">161361<a name="CIEL-161361"> </a></td><td>efavirenz / lamivudine / tenofovir disoproxil</td><td/></tr><tr><td style="white-space:nowrap">161363<a name="CIEL-161363"> </a></td><td>lamivudine / stavudine</td><td/></tr><tr><td style="white-space:nowrap">161364<a name="CIEL-161364"> </a></td><td>Lamivudine / tenofovir disoproxil</td><td/></tr><tr><td style="white-space:nowrap">1652<a name="CIEL-1652"> </a></td><td>Lamivudine / nevirapine / zidovudine</td><td/></tr><tr><td style="white-space:nowrap">5424<a name="CIEL-5424"> </a></td><td>Other antiretroviral drug</td><td/></tr><tr><td style="white-space:nowrap">5811<a name="CIEL-5811"> </a></td><td>Unknown antiretroviral drug</td><td/></tr><tr><td style="white-space:nowrap">630<a name="CIEL-630"> </a></td><td>Lamivudine / zidovudine</td><td/></tr><tr><td style="white-space:nowrap">103166<a name="CIEL-103166"> </a></td><td>Abacavir / lamivudine</td><td/></tr><tr><td style="white-space:nowrap">70056<a name="CIEL-70056"> </a></td><td>Abacavir</td><td/></tr><tr><td style="white-space:nowrap">71647<a name="CIEL-71647"> </a></td><td>Atazanavir</td><td/></tr><tr><td style="white-space:nowrap">74807<a name="CIEL-74807"> </a></td><td>Didanosine</td><td/></tr><tr><td style="white-space:nowrap">75523<a name="CIEL-75523"> </a></td><td>Efavirenz</td><td/></tr><tr><td style="white-space:nowrap">75628<a name="CIEL-75628"> </a></td><td>Efavirenz</td><td/></tr><tr><td style="white-space:nowrap">77995<a name="CIEL-77995"> </a></td><td>Indinavir</td><td/></tr><tr><td style="white-space:nowrap">78643<a name="CIEL-78643"> </a></td><td>Lamivudine</td><td/></tr><tr><td style="white-space:nowrap">79040<a name="CIEL-79040"> </a></td><td>Lopinavir</td><td/></tr><tr><td style="white-space:nowrap">792<a name="CIEL-792"> </a></td><td>Lamivudine / nevirapine / stavudine</td><td/></tr><tr><td style="white-space:nowrap">794<a name="CIEL-794"> </a></td><td>Lopinavir / ritonavir</td><td/></tr><tr><td style="white-space:nowrap">80487<a name="CIEL-80487"> </a></td><td>Nelfinavir</td><td/></tr><tr><td style="white-space:nowrap">80586<a name="CIEL-80586"> </a></td><td>Nevirapine</td><td/></tr><tr><td style="white-space:nowrap">83412<a name="CIEL-83412"> </a></td><td>Ritonavir</td><td/></tr><tr><td style="white-space:nowrap">84309<a name="CIEL-84309"> </a></td><td>Stavudine</td><td/></tr><tr><td style="white-space:nowrap">84795<a name="CIEL-84795"> </a></td><td>Tenofovir</td><td/></tr><tr><td style="white-space:nowrap">86663<a name="CIEL-86663"> </a></td><td>Zidovudine</td><td/></tr><tr><td style="white-space:nowrap">01234<a name="CIEL-01234"> </a></td><td>Tenofovir / Lamivudine / Dolutegravir</td><td/></tr><tr><td style="white-space:nowrap">9860127<a name="CIEL-9860127"> </a></td><td>No</td><td>Generic answer to a question.</td></tr><tr><td style="white-space:nowrap">9860131<a name="CIEL-9860131"> </a></td><td>New client</td><td/></tr><tr><td style="white-space:nowrap">9860133<a name="CIEL-9860133"> </a></td><td>Transfer in date</td><td/></tr><tr><td style="white-space:nowrap">9860135<a name="CIEL-9860135"> </a></td><td>Transit patient</td><td>A patient who is being seen outside of their regular care setting temporarily to receive medication refills, etc.</td></tr><tr><td style="white-space:nowrap">9860137<a name="CIEL-9860137"> </a></td><td>re-enroll</td><td/></tr><tr><td style="white-space:nowrap">9860143<a name="CIEL-9860143"> </a></td><td>Treatment end date</td><td/></tr><tr><td style="white-space:nowrap">9860145<a name="CIEL-9860145"> </a></td><td>Transferred out</td><td>Patient transferred out to other services</td></tr><tr><td style="white-space:nowrap">9860147<a name="CIEL-9860147"> </a></td><td>Died</td><td/></tr><tr><td style="white-space:nowrap">9860151<a name="CIEL-9860151"> </a></td><td>Treatment interrupted/stopped</td><td/></tr><tr><td style="white-space:nowrap">9860153<a name="CIEL-9860153"> </a></td><td>ARV regimen/code for drugs collected</td><td/></tr><tr><td style="white-space:nowrap">9860155<a name="CIEL-9860155"> </a></td><td>Antiretroviral treatment start date</td><td>When were the antiretroviral drugs started for the patient?</td></tr><tr><td style="white-space:nowrap">9860157<a name="CIEL-9860157"> </a></td><td>Toxicity, drug</td><td>Adverse reaction to a drug (oral, parenteral, topical).</td></tr><tr><td style="white-space:nowrap">9860159<a name="CIEL-9860159"> </a></td><td>Regimen failure</td><td>Failure of a therapy or treatment to achieve its end points.</td></tr><tr><td style="white-space:nowrap">9860161<a name="CIEL-9860161"> </a></td><td>Cannot afford treatment</td><td>Patient unable to pay for treatment.</td></tr><tr><td style="white-space:nowrap">9860163<a name="CIEL-9860163"> </a></td><td>Isoniazid / pyrazinamide / rifampin</td><td>Combination drug also known as Rifater.  Used in the early treatment of tuberculosis.</td></tr><tr><td style="white-space:nowrap">9860165<a name="CIEL-9860165"> </a></td><td>Weight change</td><td>Alteration in a patient's weight.  Could represent either a weight gain or loss.</td></tr><tr><td style="white-space:nowrap">9860167<a name="CIEL-9860167"> </a></td><td>Unknown</td><td>Generic answer to a question.</td></tr><tr><td style="white-space:nowrap">9860169<a name="CIEL-9860169"> </a></td><td>Ethambutol and isoniazid</td><td>Combination drug used to treat tuberculosis, often used with other drugs.  It's also known as Ethizide.</td></tr><tr><td style="white-space:nowrap">9860171<a name="CIEL-9860171"> </a></td><td>Rifampicin isoniazid pyrazinamide and ethambutol</td><td>Fixed-dose combination drug used to treat tuberculosis.  Also known as Rifafour.</td></tr><tr><td style="white-space:nowrap">9860173<a name="CIEL-9860173"> </a></td><td>Reason antiretrovirals stopped</td><td>Question on encounter form.  Part of the plan gathers a reason for stopping ARVs.  This concept captures that information.</td></tr><tr><td style="white-space:nowrap">9860175<a name="CIEL-9860175"> </a></td><td>Tuberculosis treatment started</td><td>Part of the encounter form plan. Answers are drugs started at the end of the particular encounter.</td></tr><tr><td style="white-space:nowrap">9860177<a name="CIEL-9860177"> </a></td><td>Change formulation</td><td>Answer on encounter form.  Implies that a patient's current drugs will be changed to meet a new formulation.</td></tr><tr><td style="white-space:nowrap">9860179<a name="CIEL-9860179"> </a></td><td>Completed total PMTCT</td><td>Answer to question.  Implies that a person completed a course of total prevention of mother to child transmission therapy.</td></tr><tr><td style="white-space:nowrap">9860181<a name="CIEL-9860181"> </a></td><td>Rifampicin and isoniazid</td><td>Combination drug also known as Rifinah. Used in the early treatment of tuberculosis.</td></tr><tr><td style="white-space:nowrap">9860183<a name="CIEL-9860183"> </a></td><td>Currently pregnant</td><td/></tr><tr><td style="white-space:nowrap">9860185<a name="CIEL-9860185"> </a></td><td>Medications unavailable</td><td>Drugs/medications unavailable for use to treat patient. A reason for not receiving/taking medications.</td></tr><tr><td style="white-space:nowrap">9860187<a name="CIEL-9860187"> </a></td><td>Inpatient care or hospitalization</td><td>none</td></tr><tr><td style="white-space:nowrap">9860189<a name="CIEL-9860189"> </a></td><td>Other</td><td>A generic, descriptive answer which is a handwritten, non-coded response to a question.</td></tr><tr><td style="white-space:nowrap">9860191<a name="CIEL-9860191"> </a></td><td>Isoniazid</td><td>A crystalline antibacterial compound (C6H7N3O) used in the treatment of tuberculosis. </td></tr><tr><td style="white-space:nowrap">9860193<a name="CIEL-9860193"> </a></td><td>Ethambutol</td><td>Anti-mycobaterial drug used to treat active tuberculosis. Always used with other antimycobacterial agents.</td></tr><tr><td style="white-space:nowrap">9860195<a name="CIEL-9860195"> </a></td><td>Streptomycin</td><td/></tr><tr><td style="white-space:nowrap">9860197<a name="CIEL-9860197"> </a></td><td>Pyrazinamide</td><td>Antituberculosis agent used to treat patients with active tuberculosis, usually in combination with other agents.</td></tr><tr><td style="white-space:nowrap">9860199<a name="CIEL-9860199"> </a></td><td>Refusal of treatment by patient</td><td>Patient or client refusal of or resistance to medical, psychological, or psychiatric treatment. (APA, Thesaurus of Psychological Index Terms, 8th ed.)</td></tr><tr><td style="white-space:nowrap">9860201<a name="CIEL-9860201"> </a></td><td>Planned treatment interruption</td><td/></tr><tr><td style="white-space:nowrap">9860203<a name="CIEL-9860203"> </a></td><td>Non-compliance with treatment or therapy</td><td>Not following the prescribed course of therapy or not taking prescribed medicines.</td></tr><tr><td style="white-space:nowrap">9860205<a name="CIEL-9860205"> </a></td><td>Treatment never started - patient refused</td><td/></tr><tr><td style="white-space:nowrap">9860207<a name="CIEL-9860207"> </a></td><td>Other patient decision</td><td/></tr><tr><td style="white-space:nowrap">9860209<a name="CIEL-9860209"> </a></td><td>Patient age</td><td>Generic answer to a question.  For example, a patient stops a medication because of his or her age.</td></tr><tr><td style="white-space:nowrap">9860211<a name="CIEL-9860211"> </a></td><td>Gender identity</td><td/></tr><tr><td style="white-space:nowrap">9860213<a name="CIEL-9860213"> </a></td><td>Identifies as male gender</td><td/></tr><tr><td style="white-space:nowrap">9860215<a name="CIEL-9860215"> </a></td><td>Identifies as female gender</td><td/></tr><tr><td style="white-space:nowrap">9860217<a name="CIEL-9860217"> </a></td><td>Male to female transsexual</td><td/></tr><tr><td style="white-space:nowrap">9860219<a name="CIEL-9860219"> </a></td><td>Female to male transsexual</td><td/></tr><tr><td style="white-space:nowrap">9860221<a name="CIEL-9860221"> </a></td><td>Identifies as non-binary gender</td><td/></tr><tr><td style="white-space:nowrap">9860223<a name="CIEL-9860223"> </a></td><td>Female gender</td><td/></tr><tr><td style="white-space:nowrap">9860225<a name="CIEL-9860225"> </a></td><td>Restart medication</td><td/></tr><tr><td style="white-space:nowrap">9860227<a name="CIEL-9860227"> </a></td><td>Currently breastfeeding child</td><td>Question on encounter form: &quot;Is the child currently being breastfed?&quot;</td></tr><tr><td style="white-space:nowrap">9860229<a name="CIEL-9860229"> </a></td><td>New patient identifier</td><td>Link to new patient identifier if patient has transferred out of facility</td></tr><tr><td style="white-space:nowrap">9860231<a name="CIEL-9860231"> </a></td><td>Reason for lost to follow up</td><td>Why the patient did not follow up with the health care?</td></tr><tr><td style="white-space:nowrap">9860233<a name="CIEL-9860233"> </a></td><td>Health facility</td><td/></tr><tr><td style="white-space:nowrap">9860235<a name="CIEL-9860235"> </a></td><td>Community</td><td>People with whom the client lives in the same geographical area or neighborhood</td></tr><tr><td style="white-space:nowrap">9860237<a name="CIEL-9860237"> </a></td><td>mobile voluntary counseling and testing program</td><td/></tr><tr><td style="white-space:nowrap">9860239<a name="CIEL-9860239"> </a></td><td>Home based HIV testing program</td><td/></tr><tr><td style="white-space:nowrap">9860241<a name="CIEL-9860241"> </a></td><td>HIV positive</td><td>Includes the spectrum of human immunodeficiency virus infections that range from asymptomatic seropositivity, thru AIDS-related complex (ARC), to acquired immunodeficiency syndrome (AIDS).</td></tr><tr><td style="white-space:nowrap">9860243<a name="CIEL-9860243"> </a></td><td>Negative</td><td>Response to a finding or test result.</td></tr><tr><td style="white-space:nowrap">9921831<a name="CIEL-9921831"> </a></td><td>HIV program end date</td><td>Question on encounter form. The date the patient was removed from the HIV program.</td></tr><tr><td style="white-space:nowrap">5240<a name="CIEL-5240"> </a></td><td>Lost to followup</td><td>Patients that are lost to followup.. boolean question.</td></tr></table><p><b>Additional Language Displays</b></p><table class="codes"><tr><td><b>Code</b></td><td><b>Bengali (bn)</b></td><td><b>Spanish (es)</b></td><td><b>French (fr)</b></td><td><b>ht</b></td><td><b>id</b></td><td><b>Italian (it)</b></td><td><b>km</b></td><td><b>ne</b></td><td><b>Portuguese (pt)</b></td><td><b>Русский (Russian, ru)</b></td><td><b>rw</b></td><td><b>sw</b></td><td><b>ti</b></td><td><b>ur</b></td><td><b>vi</b></td></tr><tr><td>1065</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>1066</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>1067</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>1434</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>138405</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>160119</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>116128</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>160540</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>160542</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>1193</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>5096</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>160104</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>160105</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>160124</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>161361</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>161363</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>161364</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>1652</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>5424</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>5811</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>630</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>103166</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>70056</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>71647</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>74807</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>75523</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>75628</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>77995</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>78643</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>79040</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>792</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>794</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>80487</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>80586</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>83412</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>84309</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>84795</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>86663</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>01234</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860127</td><td>না</td><td>No</td><td>Non</td><td>Fo</td><td></td><td>Falso</td><td>ទេ</td><td>हुँदैन</td><td>Falso</td><td>Нет</td><td>Muzima</td><td></td><td>ኣይትጥቀምን</td><td>نہیں</td><td></td></tr><tr><td>9860131</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860133</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860135</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860137</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860143</td><td></td><td>Fecha en la que se suspendió el tratamiento</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860145</td><td></td><td></td><td>Reféré vers</td><td>Transfere deyò</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860147</td><td></td><td>Muerte</td><td>Dècédé	</td><td>mouri</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860151</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860153</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860155</td><td></td><td></td><td>Date de début des antirétroviraux</td><td>Antiretwoviral tretman dat kòmansman</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860157</td><td></td><td>toxicidad por droga</td><td>Toxicité au médicaments</td><td>Medikaman toksik</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860159</td><td></td><td>Falla de tratamiento</td><td>Échec du traitement</td><td>Echek rejim</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860161</td><td></td><td>No puede costear el tratamiento</td><td>Pouvez pas offrir un traitement</td><td>Pa kapab peye tretman</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860163</td><td></td><td>Rifampicina, isoniazida y pirazinamida</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860165</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860167</td><td>জানিনা</td><td>Desconocida</td><td>Inconnu</td><td>Enkoni</td><td></td><td></td><td>មិនដឹង</td><td></td><td></td><td>Не известно</td><td>Ntabizi</td><td>Haijulikani</td><td></td><td>معلوم نہیں</td><td></td></tr><tr><td>9860169</td><td></td><td>Clorhidrato de etambutol+isoniazida</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860171</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860173</td><td></td><td></td><td>Antirétroviraux raison d'arrêt</td><td>Rezon dwog antiretwoviral te sispann</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860175</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860177</td><td></td><td></td><td>Changement de formulation</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860179</td><td></td><td></td><td>Traitement PTME complete</td><td>Fini ak PTME</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860181</td><td></td><td>Rifampicina e isoniazida</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860183</td><td></td><td>Actualmente embarazada</td><td>Femme enceinte</td><td>Fanm ensent</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>Ujauzito wa sasa</td><td></td><td></td><td></td></tr><tr><td>9860185</td><td></td><td>Fármaco no disponible - no hay reserva</td><td>Médicaments non disponibles</td><td>Medikaman pa disponib</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860187</td><td></td><td>Cuidado de paciente hospitalizado</td><td>Patient hospitalisé</td><td>Entène lopital</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860189</td><td></td><td>Otro no codificado</td><td>Autre et non codé</td><td>Lòt ki pa-kode</td><td></td><td></td><td>ផ្សេងៗ</td><td>अन्य</td><td></td><td></td><td></td><td>Nyinginezo</td><td></td><td></td><td></td></tr><tr><td>9860191</td><td></td><td>Ácido isonicotínco hidrazina</td><td>Isoniazid</td><td>Isoniazid</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860193</td><td></td><td>Etambutol</td><td>Ethambutol</td><td>Ethambutol</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>Ethambutol</td></tr><tr><td>9860195</td><td></td><td>Estreptomicina</td><td>Streptomycine	</td><td>Streptomysin</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860197</td><td></td><td>Amida de ácido pirazinoico</td><td>Pyrazinamide</td><td>Pyrazinamide</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860199</td><td></td><td>rechazo del tratamiento por el paciente</td><td>Refus de traitement par le patient</td><td>Pasyan pa vle pran medikaman</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860201</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860203</td><td></td><td>Adherencia del paciente nula - general</td><td>Le non-respect d'un traitement ou d'une thérapie</td><td>Ki pa konfòm avèk tretman oswa terapi</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860205</td><td></td><td></td><td>Traitement jamais commencer - patient refus</td><td>Tretman pa janm kòmanse - pasyan refize</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860207</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860209</td><td></td><td>Edad del paciente</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860211</td><td></td><td>Identidad de género</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860213</td><td></td><td>Identidad masculina</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860215</td><td></td><td>Identidad femenina</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860217</td><td></td><td>Transexual, mujer a hombre</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860219</td><td></td><td>Cirugía intersexual, conversión de sexo femenino a sexo masculino</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860221</td><td></td><td>Identidad de género no binario</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860223</td><td></td><td>Mujer</td><td>Sexe féminin</td><td>Sèks fi</td><td></td><td></td><td>ស្រី</td><td></td><td></td><td>Женщины</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860225</td><td></td><td>Reinicio de la medicación</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860227</td><td></td><td>Amamantamiento (madre)</td><td>Allaite actuellement</td><td>Ap bay tete nan moman a</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860229</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860231</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860233</td><td></td><td>Institución sanitaria</td><td>Centre médical</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860235</td><td></td><td>Comunidad (contexto social)</td><td></td><td></td><td>Masyarakat</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860237</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860239</td><td></td><td></td><td>Programme de dépistage du VIH à domicile</td><td>Pwogram tès VIH sante kominote</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9860241</td><td></td><td>virus de la inmunodeficiencia humana positivo</td><td>Virus de l'immunodéficience humaine positif</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>Tích cực HIV</td></tr><tr><td>9860243</td><td></td><td>(-)</td><td>Négatif</td><td>Négatif</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>Hasi</td><td></td><td></td><td></td></tr><tr><td>9921831</td><td></td><td></td><td>Date de fin du programme VIH</td><td>Dat fini ak pwogram VIH</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>5240</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table></div>
+  </text>
+  <url value="https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/CodeSystem/CIEL"/>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://hl7.org/fhir/v2/0203"/>
+        <code value="ACSN"/>
+        <display value="Accession ID"/>
+      </coding>
+      <text value="Accession ID"/>
+    </type>
+    <system value="https://api.staging.openconceptlab.org"/>
+    <value value="/orgs/Kenya_SMART_Guidelines/CodeSystem/CIEL/"/>
+  </identifier>
+  <version value="0.1.0"/>
+  <name value="CIEL"/>
+  <title value="CIEL"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2025-01-15T14:05:09+00:00"/>
+  <publisher value="intellisoftkenya"/>
+  <contact>
+    <name value="intellisoftkenya"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.intellisoftkenya.com/"/>
+    </telecom>
+  </contact>
+  <description value="0.1.1"/>
+  <caseSensitive value="false"/>
+  <content value="complete"/>
+  <count value="97"/>
+  <property>
+    <code value="conceptclass"/>
+    <uri value="https://api.staging.openconceptlab.org/orgs/OCL/sources/Classes/concepts"/>
+    <description value="Standard list of concept classes."/>
+    <type value="string"/>
+  </property>
+  <property>
+    <code value="datatype"/>
+    <uri value="https://api.staging.openconceptlab.org/orgs/OCL/sources/Datatypes/concepts"/>
+    <description value="Standard list of concept datatypes."/>
+    <type value="string"/>
+  </property>
+  <property>
+    <code value="inactive"/>
+    <uri value="http://hl7.org/fhir/concept-properties"/>
+    <description value="True if the concept is not considered active."/>
+    <type value="Coding"/>
+  </property>
+  <concept>
+    <code value="1065"/>
+    <display value="YES"/>
+    <designation>
+      <language value="en"/>
+      <value value="YES"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="1066"/>
+    <display value="NO"/>
+    <designation>
+      <language value="en"/>
+      <value value="NO"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="1067"/>
+    <display value="Unknown"/>
+    <designation>
+      <language value="en"/>
+      <value value="Unknown"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="1434"/>
+    <display value="Currently pregnant"/>
+    <designation>
+      <language value="en"/>
+      <value value="Currently pregnant"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="138405"/>
+    <display value="Human immunodeficiency virus (HIV) disease"/>
+    <designation>
+      <language value="en"/>
+      <value value="Human immunodeficiency virus (HIV) disease"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="160119"/>
+    <display value="CURRENTLY TAKING ARV"/>
+    <designation>
+      <language value="en"/>
+      <value value="CURRENTLY TAKING ARV"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="116128"/>
+    <display value="Malaria"/>
+    <designation>
+      <language value="en"/>
+      <value value="Malaria"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="160540"/>
+    <display value="Method of enrollment"/>
+    <designation>
+      <language value="en"/>
+      <value value="Method of enrollment"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="160542"/>
+    <display value="Outpatient department"/>
+    <designation>
+      <language value="en"/>
+      <value value="Outpatient department"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="1193"/>
+    <display value="CURRENT DRUGS USED"/>
+    <designation>
+      <language value="en"/>
+      <value value="CURRENT DRUGS USED"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="5096"/>
+    <display value="RETURN VISIT DATE"/>
+    <designation>
+      <language value="en"/>
+      <value value="RETURN VISIT DATE"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="160104"/>
+    <display value="Efavirenz / Lamivudine / Stavudine"/>
+    <designation>
+      <language value="en"/>
+      <value value="Efavirenz / Lamivudine / Stavudine"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="160105"/>
+    <display value="Efavirenz / Stavudine / Zidovudine"/>
+    <designation>
+      <language value="en"/>
+      <value value="Efavirenz / Stavudine / Zidovudine"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="160124"/>
+    <display value="Efavirenz / Lamivudine / Zidovudine"/>
+    <designation>
+      <language value="en"/>
+      <value value="Efavirenz / Lamivudine / Zidovudine"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="161361"/>
+    <display value="efavirenz / lamivudine / tenofovir disoproxil"/>
+    <designation>
+      <language value="en"/>
+      <value value="efavirenz / lamivudine / tenofovir disoproxil"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="161363"/>
+    <display value="lamivudine / stavudine"/>
+    <designation>
+      <language value="en"/>
+      <value value="lamivudine / stavudine"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="161364"/>
+    <display value="Lamivudine / tenofovir disoproxil"/>
+    <designation>
+      <language value="en"/>
+      <value value="Lamivudine / tenofovir disoproxil"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="1652"/>
+    <display value="Lamivudine / nevirapine / zidovudine"/>
+    <designation>
+      <language value="en"/>
+      <value value="Lamivudine / nevirapine / zidovudine"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="5424"/>
+    <display value="Other antiretroviral drug"/>
+    <designation>
+      <language value="en"/>
+      <value value="Other antiretroviral drug"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="5811"/>
+    <display value="Unknown antiretroviral drug"/>
+    <designation>
+      <language value="en"/>
+      <value value="Unknown antiretroviral drug"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="630"/>
+    <display value="Lamivudine / zidovudine"/>
+    <designation>
+      <language value="en"/>
+      <value value="Lamivudine / zidovudine"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="103166"/>
+    <display value="Abacavir / lamivudine"/>
+    <designation>
+      <language value="en"/>
+      <value value="Abacavir / lamivudine"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="70056"/>
+    <display value="Abacavir"/>
+    <designation>
+      <language value="en"/>
+      <value value="Abacavir"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="71647"/>
+    <display value="Atazanavir"/>
+    <designation>
+      <language value="en"/>
+      <value value="Atazanavir"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="74807"/>
+    <display value="Didanosine"/>
+    <designation>
+      <language value="en"/>
+      <value value="Didanosine"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="75523"/>
+    <display value="Efavirenz"/>
+    <designation>
+      <language value="en"/>
+      <value value="Efavirenz"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="75628"/>
+    <display value="Efavirenz"/>
+    <designation>
+      <language value="en"/>
+      <value value="Efavirenz"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="77995"/>
+    <display value="Indinavir"/>
+    <designation>
+      <language value="en"/>
+      <value value="Indinavir"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="78643"/>
+    <display value="Lamivudine"/>
+    <designation>
+      <language value="en"/>
+      <value value="Lamivudine"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="79040"/>
+    <display value="Lopinavir"/>
+    <designation>
+      <language value="en"/>
+      <value value="Lopinavir"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="792"/>
+    <display value="Lamivudine / nevirapine / stavudine"/>
+    <designation>
+      <language value="en"/>
+      <value value="Lamivudine / nevirapine / stavudine"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="794"/>
+    <display value="Lopinavir / ritonavir"/>
+    <designation>
+      <language value="en"/>
+      <value value="Lopinavir / ritonavir"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="80487"/>
+    <display value="Nelfinavir"/>
+    <designation>
+      <language value="en"/>
+      <value value="Nelfinavir"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="80586"/>
+    <display value="Nevirapine"/>
+    <designation>
+      <language value="en"/>
+      <value value="Nevirapine"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="83412"/>
+    <display value="Ritonavir"/>
+    <designation>
+      <language value="en"/>
+      <value value="Ritonavir"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="84309"/>
+    <display value="Stavudine"/>
+    <designation>
+      <language value="en"/>
+      <value value="Stavudine"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="84795"/>
+    <display value="Tenofovir"/>
+    <designation>
+      <language value="en"/>
+      <value value="Tenofovir"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="86663"/>
+    <display value="Zidovudine"/>
+    <designation>
+      <language value="en"/>
+      <value value="Zidovudine"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="01234"/>
+    <display value="Tenofovir / Lamivudine / Dolutegravir"/>
+    <designation>
+      <language value="en"/>
+      <value value="Tenofovir / Lamivudine / Dolutegravir"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860127"/>
+    <display value="No"/>
+    <definition value="Generic answer to a question."/>
+    <designation>
+      <language value="ru"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Нет"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <value value="False"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <value value="Faux"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Falso"/>
+    </designation>
+    <designation>
+      <language value="it"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="No"/>
+    </designation>
+    <designation>
+      <language value="it"/>
+      <value value="Falso"/>
+    </designation>
+    <designation>
+      <language value="pt"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Não"/>
+    </designation>
+    <designation>
+      <language value="pt"/>
+      <value value="Falso"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="No"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Non"/>
+    </designation>
+    <designation>
+      <language value="rw"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Muzima"/>
+    </designation>
+    <designation>
+      <language value="ti"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="ኣይትጥቀምን"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="No"/>
+    </designation>
+    <designation>
+      <language value="bn"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="না"/>
+    </designation>
+    <designation>
+      <language value="ht"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Non"/>
+    </designation>
+    <designation>
+      <language value="ht"/>
+      <value value="Fo"/>
+    </designation>
+    <designation>
+      <language value="ur"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="نہیں"/>
+    </designation>
+    <designation>
+      <language value="km"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="ទេ"/>
+    </designation>
+    <designation>
+      <language value="ne"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="हुँदैन"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860131"/>
+    <display value="New client"/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="New client"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <value value="New patient"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Question"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="Coded"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860133"/>
+    <display value="Transfer in date"/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Transfer in date"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Question"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="Date"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860135"/>
+    <display value="Transit patient"/>
+    <definition value="A patient who is being seen outside of their regular care setting temporarily to receive medication refills, etc."/>
+    <designation>
+      <language value="en"/>
+      <value value="Transient patient"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Transit patient"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860137"/>
+    <display value="re-enroll"/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="re-enroll"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860143"/>
+    <display value="Treatment end date"/>
+    <designation>
+      <language value="en"/>
+      <value value="Date treatment stopped"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Treatment end date"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Fecha en la que se suspendió el tratamiento"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Question"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="Date"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860145"/>
+    <display value="Transferred out"/>
+    <definition value="Patient transferred out to other services"/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Transferred out"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Transférer au"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <value value="Reféré vers"/>
+    </designation>
+    <designation>
+      <language value="ht"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Transfere deyò"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860147"/>
+    <display value="Died"/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Died"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Muerte"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Dècédé&#x9;"/>
+    </designation>
+    <designation>
+      <language value="ht"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="mouri"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="State"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860151"/>
+    <display value="Treatment interrupted/stopped"/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Treatment interrupted/stopped"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Finding"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860153"/>
+    <display value="ARV regimen/code for drugs collected"/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="ARV regimen/code for drugs collected"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <value value="ARV regimen/code for drugs dispensed"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Finding"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="Coded"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860155"/>
+    <display value="Antiretroviral treatment start date"/>
+    <definition value="When were the antiretroviral drugs started for the patient?"/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Antiretroviral treatment start date"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="SHORT"/>
+      </use>
+      <value value="ARV start date"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <value value="ART start date"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Date de début des antirétroviraux"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <value value="Date antiretrovirals started"/>
+    </designation>
+    <designation>
+      <language value="ht"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Antiretwoviral tretman dat kòmansman"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Finding"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="Date"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860157"/>
+    <display value="Toxicity, drug"/>
+    <definition value="Adverse reaction to a drug (oral, parenteral, topical)."/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Toxicity, drug"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="efecto adverso"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <value value="Drug poisoning"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <value value="Drug toxicity"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="toxicidad por droga"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Toxicité au médicaments"/>
+    </designation>
+    <designation>
+      <language value="ht"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Medikaman toksik"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Diagnosis"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860159"/>
+    <display value="Regimen failure"/>
+    <definition value="Failure of a therapy or treatment to achieve its end points."/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Regimen failure"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Échec du traitement"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Falla de tratamiento"/>
+    </designation>
+    <designation>
+      <language value="ht"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Echek rejim"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Finding"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860161"/>
+    <display value="Cannot afford treatment"/>
+    <definition value="Patient unable to pay for treatment."/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Cannot afford treatment"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="No puede costear el tratamiento"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Pouvez pas offrir un traitement"/>
+    </designation>
+    <designation>
+      <language value="ht"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Pa kapab peye tretman"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Finding"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860163"/>
+    <display value="Isoniazid / pyrazinamide / rifampin"/>
+    <definition value="Combination drug also known as Rifater.  Used in the early treatment of tuberculosis."/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Isoniazid / pyrazinamide / rifampin"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <value value="Rifater"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <value value="Rifampicin isoniazid and pyrazinamide"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Rifampicina+isoniazida+pirazinamida"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Rifampicina, isoniazida y pirazinamida"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Drug"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860165"/>
+    <display value="Weight change"/>
+    <definition value="Alteration in a patient's weight.  Could represent either a weight gain or loss."/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Weight change"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Finding"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860167"/>
+    <display value="Unknown"/>
+    <definition value="Generic answer to a question."/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Unknown"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Ne sait pas"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <value value="Inconnu"/>
+    </designation>
+    <designation>
+      <language value="rw"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Ntabizi"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Desconocido"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Desconocida"/>
+    </designation>
+    <designation>
+      <language value="sw"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Haijulikani"/>
+    </designation>
+    <designation>
+      <language value="ru"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Не известно"/>
+    </designation>
+    <designation>
+      <language value="bn"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="জানিনা"/>
+    </designation>
+    <designation>
+      <language value="ht"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Enkoni"/>
+    </designation>
+    <designation>
+      <language value="ur"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="معلوم نہیں"/>
+    </designation>
+    <designation>
+      <language value="km"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="មិនដឹង"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860169"/>
+    <display value="Ethambutol and isoniazid"/>
+    <definition value="Combination drug used to treat tuberculosis, often used with other drugs.  It's also known as Ethizide."/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Ethambutol and isoniazid"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <value value="Ethizide"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="SHORT"/>
+      </use>
+      <value value="Ethambutol / isoniazid"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Clorhidrato de etambutol+isoniazida"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Drug"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860171"/>
+    <display value="Rifampicin isoniazid pyrazinamide and ethambutol"/>
+    <definition value="Fixed-dose combination drug used to treat tuberculosis.  Also known as Rifafour."/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Rifampicin isoniazid pyrazinamide and ethambutol"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <value value="Rifafour"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Drug"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860173"/>
+    <display value="Reason antiretrovirals stopped"/>
+    <definition value="Question on encounter form.  Part of the plan gathers a reason for stopping ARVs.  This concept captures that information."/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Reason antiretrovirals stopped"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Antirétroviraux raison d'arrêt"/>
+    </designation>
+    <designation>
+      <language value="ht"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Rezon dwog antiretwoviral te sispann"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <value value="Reason ARVs stopped"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Question"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="Coded"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860175"/>
+    <display value="Tuberculosis treatment started"/>
+    <definition value="Part of the encounter form plan. Answers are drugs started at the end of the particular encounter."/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Tuberculosis treatment started"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Question"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="Coded"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860177"/>
+    <display value="Change formulation"/>
+    <definition value="Answer on encounter form.  Implies that a patient's current drugs will be changed to meet a new formulation."/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Change formulation"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Changement de formulation"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc Order"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860179"/>
+    <display value="Completed total PMTCT"/>
+    <definition value="Answer to question.  Implies that a person completed a course of total prevention of mother to child transmission therapy."/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Completed total PMTCT"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Traitement PTME complete"/>
+    </designation>
+    <designation>
+      <language value="ht"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Fini ak PTME"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Finding"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860181"/>
+    <display value="Rifampicin and isoniazid"/>
+    <definition value="Combination drug also known as Rifinah. Used in the early treatment of tuberculosis."/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Rifampicin and isoniazid"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <value value="Rifinah"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Rifampicina+isoniazida"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Rifampicina e isoniazida"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Drug"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860183"/>
+    <display value="Currently pregnant"/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Currently pregnant"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Femme enceinte"/>
+    </designation>
+    <designation>
+      <language value="sw"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Ujauzito wa sasa"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="SHORT"/>
+      </use>
+      <value value="Currently pregnant"/>
+    </designation>
+    <designation>
+      <language value="ht"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Fanm ensent"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Embarazo confirmado"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Paciente actualmente embarazada"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Embarazada"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Actualmente embarazada"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Finding"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="Boolean"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860185"/>
+    <display value="Medications unavailable"/>
+    <definition value="Drugs/medications unavailable for use to treat patient. A reason for not receiving/taking medications."/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Medications unavailable"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="SHORT"/>
+      </use>
+      <value value="Meds Unavailable"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <value value="Drugs unavailable"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Médicaments non disponibles"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <value value="Drugs out of stock"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <value value="Medications out of stock"/>
+    </designation>
+    <designation>
+      <language value="ht"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Medikaman pa disponib"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Fármaco no disponible - no hay reserva"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Question"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="Coded"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860187"/>
+    <display value="Inpatient care or hospitalization"/>
+    <definition value="none"/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Inpatient care or hospitalization"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Patient hospitalisé"/>
+    </designation>
+    <designation>
+      <language value="ht"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Entène lopital"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Cuidado de paciente hospitalizado"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc Order"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860189"/>
+    <display value="Other"/>
+    <definition value="A generic, descriptive answer which is a handwritten, non-coded response to a question."/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Other non-coded"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <value value="Autre"/>
+    </designation>
+    <designation>
+      <language value="sw"/>
+      <value value="Nyinginezo"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Otro no codificado"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <value value="Other"/>
+    </designation>
+    <designation>
+      <language value="ht"/>
+      <value value="Lòt"/>
+    </designation>
+    <designation>
+      <language value="ht"/>
+      <value value="LÒT SAN-KÒD"/>
+    </designation>
+    <designation>
+      <language value="ht"/>
+      <value value="Lòt ki pa-kode"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <value value="Autre et non codé"/>
+    </designation>
+    <designation>
+      <language value="km"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="ផ្សេងៗ"/>
+    </designation>
+    <designation>
+      <language value="ne"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="अन्य"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860191"/>
+    <display value="Isoniazid"/>
+    <definition value="A crystalline antibacterial compound (C6H7N3O) used in the treatment of tuberculosis. "/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Isoniazid"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <value value="Nydrazid"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <value value="Soniazio"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <value value="Tubizid"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="SHORT"/>
+      </use>
+      <value value="INH"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Isoniazid"/>
+    </designation>
+    <designation>
+      <language value="ht"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="izoniazid"/>
+    </designation>
+    <designation>
+      <language value="ht"/>
+      <value value="Isoniazid"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Isoniacida"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Isoniazida"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Isonicotinilhidrazina"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Ácido isonicotínco hidrazina"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Drug"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860193"/>
+    <display value="Ethambutol"/>
+    <definition value="Anti-mycobaterial drug used to treat active tuberculosis. Always used with other antimycobacterial agents."/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Ethambutol"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <value value="Myambutol"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="SHORT"/>
+      </use>
+      <value value="E"/>
+    </designation>
+    <designation>
+      <language value="vi"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Ethambutol"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Ethambutol"/>
+    </designation>
+    <designation>
+      <language value="ht"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Ethambutol"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Etambutol"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Drug"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860195"/>
+    <display value="Streptomycin"/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Streptomycin"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="SHORT"/>
+      </use>
+      <value value="S"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Streptomycine&#x9;"/>
+    </designation>
+    <designation>
+      <language value="ht"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Streptomysin"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Estreptomicina"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Drug"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860197"/>
+    <display value="Pyrazinamide"/>
+    <definition value="Antituberculosis agent used to treat patients with active tuberculosis, usually in combination with other agents."/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Pyrazinamide"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="SHORT"/>
+      </use>
+      <value value="Z"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Pyrazinamide"/>
+    </designation>
+    <designation>
+      <language value="ht"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Pyrazinamide"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Pirazinamida"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Amida de ácido pirazinoico"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Drug"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860199"/>
+    <display value="Refusal of treatment by patient"/>
+    <definition value="Patient or client refusal of or resistance to medical, psychological, or psychiatric treatment. (APA, Thesaurus of Psychological Index Terms, 8th ed.)"/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Refusal of treatment by patient"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="rechazo del tratamiento por el paciente"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Refus de traitement par le patient"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <value value="Patient refused treatment"/>
+    </designation>
+    <designation>
+      <language value="ht"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Pasyan pa vle pran medikaman"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Diagnosis"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="Boolean"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860201"/>
+    <display value="Planned treatment interruption"/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Planned treatment interruption"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="SHORT"/>
+      </use>
+      <value value="Planned rx interruption"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860203"/>
+    <display value="Non-compliance with treatment or therapy"/>
+    <definition value="Not following the prescribed course of therapy or not taking prescribed medicines."/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Non-compliance with treatment or therapy"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <value value="Non-adherence with treatment or therapy"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <value value="Poor adherence with treatment or therapy"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Le non-respect d'un traitement ou d'une thérapie"/>
+    </designation>
+    <designation>
+      <language value="ht"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Ki pa konfòm avèk tretman oswa terapi"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Incumplimiento del paciente - general"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Adherencia del paciente nula - general"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Finding"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860205"/>
+    <display value="Treatment never started - patient refused"/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Treatment never started - patient refused"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Traitement jamais commencer - patient refus"/>
+    </designation>
+    <designation>
+      <language value="ht"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Tretman pa janm kòmanse - pasyan refize"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="State"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860207"/>
+    <display value="Other patient decision"/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Other patient decision"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860209"/>
+    <display value="Patient age"/>
+    <definition value="Generic answer to a question.  For example, a patient stops a medication because of his or her age."/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Patient age"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Factor etario"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Edad del paciente"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860211"/>
+    <display value="Gender identity"/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Gender identity"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Identidad de género"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Question"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="Coded"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860213"/>
+    <display value="Identifies as male gender"/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="SHORT"/>
+      </use>
+      <value value="Male"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Identifies as male gender"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Se identifica como género masculino"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Identidad de género masculino"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Identidad masculina"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Finding"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860215"/>
+    <display value="Identifies as female gender"/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="SHORT"/>
+      </use>
+      <value value="Female"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Identifies as female gender"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Se identifica como género femenino"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Identidad de género femenino"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Identidad femenina"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Finding"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860217"/>
+    <display value="Male to female transsexual"/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Male to female transsexual"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Transexual, mujer a hombre"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Finding"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860219"/>
+    <display value="Female to male transsexual"/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Female to male transsexual"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Cirugía intersexual, conversión de sexo femenino a sexo masculino"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Finding"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860221"/>
+    <display value="Identifies as non-binary gender"/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Identifies as non-binary gender"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Se identifica como género no binario"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Identidad de género no binario"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Finding"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860223"/>
+    <display value="Female gender"/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Female gender"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Sexe féminin"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <value value="Female"/>
+    </designation>
+    <designation>
+      <language value="ru"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Женщины"/>
+    </designation>
+    <designation>
+      <language value="ht"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Sèks fi"/>
+    </designation>
+    <designation>
+      <language value="km"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="ស្រី"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Mujer"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860225"/>
+    <display value="Restart medication"/>
+    <designation>
+      <language value="es"/>
+      <value value="Reinicio de la medicación"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Restart medication"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Procedure"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860227"/>
+    <display value="Currently breastfeeding child"/>
+    <definition value="Question on encounter form: &quot;Is the child currently being breastfed?&quot;"/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Currently breastfeeding child"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Allaitement de l'enfant en cours"/>
+    </designation>
+    <designation>
+      <language value="ht"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Ap bay tete nan moman a"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <value value="Allaite actuellement"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Amamantamiento (madre)"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Question"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="Coded"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860229"/>
+    <display value="New patient identifier"/>
+    <definition value="Link to new patient identifier if patient has transferred out of facility"/>
+    <designation>
+      <language value="en"/>
+      <value value="New patient ID"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="New patient identifier"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="Text"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860231"/>
+    <display value="Reason for lost to follow up"/>
+    <definition value="Why the patient did not follow up with the health care?"/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Reason for lost to follow up"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="Text"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860233"/>
+    <display value="Health facility"/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Health facility"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Centre médical"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Institución sanitaria"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860235"/>
+    <display value="Community"/>
+    <definition value="People with whom the client lives in the same geographical area or neighborhood"/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Community"/>
+    </designation>
+    <designation>
+      <language value="id"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Masyarakat"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Comunidad"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Comunidad (contexto social)"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860237"/>
+    <display value="mobile voluntary counseling and testing program"/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="SHORT"/>
+      </use>
+      <value value="mobile VCT program"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="mobile voluntary counseling and testing program"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="Coded"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860239"/>
+    <display value="Home based HIV testing program"/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Home based HIV testing program"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="SHORT"/>
+      </use>
+      <value value="HCT program"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Programme de dépistage du VIH à domicile"/>
+    </designation>
+    <designation>
+      <language value="ht"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Pwogram tès VIH sante kominote"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860241"/>
+    <display value="HIV positive"/>
+    <definition value="Includes the spectrum of human immunodeficiency virus infections that range from asymptomatic seropositivity, thru AIDS-related complex (ARC), to acquired immunodeficiency syndrome (AIDS)."/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="HIV positive"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="virus de la inmunodeficiencia humana positivo"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <value value="Séropositif"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Virus de l'immunodéficience humaine positif"/>
+    </designation>
+    <designation>
+      <language value="vi"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Tích cực HIV"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Diagnosis"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9860243"/>
+    <display value="Negative"/>
+    <definition value="Response to a finding or test result."/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Negative"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Négatif"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <value value="(-)"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <value value="-"/>
+    </designation>
+    <designation>
+      <language value="en"/>
+      <value value="Neg"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Negativo"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Negativa"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="Neg"/>
+    </designation>
+    <designation>
+      <language value="es"/>
+      <value value="(-)"/>
+    </designation>
+    <designation>
+      <language value="sw"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Hasi"/>
+    </designation>
+    <designation>
+      <language value="ht"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Négatif"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Misc"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="N/A"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="9921831"/>
+    <display value="HIV program end date"/>
+    <definition value="Question on encounter form. The date the patient was removed from the HIV program."/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="HIV program end date"/>
+    </designation>
+    <designation>
+      <language value="fr"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Date de fin du programme VIH"/>
+    </designation>
+    <designation>
+      <language value="ht"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Dat fini ak pwogram VIH"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Question"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="Datetime"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="5240"/>
+    <display value="Lost to followup"/>
+    <definition value="Patients that are lost to followup.. boolean question."/>
+    <designation>
+      <language value="en"/>
+      <use>
+        <code value="FULLY_SPECIFIED"/>
+      </use>
+      <value value="Lost to followup"/>
+    </designation>
+    <property>
+      <code value="conceptclass"/>
+      <valueString value="Question"/>
+    </property>
+    <property>
+      <code value="datatype"/>
+      <valueString value="Boolean"/>
+    </property>
+  </concept>
+</CodeSystem>

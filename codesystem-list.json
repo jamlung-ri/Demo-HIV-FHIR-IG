@@ -1,0 +1,20 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/CodeSystem/CIEL",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "CIEL",
+      "title" : "CIEL",
+      "description" : "0.1.1"
+    },
+    {
+      "url" : "https://app.staging.openconceptlab.org/#/orgs/Kenya_SMART_Guidelines/sources/tx_curr",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "HIV-Indicators",
+      "title" : "HIV Indicators",
+      "description" : "0.1.1"
+    }
+  ]
+}

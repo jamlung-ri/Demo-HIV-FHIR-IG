@@ -1,0 +1,59 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "entry.point",
+  "meta" : {
+    "lastUpdated" : "2024-05-28T19:27:57.377923Z"
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet entry.point</b></p><a name=\"entry.point\"> </a><a name=\"hcentry.point\"> </a><a name=\"entry.point-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2024-05-28 19:27:57+0000</p></div><ul><li>Include codes from<code>https://app.staging.openconceptlab.org/entry.point</code> where excludeWildcard  = true, excludeFuzzy  = true and includeSearchMeta  = true</li></ul></div>"
+  },
+  "url" : "https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/ValueSet/entry.point",
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/v2/0203",
+        "code" : "ACSN",
+        "display" : "Accession ID"
+      }],
+      "text" : "Accession ID"
+    },
+    "system" : "https://api.staging.openconceptlab.org",
+    "value" : "/orgs/Kenya_SMART_Guidelines/ValueSet/entry_point/"
+  }],
+  "version" : "0.1.0",
+  "name" : "Entry Point",
+  "title" : "Entry Point",
+  "status" : "active",
+  "date" : "2025-01-15T14:05:09+00:00",
+  "publisher" : "intellisoftkenya",
+  "contact" : [{
+    "name" : "intellisoftkenya",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.intellisoftkenya.com/"
+    }]
+  }],
+  "description" : "0.1.0",
+  "compose" : {
+    "include" : [{
+      "system" : "https://app.staging.openconceptlab.org/entry.point",
+      "version" : "0.1.0",
+      "filter" : [{
+        "property" : "excludeWildcard",
+        "op" : "=",
+        "value" : "true"
+      },
+      {
+        "property" : "excludeFuzzy",
+        "op" : "=",
+        "value" : "true"
+      },
+      {
+        "property" : "includeSearchMeta",
+        "op" : "=",
+        "value" : "true"
+      }]
+    }]
+  }
+}

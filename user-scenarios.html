@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>User Scenarios -  v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"2.3"}
+    h3,h4,h5,h6{--heading-prefix:"2.3"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold"></span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+    <li class="dropdowm">
+        <a href="index.html">Home</a>
+    </li>
+    <li class="dropdown">
+        <a data-toggle="dropdown" href="business-requirements.html" class="dropdown-toggle">Business Requirements<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li>
+                <a href="concepts.html">Concepts</a>
+            </li>
+            <li>
+                <a href="generic-personas.html">Generic Personas</a>
+            </li>
+            <li>
+                <a href="user-scenarios.html">User Scenarios</a>
+            </li>
+            <li>
+                <a href="business-processes.html">Business Processes</a>
+            </li>
+            <li>
+                <a href="core-data-elements.html">Core Data Elements</a>
+            </li>
+            <li>
+                <a href="decision-support-logic.html">Decision Support Logic</a>
+            </li>
+            <li>
+                <a href="indicators-and-monitoring.html">Indicators and Monitoring</a>
+            </li>
+            <li>
+                <a href="functional-requirements.html">Functional Requirements</a>
+            </li>
+            <li>
+                <a href="non-functional-requirements.html">Non-Functional Requirements</a>
+            </li>
+        </ul>
+    </li>
+    <li class="dropdown">
+        <a data-toggle="dropdown" class="dropdown-toggle" href="deployment.html">Indices<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li>
+                <a href="artifacts.html">Artifact Index</a>
+            </li>
+        </ul>
+    </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='business-requirements.html'><b>Business Requirements</b></a></li><li><b>User Scenarios</b></li>
+
+          <span style="float:right;">
+
+            <a href="generic-personas.html">&lt;prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="business-processes.html">next&gt;</a>
+
+          </span>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">HIVFHIRIG, published by intellisoftkenya. This guide is not an authorized publication; it is the continuous build for version 0.1.0 built by the FHIR (HL7® FHIR® Standard) CI Build. This version is based on the current content of <a href="https://github.com/jamlung-ri/Demo-HIV-FHIR-IG/tree/main">https://github.com/jamlung-ri/Demo-HIV-FHIR-IG/tree/main</a> and changes regularly. See the <a href="https://IntelliSOFT-Consulting.github.io/HIV-FHIR-IG/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>User Scenarios</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#scenario-1-a-user-scenario-for-new-client-enrollment-tx-new" id="markdown-toc-scenario-1-a-user-scenario-for-new-client-enrollment-tx-new">Scenario 1: A user scenario for new Client enrollment (TX-NEW)</a></li>
+  <li><a href="#scenario-2-a-user-scenario-for-new-client-enrollment-tx-new" id="markdown-toc-scenario-2-a-user-scenario-for-new-client-enrollment-tx-new">Scenario 2: A user scenario for new client Enrollment (TX-NEW)</a></li>
+  <li><a href="#scenario-3-user-scenario-for-a-client-with-no-clinical-contact-since-their-last-expected-contact-tx-ml" id="markdown-toc-scenario-3-user-scenario-for-a-client-with-no-clinical-contact-since-their-last-expected-contact-tx-ml">Scenario 3: User scenario for a client with no clinical contact since their last expected contact (TX-ML)</a></li>
+  <li><a href="#scenario-4-user-scenario-for-clients-with-suppressed-viral-load-tx-pvls" id="markdown-toc-scenario-4-user-scenario-for-clients-with-suppressed-viral-load-tx-pvls">Scenario 4: User scenario for clients with suppressed viral load (TX-PVLS)</a></li>
+  <li><a href="#scenario-5-user-scenario-for-hiv-testing-services-hts-tst" id="markdown-toc-scenario-5-user-scenario-for-hiv-testing-services-hts-tst">Scenario 5: User scenario for HIV Testing services (HTS-TST)</a></li>
+</ul>
+
+</div>
+<p>User scenarios are stories that explain how different personas might interact with each other and provide an illustrative idea of a typical workflow. This section aims to clarify how different personas identified in section 2 would fit into the existing workflows.</p>
+
+<h3 id="scenario-1-a-user-scenario-for-new-client-enrollment-tx-new">Scenario 1: A user scenario for new Client enrollment (TX-NEW)</h3>
+
+<table class="table table-bordered table-hover">
+    <tbody>
+        <tr>
+            <td>
+                <p><strong>Key Personas</strong></p>
+                <ul>
+                    <li>
+                        <span><i>Client</i></span>: Ann
+                    </li>
+                    <li>
+                        <span><i>Health Record Information Officer (HRIO)</i></span>: Francis
+                    </li>
+                    <li>
+                        <span><i>Clinician</i></span>: Julie
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            Ann, a 29-year-old lady, has been feeling unwell for the past week. Ann realized she had missed her menstrual period for one month and was curious to know whether she might be pregnant. Ann does a self-pregnancy test and finds out she is pregnant. Ann decides to visit TumuTumu hospital for further assessment and also to start the antenatal clinic journey.<br />
+At the hospital, Ann finds Julie(clinician), who takes her history and recommends a repeat pregnancy test for confirmation. Ann goes to the lab and finds Miano(Lab technologist) who does a pregnancy test which turns out to be positive. Ann proceeds back to the consultation room and finds  Julie. Julie accesses Ann’s results from the EMR system. Julie congratulates Ann and opens an antenatal form for her.<br />
+As part of the routine tests, Ann is informed that part of the tests that need to be done include HIV test. Ann gives consent for HIV test. Julie directs Ann to the HTS provider who counsels her and proceeds to do the test. The test turns out to be positive. Post-counselling is done and she is advised on linkage to care and treatment. Ann agrees to receive care and treatment from the same facility. Ann is directed back to Julie who stresses to her the need to start treatment immediately and attend all antenatal visits to prevent mother-to-child transmission. Ann agrees with her and admits she is ready to start the treatment immediately.
+Julie links Ann to Francis (HRIO) for ART enrollment. Francis registers Ann in the ART system and gives her a unique identifier number. He enrolls her in the ART clinic where she will be receiving treatment services.<br />
+When generating TX-NEW for January 2024, Ann was part of the report as she was enrolled irregardless of her pregnancy status.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><strong>Corresponding Business Processes</strong></p>
+                <ul>
+                    <li>Client enrollment</li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="scenario-2-a-user-scenario-for-new-client-enrollment-tx-new">Scenario 2: A user scenario for new client Enrollment (TX-NEW)</h3>
+
+<table class="table table-bordered table-hover">
+    <tbody>
+        <tr>
+            <td>
+                <p><strong>Key Personas</strong></p>
+                <ul>
+                    <li>
+                        <span><i>Client</i></span>: Peter
+                    </li>
+                    <li>
+                        <span><i>HTS provider</i></span>: Patricia
+                    </li>
+                    <li>
+                        <span><i>Clinician</i></span>: Lynette
+                    </li>
+                    <li>
+                        <span><i>HRIO</i></span>: Francis
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            Peter a 59-year-old man widower has been unwell for the past month and has been receiving treatment from different health centres since December 2023. Peter visits TumuTumu hospital in February 2024 and after registration, Peter is directed to the consultation room where he finds Lynette (Clinician). Peter explains to Lynette how his health journey has been deteriorating over time. Lynette captures important medical history and does a physical examination. Lynette finds out Peter is pale, hypotensive, and lethargic. She orders for complete blood count test which shows marked thrombocytopenia and normocytic normochromic anemia. Lynette asks Peter what his HIV status is as a screening criteria for chronic illnesses and Peter admits he is not sure for it has been almost 10 years since he was tested. Lynette recommends to Peter an HIV test would be necessary at that particular time to rule out possible differential diagnosis. Peter agrees and gives consent for HIV test. Lynette links Peter to Patricia  (HTS provider) who does pre-test counseling and proceeds to do the test. The test turns out to be positive. A repeat test is done and turns positive too. Peter is devastated but Patricia(HTS provider) manages to calm him down. Post-test counseling is done and Peter is linked to the ART clinic for treatment services. Francis (HRIO), registers Peter in the ART system and assigns him a unique patient identifier number. Peter is directed back to Lynette who advises him that he will need to be admitted for close monitoring as he starts on the antiretroviral treatment and further management for underlying conditions.
+When generating the TX-NEW report for February 2024, Peter was part of the report as he was newly enrolled.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><strong>Corresponding Business Processes</strong></p>
+                <ul>
+                    <li>Client enrollment</li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="scenario-3-user-scenario-for-a-client-with-no-clinical-contact-since-their-last-expected-contact-tx-ml">Scenario 3: User scenario for a client with no clinical contact since their last expected contact (TX-ML)</h3>
+
+<table class="table table-bordered table-hover">
+    <tbody>
+        <tr>
+            <td>
+                <p><strong>Key Personas</strong></p>
+                <ul>
+                    <li>
+                        <span><i>Client</i></span>: Peter
+                    </li>
+                    <li>
+                        <span><i>HRIO</i></span>: Francis
+                    </li>
+                    <li>
+                        <span><i>Peer educator/Social worker/ CHP</i></span>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            Peter was enrolled in the ART clinic at TumuTumu hospital in February 2024. Peter was admitted to the hospital due to coinfections and was being closely monitored. On discharge day, Peter booked an appointment for ART clinic in March 2024. Francis (HRIO), sent reminders to all the clients who were due for follow-up.  However, Peter did not show up for the clinic on the expected date. A month lapsed without visiting the clinic and the tracing process by a social- worker was started.<br /><br />
+
+While generating the TX-ML report for March 2024, Peter will be part of the report as he has not shown any clinical contact since their last expected contact.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><strong>Corresponding Business Processes</strong></p>
+                <ul>
+                <li>(See component 4)</li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="scenario-4-user-scenario-for-clients-with-suppressed-viral-load-tx-pvls">Scenario 4: User scenario for clients with suppressed viral load (TX-PVLS)</h3>
+
+<table class="table table-bordered table-hover">
+    <tbody>
+        <tr>
+            <td>
+                <p><strong>Key Personas</strong></p>
+                <ul>
+                    <li>
+                        <span><i>Client</i></span>: Kevin
+                    </li>
+                    <li>
+                        <span><i>Clinician</i></span>: Julie
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+After a series of two sessions of enhanced adherence counseling, Kevin has been compliant with the medications and has honored follow-up appointments when due. During his appointment session in January 2024, the viral load was 1000 copies/ml. Julie discussed the results with Kevin and stressed the need for compliance to suppress the viral load. Kevin reports that he has been taking the medication as advised and he has never missed a dose. Julie recommends that he continue taking the medication and will be reviewed after two months for a repeat viral load test.<br /><br />
+Kevin visits the clinic two months later as previously advised and on reviewing the viral load test with the clinician, the viral load is 800 copies/ml.<br /><br />
+Julie informs Kevin that is good progress and the main goal is to reach undetectable levels. Julie advises Kevin to continue being adherent to medications and to honor follow-up sessions.
+Throughout the year, Kevin has been compliant with his medications and visits the clinic every two months. The viral load has ranged between 700-800c/ml during review sessions.<br /><br />
+While generating TX-PVLS for June 2024, Kevin will be part of the report as his viral load has been below 1000c/ml over the last three months.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><strong>Corresponding Business Processes</strong></p>
+                <ul>
+                    <li>(See component 4)</li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="scenario-5-user-scenario-for-hiv-testing-services-hts-tst">Scenario 5: User scenario for HIV Testing services (HTS-TST)</h3>
+
+<table class="table table-bordered table-hover">
+    <tbody>
+        <tr>
+            <td>
+                <p><strong>Key Personas</strong></p>
+                <ul>
+                    <li>
+                        <span><i>Client</i></span>: Abdu
+                    </li>
+                    <li>
+                        <span><i>Clinician</i></span>: Julie
+                    </li>
+                    <li>
+                        <span><i>HRIO</i></span>: Sam
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            Abdu, a 30-year-old man, did a self-test at home and got a HIV-positive result.  Abdu opts to visit TumuTumu Hospital, where he is directed to the HIV testing services.  Abdu meets Clara, who provides counseling and proceeds to carry out a rapid HIV test to help determine his HIV Status.  The results come back as HIV positive, and the retesting result is also positive. Abdu is devastated by the results; however,  Clara manages to calm him down and link him to the ART clinic for adherence counseling, index testing services, and ART enrollment.<br /><br />
+ Abdu meets Sam (HRIO) who registers him by capturing his basic demographic information including age, administrative area, occupation, and marital status. Upon capturing the initial information,   Sam assigns  Abdu to the clinician pool for an initial consultation.<br /><br />
+At the consultation,  Abdu meets Julie(Clinician), who retrieves Abdu’s record on the ART e-Register and begins the consultation process, captures  Abdu’s social and family history, and screens for TB and other opportunistic infections like cryptococcal meningitis, Varicella zoster and Pneumocystis Jirovecii pneumonia. There are symptoms for the illnesses screened. Julie finishes the consultation by providing some additional counseling to Julie on how to manage his condition and lifestyle, he then prescribes and initiates  Abdu on ART for six months.  He then sets the next appointment date and sends him to the pharmacy with his file.<br /><br />
+After picking ARVs, Abdu is directed to Sam (HRIO) who updates the ART registers issues clients hand-held cards, and updates the appointment date. Abdu exits the facility.<br /><br />
+While generating the HTS-TST report, Abdu will be part of the report as he was among the individuals who received HIV testing and received the results.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><strong>Corresponding Business Processes</strong></p>
+                <ul>
+                    <li>(See component 4)</li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:left">&#xA0;
+
+                <a href="generic-personas.html">&lt;prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:right">&#xA0;
+
+                <a href="business-processes.html">next&gt;</a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.intellisoftkenya.com/">intellisoftkenya</a>.  Package fhir.hivfhirIg#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jan 15, 2025 14:05+0000">2025-01-15</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

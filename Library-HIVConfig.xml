@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Library xmlns="http://hl7.org/fhir">
+  <id value="HIVConfig"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablelibrary"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablelibrary"/>
+    <profile value="http://hl7.org/fhir/uv/cql/StructureDefinition/cql-library"/>
+    <profile value="http://hl7.org/fhir/uv/cql/StructureDefinition/cql-module"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml">
+<div>
+    <table class="grid dict">
+        
+        
+        <tr>
+            <th scope="row"><b>Title: </b></th>
+            <td style="padding-left: 4px;">HIVConfig</td>
+        </tr>
+        
+
+        
+        
+        <tr>
+            <th scope="row"><b>Id: </b></th>
+            <td style="padding-left: 4px;">HIVConfig</td>
+        </tr>
+        
+
+        
+        
+        <tr>
+            <th scope="row"><b>Version: </b></th>
+            <td style="padding-left: 4px;">0.1.0</td>
+        </tr>
+        
+
+        
+        <tr>
+            <th scope="row"><b>Url: </b></th>
+            <td style="padding-left: 4px;"><a href="Library-HIVConfig.html">HIVConfig</a></td>
+        </tr>
+        
+
+        
+
+        
+
+        
+        <tr>
+            <th scope="row"><b>Status: </b></th>
+            <td style="padding-left: 4px;">draft</td>
+        </tr>
+        
+
+        
+        <tr>
+            <th scope="row"><b>Experimental: </b></th>
+            <td style="padding-left: 4px;">true</td>
+        </tr>
+        
+
+        
+        <tr>
+            <th scope="row"><b>Type: </b></th>
+            <td style="padding-left: 4px;">
+                
+                    
+                        
+                        <p style="margin-bottom: 5px;">
+                            <b>system: </b> <span><a href="http://terminology.hl7.org/6.1.0/CodeSystem-library-type.html">http://terminology.hl7.org/CodeSystem/library-type</a></span>
+                        </p>
+                        
+                        
+                        <p style="margin-bottom: 5px;">
+                            <b>code: </b> <span>logic-library</span>
+                        </p>
+                        
+                        
+                    
+                
+                
+            </td>
+        </tr>
+        
+
+        
+
+        
+        <tr>
+            <th scope="row"><b>Date: </b></th>
+            <td style="padding-left: 4px;">2025-01-15 14:05:09+0000</td>
+        </tr>
+        
+
+        
+        <tr>
+            <th scope="row"><b>Publisher: </b></th>
+            <td style="padding-left: 4px;">intellisoftkenya</td>
+        </tr>
+        
+
+        
+        <tr>
+            <th scope="row"><b>Description: </b></th>
+            <td style="padding-left: 4px;"><div><p>Description not yet available for HIVConfig.</p>
+</div></td>
+        </tr>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+        <tr>
+            <th scope="row"><b>Related Artifacts: </b></th>
+            <td style="padding-left: 4px;">
+                
+                
+                
+                <p><b>Dependencies</b></p>
+                <ul>
+                  
+                    <li><code>http://fhir.org/guides/cqf/common/Library/FHIR-ModelInfo|4.0.1</code></li>
+                  
+                </ul>
+                
+                
+                
+                
+                
+            </td>
+        </tr>
+        
+
+        
+        <tr>
+          <th scope="row"><b>Parameters: </b></th>
+          <td style="padding-left: 4px;">
+            <table class="grid-dict">
+              <tr><th><b>Name</b></th><th><b>Type</b></th><th><b>Min</b></th><th><b>Max</b></th><th><b>In/Out</b></th></tr>
+              
+                <tr><th>HIV burden of setting</th><th>string</th><th>0</th><th>1</th><th>Out</th></tr>
+              
+                <tr><th>Testing Interval</th><th>Quantity</th><th>0</th><th>1</th><th>Out</th></tr>
+              
+                <tr><th>Intervention Interval</th><th>Quantity</th><th>0</th><th>1</th><th>Out</th></tr>
+              
+                <tr><th>LTFU Days</th><th>Quantity</th><th>0</th><th>1</th><th>Out</th></tr>
+              
+                <tr><th>DSD Retention Interval</th><th>Quantity</th><th>0</th><th>1</th><th>Out</th></tr>
+              
+            </table>
+          </td>
+        </tr>
+        
+
+        
+
+        
+        
+        <tr>
+          <td colspan="2">
+            <table>
+              <tr><th><a id="cql-content"><b>Content: </b></a> text/cql</th></tr>
+              <tr><td><pre><code class="language-cql">library HIVConfig
+
+using FHIR version '4.0.1'
+
+/* 
+ * HIV burden of setting
+ */
+define &quot;HIV burden of setting&quot;:
+    'High HIV burden setting'
+
+define &quot;Testing Interval&quot;:
+    3 months
+
+define &quot;Intervention Interval&quot;:
+    7 days
+
+define &quot;LTFU Days&quot;:
+    28 days
+
+define &quot;DSD Retention Interval&quot;:
+    12 months</code></pre></td></tr>
+            </table>
+          </td>
+        </tr>
+        
+        
+        
+        
+        
+        <tr>
+          <td colspan="2">
+            <table>
+              <tr><th><b>Content: </b> application/elm+json</th></tr>
+              <tr><td><pre><code>Encoded data (8080 characters)</code></pre></td></tr>
+            </table>
+          </td>
+        </tr>
+        
+        
+    </table>
+</div>
+</div>
+  </text>
+  <contained>
+    <Parameters>
+      <id value="options"/>
+      <parameter>
+        <name value="translatorVersion"/>
+        <valueString value="3.11.0"/>
+      </parameter>
+      <parameter>
+        <name value="option"/>
+        <valueString value="EnableAnnotations"/>
+      </parameter>
+      <parameter>
+        <name value="option"/>
+        <valueString value="EnableLocators"/>
+      </parameter>
+      <parameter>
+        <name value="option"/>
+        <valueString value="DisableListDemotion"/>
+      </parameter>
+      <parameter>
+        <name value="option"/>
+        <valueString value="DisableListPromotion"/>
+      </parameter>
+      <parameter>
+        <name value="format"/>
+        <valueString value="JSON"/>
+      </parameter>
+      <parameter>
+        <name value="analyzeDataRequirements"/>
+        <valueBoolean value="false"/>
+      </parameter>
+      <parameter>
+        <name value="collapseDataRequirements"/>
+        <valueBoolean value="true"/>
+      </parameter>
+      <parameter>
+        <name value="compatibilityLevel"/>
+        <valueString value="1.5"/>
+      </parameter>
+      <parameter>
+        <name value="enableCqlOnly"/>
+        <valueBoolean value="false"/>
+      </parameter>
+      <parameter>
+        <name value="errorLevel"/>
+        <valueString value="Info"/>
+      </parameter>
+      <parameter>
+        <name value="signatureLevel"/>
+        <valueString value="All"/>
+      </parameter>
+      <parameter>
+        <name value="validateUnits"/>
+        <valueBoolean value="true"/>
+      </parameter>
+      <parameter>
+        <name value="verifyOnly"/>
+        <valueBoolean value="false"/>
+      </parameter>
+    </Parameters>
+  </contained>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability">
+    <valueCode value="computable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-cqlOptions">
+    <valueReference>
+      <reference value="#options"/>
+    </valueReference>
+  </extension>
+  <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem">
+    <valueReference>
+      <reference value="Device/cqf-tooling"/>
+    </valueReference>
+  </extension>
+  <url value="http://smart.who.int/hiv/Library/HIVConfig"/>
+  <version value="0.1.0"/>
+  <name value="HIVConfig"/>
+  <title value="HIVConfig"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/library-type"/>
+      <code value="logic-library"/>
+    </coding>
+  </type>
+  <date value="2025-01-15T14:05:09+00:00"/>
+  <publisher value="intellisoftkenya"/>
+  <contact>
+    <name value="intellisoftkenya"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.intellisoftkenya.com/"/>
+    </telecom>
+  </contact>
+  <description value="Description not yet available for HIVConfig."/>
+  <relatedArtifact>
+    <type value="depends-on"/>
+    <display value="FHIR model information"/>
+    <resource value="http://fhir.org/guides/cqf/common/Library/FHIR-ModelInfo|4.0.1"/>
+  </relatedArtifact>
+  <parameter>
+    <name value="HIV burden of setting"/>
+    <use value="out"/>
+    <min value="0"/>
+    <max value="1"/>
+    <type value="string"/>
+  </parameter>
+  <parameter>
+    <name value="Testing Interval"/>
+    <use value="out"/>
+    <min value="0"/>
+    <max value="1"/>
+    <type value="Quantity"/>
+  </parameter>
+  <parameter>
+    <name value="Intervention Interval"/>
+    <use value="out"/>
+    <min value="0"/>
+    <max value="1"/>
+    <type value="Quantity"/>
+  </parameter>
+  <parameter>
+    <name value="LTFU Days"/>
+    <use value="out"/>
+    <min value="0"/>
+    <max value="1"/>
+    <type value="Quantity"/>
+  </parameter>
+  <parameter>
+    <name value="DSD Retention Interval"/>
+    <use value="out"/>
+    <min value="0"/>
+    <max value="1"/>
+    <type value="Quantity"/>
+  </parameter>
+  <content>
+    <contentType value="text/cql"/>
+    <data value="bGlicmFyeSBISVZDb25maWcKCnVzaW5nIEZISVIgdmVyc2lvbiAnNC4wLjEnCgovKiAKICogSElWIGJ1cmRlbiBvZiBzZXR0aW5nCiAqLwpkZWZpbmUgIkhJViBidXJkZW4gb2Ygc2V0dGluZyI6CiAgICAnSGlnaCBISVYgYnVyZGVuIHNldHRpbmcnCgpkZWZpbmUgIlRlc3RpbmcgSW50ZXJ2YWwiOgogICAgMyBtb250aHMKCmRlZmluZSAiSW50ZXJ2ZW50aW9uIEludGVydmFsIjoKICAgIDcgZGF5cwoKZGVmaW5lICJMVEZVIERheXMiOgogICAgMjggZGF5cwoKZGVmaW5lICJEU0QgUmV0ZW50aW9uIEludGVydmFsIjoKICAgIDEyIG1vbnRocw=="/>
+  </content>
+  <content>
+    <contentType value="application/elm+json"/>
+    <data value="ewogICAibGlicmFyeSIgOiB7CiAgICAgICJsb2NhbElkIiA6ICIwIiwKICAgICAgImFubm90YXRpb24iIDogWyB7CiAgICAgICAgICJ0cmFuc2xhdG9yVmVyc2lvbiIgOiAiMy4xMS4wIiwKICAgICAgICAgInRyYW5zbGF0b3JPcHRpb25zIiA6ICJFbmFibGVBbm5vdGF0aW9ucyxFbmFibGVMb2NhdG9ycyxEaXNhYmxlTGlzdERlbW90aW9uLERpc2FibGVMaXN0UHJvbW90aW9uIiwKICAgICAgICAgInNpZ25hdHVyZUxldmVsIiA6ICJBbGwiLAogICAgICAgICAidHlwZSIgOiAiQ3FsVG9FbG1JbmZvIgogICAgICB9LCB7CiAgICAgICAgICJ0eXBlIiA6ICJBbm5vdGF0aW9uIiwKICAgICAgICAgInMiIDogewogICAgICAgICAgICAiciIgOiAiMjIwIiwKICAgICAgICAgICAgInMiIDogWyB7CiAgICAgICAgICAgICAgICJ2YWx1ZSIgOiBbICIiLCJsaWJyYXJ5IEhJVkNvbmZpZyIgXQogICAgICAgICAgICB9IF0KICAgICAgICAgfQogICAgICB9IF0sCiAgICAgICJpZGVudGlmaWVyIiA6IHsKICAgICAgICAgImlkIiA6ICJISVZDb25maWciLAogICAgICAgICAic3lzdGVtIiA6ICJodHRwczovL0ludGVsbGlTT0ZULUNvbnN1bHRpbmcuZ2l0aHViLmlvL0hJVi1GSElSLUlHIgogICAgICB9LAogICAgICAic2NoZW1hSWRlbnRpZmllciIgOiB7CiAgICAgICAgICJpZCIgOiAidXJuOmhsNy1vcmc6ZWxtIiwKICAgICAgICAgInZlcnNpb24iIDogInIxIgogICAgICB9LAogICAgICAidXNpbmdzIiA6IHsKICAgICAgICAgImRlZiIgOiBbIHsKICAgICAgICAgICAgImxvY2FsSWQiIDogIjEiLAogICAgICAgICAgICAibG9jYWxJZGVudGlmaWVyIiA6ICJTeXN0ZW0iLAogICAgICAgICAgICAidXJpIiA6ICJ1cm46aGw3LW9yZzplbG0tdHlwZXM6cjEiCiAgICAgICAgIH0sIHsKICAgICAgICAgICAgImxvY2FsSWQiIDogIjIwNiIsCiAgICAgICAgICAgICJsb2NhdG9yIiA6ICIzOjEtMzoyNiIsCiAgICAgICAgICAgICJsb2NhbElkZW50aWZpZXIiIDogIkZISVIiLAogICAgICAgICAgICAidXJpIiA6ICJodHRwOi8vaGw3Lm9yZy9maGlyIiwKICAgICAgICAgICAgInZlcnNpb24iIDogIjQuMC4xIiwKICAgICAgICAgICAgImFubm90YXRpb24iIDogWyB7CiAgICAgICAgICAgICAgICJ0eXBlIiA6ICJBbm5vdGF0aW9uIiwKICAgICAgICAgICAgICAgInMiIDogewogICAgICAgICAgICAgICAgICAiciIgOiAiMjA2IiwKICAgICAgICAgICAgICAgICAgInMiIDogWyB7CiAgICAgICAgICAgICAgICAgICAgICJ2YWx1ZSIgOiBbICIiLCJ1c2luZyAiIF0KICAgICAgICAgICAgICAgICAgfSwgewogICAgICAgICAgICAgICAgICAgICAicyIgOiBbIHsKICAgICAgICAgICAgICAgICAgICAgICAgInZhbHVlIiA6IFsgIkZISVIiIF0KICAgICAgICAgICAgICAgICAgICAgfSBdCiAgICAgICAgICAgICAgICAgIH0sIHsKICAgICAgICAgICAgICAgICAgICAgInZhbHVlIiA6IFsgIiB2ZXJzaW9uICc0LjAuMSciIF0KICAgICAgICAgICAgICAgICAgfSBdCiAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfSBdCiAgICAgICAgIH0gXQogICAgICB9LAogICAgICAic3RhdGVtZW50cyIgOiB7CiAgICAgICAgICJkZWYiIDogWyB7CiAgICAgICAgICAgICJsb2NhbElkIiA6ICIyMDgiLAogICAgICAgICAgICAibG9jYXRvciIgOiAiODoxLTk6MjkiLAogICAgICAgICAgICAibmFtZSIgOiAiSElWIGJ1cmRlbiBvZiBzZXR0aW5nIiwKICAgICAgICAgICAgImNvbnRleHQiIDogIlVuZmlsdGVyZWQiLAogICAgICAgICAgICAiYWNjZXNzTGV2ZWwiIDogIlB1YmxpYyIsCiAgICAgICAgICAgICJhbm5vdGF0aW9uIiA6IFsgewogICAgICAgICAgICAgICAidHlwZSIgOiAiQW5ub3RhdGlvbiIsCiAgICAgICAgICAgICAgICJzIiA6IHsKICAgICAgICAgICAgICAgICAgInIiIDogIjIwOCIsCiAgICAgICAgICAgICAgICAgICJzIiA6IFsgewogICAgICAgICAgICAgICAgICAgICAidmFsdWUiIDogWyAiLyogXG4gKiBISVYgYnVyZGVuIG9mIHNldHRpbmdcbiAqL1xuIiwiZGVmaW5lICIsIlwiSElWIGJ1cmRlbiBvZiBzZXR0aW5nXCIiLCI6XG4gICAgIiBdCiAgICAgICAgICAgICAgICAgIH0sIHsKICAgICAgICAgICAgICAgICAgICAgInIiIDogIjIwOSIsCiAgICAgICAgICAgICAgICAgICAgICJzIiA6IFsgewogICAgICAgICAgICAgICAgICAgICAgICAidmFsdWUiIDogWyAiJ0hpZ2ggSElWIGJ1cmRlbiBzZXR0aW5nJyIgXQogICAgICAgICAgICAgICAgICAgICB9IF0KICAgICAgICAgICAgICAgICAgfSBdCiAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfSBdLAogICAgICAgICAgICAiZXhwcmVzc2lvbiIgOiB7CiAgICAgICAgICAgICAgICJsb2NhbElkIiA6ICIyMDkiLAogICAgICAgICAgICAgICAibG9jYXRvciIgOiAiOTo1LTk6MjkiLAogICAgICAgICAgICAgICAidmFsdWVUeXBlIiA6ICJ7dXJuOmhsNy1vcmc6ZWxtLXR5cGVzOnIxfVN0cmluZyIsCiAgICAgICAgICAgICAgICJ2YWx1ZSIgOiAiSGlnaCBISVYgYnVyZGVuIHNldHRpbmciLAogICAgICAgICAgICAgICAidHlwZSIgOiAiTGl0ZXJhbCIKICAgICAgICAgICAgfQogICAgICAgICB9LCB7CiAgICAgICAgICAgICJsb2NhbElkIiA6ICIyMTEiLAogICAgICAgICAgICAibG9jYXRvciIgOiAiMTE6MS0xMjoxMiIsCiAgICAgICAgICAgICJuYW1lIiA6ICJUZXN0aW5nIEludGVydmFsIiwKICAgICAgICAgICAgImNvbnRleHQiIDogIlVuZmlsdGVyZWQiLAogICAgICAgICAgICAiYWNjZXNzTGV2ZWwiIDogIlB1YmxpYyIsCiAgICAgICAgICAgICJhbm5vdGF0aW9uIiA6IFsgewogICAgICAgICAgICAgICAidHlwZSIgOiAiQW5ub3RhdGlvbiIsCiAgICAgICAgICAgICAgICJzIiA6IHsKICAgICAgICAgICAgICAgICAgInIiIDogIjIxMSIsCiAgICAgICAgICAgICAgICAgICJzIiA6IFsgewogICAgICAgICAgICAgICAgICAgICAidmFsdWUiIDogWyAiIiwiZGVmaW5lICIsIlwiVGVzdGluZyBJbnRlcnZhbFwiIiwiOlxuICAgICIgXQogICAgICAgICAgICAgICAgICB9LCB7CiAgICAgICAgICAgICAgICAgICAgICJyIiA6ICIyMTIiLAogICAgICAgICAgICAgICAgICAgICAicyIgOiBbIHsKICAgICAgICAgICAgICAgICAgICAgICAgInZhbHVlIiA6IFsgIjMgIiwibW9udGhzIiBdCiAgICAgICAgICAgICAgICAgICAgIH0gXQogICAgICAgICAgICAgICAgICB9IF0KICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9IF0sCiAgICAgICAgICAgICJleHByZXNzaW9uIiA6IHsKICAgICAgICAgICAgICAgImxvY2FsSWQiIDogIjIxMiIsCiAgICAgICAgICAgICAgICJsb2NhdG9yIiA6ICIxMjo1LTEyOjEyIiwKICAgICAgICAgICAgICAgInZhbHVlIiA6IDMsCiAgICAgICAgICAgICAgICJ1bml0IiA6ICJtb250aHMiLAogICAgICAgICAgICAgICAidHlwZSIgOiAiUXVhbnRpdHkiCiAgICAgICAgICAgIH0KICAgICAgICAgfSwgewogICAgICAgICAgICAibG9jYWxJZCIgOiAiMjE0IiwKICAgICAgICAgICAgImxvY2F0b3IiIDogIjE0OjEtMTU6MTAiLAogICAgICAgICAgICAibmFtZSIgOiAiSW50ZXJ2ZW50aW9uIEludGVydmFsIiwKICAgICAgICAgICAgImNvbnRleHQiIDogIlVuZmlsdGVyZWQiLAogICAgICAgICAgICAiYWNjZXNzTGV2ZWwiIDogIlB1YmxpYyIsCiAgICAgICAgICAgICJhbm5vdGF0aW9uIiA6IFsgewogICAgICAgICAgICAgICAidHlwZSIgOiAiQW5ub3RhdGlvbiIsCiAgICAgICAgICAgICAgICJzIiA6IHsKICAgICAgICAgICAgICAgICAgInIiIDogIjIxNCIsCiAgICAgICAgICAgICAgICAgICJzIiA6IFsgewogICAgICAgICAgICAgICAgICAgICAidmFsdWUiIDogWyAiIiwiZGVmaW5lICIsIlwiSW50ZXJ2ZW50aW9uIEludGVydmFsXCIiLCI6XG4gICAgIiBdCiAgICAgICAgICAgICAgICAgIH0sIHsKICAgICAgICAgICAgICAgICAgICAgInIiIDogIjIxNSIsCiAgICAgICAgICAgICAgICAgICAgICJzIiA6IFsgewogICAgICAgICAgICAgICAgICAgICAgICAidmFsdWUiIDogWyAiNyAiLCJkYXlzIiBdCiAgICAgICAgICAgICAgICAgICAgIH0gXQogICAgICAgICAgICAgICAgICB9IF0KICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9IF0sCiAgICAgICAgICAgICJleHByZXNzaW9uIiA6IHsKICAgICAgICAgICAgICAgImxvY2FsSWQiIDogIjIxNSIsCiAgICAgICAgICAgICAgICJsb2NhdG9yIiA6ICIxNTo1LTE1OjEwIiwKICAgICAgICAgICAgICAgInZhbHVlIiA6IDcsCiAgICAgICAgICAgICAgICJ1bml0IiA6ICJkYXlzIiwKICAgICAgICAgICAgICAgInR5cGUiIDogIlF1YW50aXR5IgogICAgICAgICAgICB9CiAgICAgICAgIH0sIHsKICAgICAgICAgICAgImxvY2FsSWQiIDogIjIxNyIsCiAgICAgICAgICAgICJsb2NhdG9yIiA6ICIxNzoxLTE4OjExIiwKICAgICAgICAgICAgIm5hbWUiIDogIkxURlUgRGF5cyIsCiAgICAgICAgICAgICJjb250ZXh0IiA6ICJVbmZpbHRlcmVkIiwKICAgICAgICAgICAgImFjY2Vzc0xldmVsIiA6ICJQdWJsaWMiLAogICAgICAgICAgICAiYW5ub3RhdGlvbiIgOiBbIHsKICAgICAgICAgICAgICAgInR5cGUiIDogIkFubm90YXRpb24iLAogICAgICAgICAgICAgICAicyIgOiB7CiAgICAgICAgICAgICAgICAgICJyIiA6ICIyMTciLAogICAgICAgICAgICAgICAgICAicyIgOiBbIHsKICAgICAgICAgICAgICAgICAgICAgInZhbHVlIiA6IFsgIiIsImRlZmluZSAiLCJcIkxURlUgRGF5c1wiIiwiOlxuICAgICIgXQogICAgICAgICAgICAgICAgICB9LCB7CiAgICAgICAgICAgICAgICAgICAgICJyIiA6ICIyMTgiLAogICAgICAgICAgICAgICAgICAgICAicyIgOiBbIHsKICAgICAgICAgICAgICAgICAgICAgICAgInZhbHVlIiA6IFsgIjI4ICIsImRheXMiIF0KICAgICAgICAgICAgICAgICAgICAgfSBdCiAgICAgICAgICAgICAgICAgIH0gXQogICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0gXSwKICAgICAgICAgICAgImV4cHJlc3Npb24iIDogewogICAgICAgICAgICAgICAibG9jYWxJZCIgOiAiMjE4IiwKICAgICAgICAgICAgICAgImxvY2F0b3IiIDogIjE4OjUtMTg6MTEiLAogICAgICAgICAgICAgICAidmFsdWUiIDogMjgsCiAgICAgICAgICAgICAgICJ1bml0IiA6ICJkYXlzIiwKICAgICAgICAgICAgICAgInR5cGUiIDogIlF1YW50aXR5IgogICAgICAgICAgICB9CiAgICAgICAgIH0sIHsKICAgICAgICAgICAgImxvY2FsSWQiIDogIjIyMCIsCiAgICAgICAgICAgICJsb2NhdG9yIiA6ICIyMDoxLTIxOjEzIiwKICAgICAgICAgICAgIm5hbWUiIDogIkRTRCBSZXRlbnRpb24gSW50ZXJ2YWwiLAogICAgICAgICAgICAiY29udGV4dCIgOiAiVW5maWx0ZXJlZCIsCiAgICAgICAgICAgICJhY2Nlc3NMZXZlbCIgOiAiUHVibGljIiwKICAgICAgICAgICAgImFubm90YXRpb24iIDogWyB7CiAgICAgICAgICAgICAgICJ0eXBlIiA6ICJBbm5vdGF0aW9uIiwKICAgICAgICAgICAgICAgInMiIDogewogICAgICAgICAgICAgICAgICAiciIgOiAiMjIwIiwKICAgICAgICAgICAgICAgICAgInMiIDogWyB7CiAgICAgICAgICAgICAgICAgICAgICJ2YWx1ZSIgOiBbICIiLCJkZWZpbmUgIiwiXCJEU0QgUmV0ZW50aW9uIEludGVydmFsXCIiLCI6XG4gICAgIiBdCiAgICAgICAgICAgICAgICAgIH0sIHsKICAgICAgICAgICAgICAgICAgICAgInIiIDogIjIyMSIsCiAgICAgICAgICAgICAgICAgICAgICJzIiA6IFsgewogICAgICAgICAgICAgICAgICAgICAgICAidmFsdWUiIDogWyAiMTIgIiwibW9udGhzIiBdCiAgICAgICAgICAgICAgICAgICAgIH0gXQogICAgICAgICAgICAgICAgICB9IF0KICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9IF0sCiAgICAgICAgICAgICJleHByZXNzaW9uIiA6IHsKICAgICAgICAgICAgICAgImxvY2FsSWQiIDogIjIyMSIsCiAgICAgICAgICAgICAgICJsb2NhdG9yIiA6ICIyMTo1LTIxOjEzIiwKICAgICAgICAgICAgICAgInZhbHVlIiA6IDEyLAogICAgICAgICAgICAgICAidW5pdCIgOiAibW9udGhzIiwKICAgICAgICAgICAgICAgInR5cGUiIDogIlF1YW50aXR5IgogICAgICAgICAgICB9CiAgICAgICAgIH0gXQogICAgICB9CiAgIH0KfQ=="/>
+  </content>
+</Library>
